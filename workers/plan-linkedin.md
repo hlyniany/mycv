@@ -14,7 +14,7 @@
 - **Process**:
   1. Extract ZIP: Profile.csv, Positions.csv, Education.csv, Skills.csv, Certifications.csv
   2. Parse CSV to JSONResume format
-  3. Compare against data/cv.json (filtered to entries tagged with target domain)
+  3. Compare against data/cv.resume.json (filtered to entries tagged with target domain)
   4. Generate human-readable diff
   5. Save diff to review/ folder
   6. User manually reviews and applies changes to master JSON

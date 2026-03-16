@@ -3,7 +3,7 @@
 > See also: [phases](plan-phases.md) · [html](plan-html.md) · [linkedin](plan-linkedin.md) · [orcid](plan-orcid.md) · [europass](plan-europass.md) · [json-internal](plan-json-internal.md) · [files](plan-files.md) · [open-questions](plan-open-questions.md) · [verification](plan-verification.md)
 
 ## TL;DR
-Build CV ETL with **one master JSONResume file** (`data/cv.json`) where each entry has domain tags (e.g. `"domains": ["it", "psychology"]`). Cross-domain activities are stored once with multiple tags. Shell scripts filter by domain when exporting to destinations. Manual diff review workflow with git-native source control and detailed changelog. No automation beyond existing GitHub Pages deployment. No PDF generation (manual browser "Save as PDF").
+Build CV ETL with **one master JSONResume file** (`data/cv.resume.json`) where each entry has domain tags (e.g. `"domains": ["it", "psychology"]`). Cross-domain activities are stored once with multiple tags. Shell scripts filter by domain when exporting to destinations. Manual diff review workflow with git-native source control and detailed changelog. No automation beyond existing GitHub Pages deployment. No PDF generation (manual browser "Save as PDF").
 
 ---
 

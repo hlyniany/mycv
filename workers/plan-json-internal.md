@@ -2,7 +2,7 @@
 
 > Back to [overview](plan-overview.md) · Phase: [5](plan-phases.md)
 
-**File**: data/cv.json (single master file)
+**File**: data/cv.resume.json (single master file)
 **Schema**: JSONResume v1.0.0 + custom fields
 
 ### Domain Tagging Convention
@@ -31,7 +31,7 @@ Example:
 ## 5.1 IMPORT: Receive updates from sources - `scripts/import_to_json.sh <source> <diff_file>`
 - **Input**: Diff file from read_*.sh scripts (HTML, LinkedIn, ORCID, Europass)
 - **Tool**: Python + JSON merge
-- **Output**: Updated data/cv.json (if user approves)
+- **Output**: Updated data/cv.resume.json (if user approves)
 - **Process**:
   1. Load diff file from review/ folder
   2. Display structured diff:
@@ -48,15 +48,15 @@ Example:
      - work[8]: (temporary position)
      ```
   3. Ask user: "Apply changes? [y/n/e(dit)]"
-  4. If yes: Apply changes to data/cv.json
+  4. If yes: Apply changes to data/cv.resume.json
   5. If edit: Open in $EDITOR for manual adjustments
   6. User adds/adjusts `"domains"` tags on new entries
   7. Generate changelog entry
-  8. Git add data/cv.json
+  8. Git add data/cv.resume.json
   9. Print: "Ready to commit. Review with `git diff --cached` then `git commit`"
 
 ## 5.2 DIFF: Generate for manual review - `scripts/generate_diff.sh`
-- **Input**: data/cv.json (working tree vs. git HEAD)
+- **Input**: data/cv.resume.json (working tree vs. git HEAD)
 - **Tool**: Python JSON diff or git diff
 - **Output**: Human-readable diff display
 - **Process**:
@@ -64,7 +64,7 @@ Example:
   2. Parse JSON-level changes (not just text diff)
   3. Display semantic diff:
      ```
-     Changed in cv.json since last commit:
+     Changed in cv.resume.json since last commit:
      
      Section: Work Experience
      - Modified: EPAM Systems end date
@@ -78,14 +78,14 @@ Example:
   4. Exit code: 0 if changes, 1 if no changes
 
 ## 5.3 UPDATE: Apply with git - `scripts/apply_update.sh`
-- **Input**: Modified data/cv.json (user has manually edited)
+- **Input**: Modified data/cv.resume.json (user has manually edited)
 - **Tool**: Git commands
 - **Output**: Staged changes (not committed yet)
 - **Process**:
   1. Validate JSON syntax
   2. Validate JSONResume schema compliance
   3. Generate changelog entry (see 5.4)
-  4. Git add data/cv.json
+  4. Git add data/cv.resume.json
   5. Append to CHANGELOG.md
   6. Git add CHANGELOG.md
   7. Print suggested commit message:
@@ -102,7 +102,7 @@ Example:
 
 **Structure**:
 ```markdown
-# Changelog - cv.json
+# Changelog - cv.resume.json
 
 All notable changes to the master resume will be documented here.
 Format: [ISO Date] - Source - Summary
