@@ -4,17 +4,19 @@
 
 **Current files**: [VitaliyHlynianyiZhuk2025.html](../VitaliyHlynianyiZhuk2025.html), [index.html](../index.html)
 
+**Destination model**: Separate HTML page per domain. `index.html` becomes a landing page with links to each domain page (e.g. cv-it.html, cv-psychology.html, cv-theatre.html, cv-bank-marketing.html).
+
 ---
 
 ## 1.1 READ: Initial extraction (any structure) - `scripts/read_html_initial.sh`
 - **Input**: Existing HTML file (any structure)
 - **Tool**: Python + BeautifulSoup4
-- **Output**: 4 JSONResume files (it.json, psychology.json, theatre.json, bank_marketing.json)
+- **Output**: Single master JSONResume file (data/cv.json)
 - **Process**:
   1. Parse HTML, extract: name, contact, experience, education, skills
   2. Create initial JSONResume structure
   3. Output to review/ folder for manual inspection
-  4. User manually distributes content across 4 domain files
+  4. User manually adds `"domains": [...]` tags to each entry
 - **Run once**: Initial setup only
 
 ## 1.2 READ: From structured HTML - `scripts/read_html_structured.sh`
@@ -25,16 +27,17 @@
 - **Process**: Parse with CSS selectors matching template structure
 
 ## 1.3 WRITE: Total rewrite - `scripts/write_html_full.sh <domain>`
-- **Input**: data/{domain}.json
+- **Input**: data/cv.json, domain filter
 - **Tool**: Python + Jinja2
-- **Output**: HTML file (e.g., VitaliyHlynianyiZhuk2025-IT.html)
-- **Template**: templates/cv.html.j2
+- **Output**: HTML file per domain (e.g., cv-it.html) + updated index.html with links
+- **Template**: templates/cv.html.j2, templates/index.html.j2
 - **Process**:
-  1. Load domain JSON file
-  2. Validate against JSONResume schema
+  1. Load master JSON, filter entries where `"domains"` includes target domain
+  2. Validate filtered data against JSONResume schema
   3. Render Jinja2 template
   4. Write to output file
-  5. Git commit if changes detected
+  5. Regenerate index.html with links to all domain pages
+  6. Git commit if changes detected
 - **Deploy**: GitHub Pages action will auto-deploy on push
 
 ## 1.4 WRITE: Incremental update - `scripts/write_html_update.sh <domain> <section>`
