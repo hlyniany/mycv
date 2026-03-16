@@ -62,7 +62,7 @@
 
 1. Create templates/cv.html.j2 (Jinja2 HTML template)
    - Based on existing VitaliyHlynianyiZhuk2025.html structure
-   - Add Jinja2 variables: {{ basics.name }}, {% for job in work %}, etc.
+   - Add Jinja2 variables: `{{ basics.name }}`, `{% raw %}{% for job in work %}{% endraw %}`, etc.
 2. Implement `scripts/write_html_full.sh`
 3. Generate HTML for all 4 domains:
    ```bash
