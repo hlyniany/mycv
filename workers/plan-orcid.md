@@ -17,7 +17,7 @@
   2. GET /{orcid_id}/activities (employment, education, works, fundings)
   3. GET /{orcid_id}/person (name, biography, external identifiers)
   4. Parse ORCID XML/JSON → JSONResume format
-  5. Compare against data/cv.json (all entries except those tagged `-noorcid`)
+  5. Compare against data/cv.resume.json (all entries except those tagged `-noorcid`)
   6. Generate diff for manual review
 - **First run**: Need OAuth consent flow (browser popup)
 
@@ -35,7 +35,7 @@
 ```
 
 ## 3.2 WRITE: To ORCID API - `scripts/write_orcid.sh`
-- **Input**: data/cv.json, OAuth token
+- **Input**: data/cv.resume.json, OAuth token
 - **Tool**: Python + requests library
 - **Output**: ORCID profile updated
 - **Process**:

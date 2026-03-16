@@ -6,7 +6,7 @@
 
 ## Verification Criteria
 
-1. **Data Integrity**: Master cv.json validates against JSONResume schema (with custom domain fields)
+1. **Data Integrity**: Master cv.resume.json validates against JSONResume schema (with custom domain fields)
 2. **Domain Filtering**: Each domain export contains only entries tagged for that domain
 3. **Cross-domain Entries**: Entries tagged with multiple domains appear in all relevant exports
 4. **Round-trip Accuracy**: Data survives HTML → JSON → HTML conversion without loss
@@ -27,7 +27,7 @@
 
 ### 2. Phase 1 Implementation
 - Create folder structure
-- Initialize master cv.json with domain tag convention
+- Initialize master cv.resume.json with domain tag convention
 - Set up .gitignore
 - Initial git commit
 

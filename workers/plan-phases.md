@@ -7,7 +7,7 @@
    ```
    mycv/
    ├── data/
-   │   └── cv.json (master JSONResume with domain tags)
+   │   └── cv.resume.json (master JSONResume with domain tags)
    ├── review/ (for diffs)
    ├── scripts/
    ├── templates/
@@ -79,7 +79,7 @@
 3. Implement `scripts/apply_update.sh` (stage changes, prepare commit)
 4. Implement `scripts/changelog_entry.sh` (auto-generate changelog)
 5. Test full workflow:
-   - Make manual edit to data/cv.json
+   - Make manual edit to data/cv.resume.json
    - Run generate_diff.sh → see changes
    - Run apply_update.sh → stage and prepare commit
    - Review git diff --cached
@@ -117,7 +117,7 @@ Deprioritized. Revisit after Phases 1–6 are working.
 2. **Test scenario 2**: ORCID round-trip
    - Read from ORCID → Review diff → Modify local JSON → Write back to ORCID → Read again to verify
 3. **Test scenario 3**: Manual JSON edit
-   - Edit data/cv.json directly → Generate diff → Apply → Commit → Update HTML + ORCID
+   - Edit data/cv.resume.json directly → Generate diff → Apply → Commit → Update HTML + ORCID
 4. **Test scenario 4**: Data consistency
    - Verify master JSON maintains proper JSONResume schema
    - Domain filtering produces correct subsets

@@ -13,7 +13,7 @@
 ## To Create
 
 ### Data (source of truth)
-- data/cv.json - Single master resume (all domains, tagged per entry)
+- data/cv.resume.json - Single master resume (all domains, tagged per entry)
 
 ### Scripts (shell + Python)
 - scripts/read_html_initial.sh (HTML → JSON, one-time)

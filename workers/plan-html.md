@@ -11,7 +11,7 @@
 ## 1.1 READ: Initial extraction (any structure) - `scripts/read_html_initial.sh`
 - **Input**: Existing HTML file (any structure)
 - **Tool**: Python + BeautifulSoup4
-- **Output**: Single master JSONResume file (data/cv.json)
+- **Output**: Single master JSONResume file (data/cv.resume.json)
 - **Process**:
   1. Parse HTML, extract: name, contact, experience, education, skills
   2. Create initial JSONResume structure
@@ -27,7 +27,7 @@
 - **Process**: Parse with CSS selectors matching template structure
 
 ## 1.3 WRITE: Total rewrite - `scripts/write_html_full.sh <domain>`
-- **Input**: data/cv.json, domain filter
+- **Input**: data/cv.resume.json, domain filter
 - **Tool**: Python + Jinja2
 - **Output**: HTML file per domain (e.g., cv-it.html) + updated index.html with links
 - **Template**: templates/cv.html.j2, templates/index.html.j2
