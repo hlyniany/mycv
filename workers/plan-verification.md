@@ -6,13 +6,14 @@
 
 ## Verification Criteria
 
-1. **Data Integrity**: Each domain JSON validates against JSONResume schema
-2. **Round-trip Accuracy**: Data survives HTML → JSON → HTML conversion without loss
-3. **ORCID Sync**: Data written to ORCID matches local JSON, read back correctly
-4. **Europass Import**: Generated XML imports to Europass platform without errors
-5. **Diff Accuracy**: Diff tools correctly identify added/changed/removed items
-6. **Git History**: Changelog matches git commit history, no undocumented changes
-7. **Manual Review**: User can understand all diffs without confusion
+1. **Data Integrity**: Master cv.json validates against JSONResume schema (with custom domain fields)
+2. **Domain Filtering**: Each domain export contains only entries tagged for that domain
+3. **Cross-domain Entries**: Entries tagged with multiple domains appear in all relevant exports
+4. **Round-trip Accuracy**: Data survives HTML → JSON → HTML conversion without loss
+5. **ORCID Sync**: Data written to ORCID matches local JSON (minus `-noorcid` entries), reads back correctly
+6. **Diff Accuracy**: Diff tools correctly identify added/changed/removed items
+7. **Git History**: Changelog matches git commit history, no undocumented changes
+8. **Manual Review**: User can understand all diffs without confusion
 
 ---
 
@@ -26,14 +27,14 @@
 
 ### 2. Phase 1 Implementation
 - Create folder structure
-- Initialize 4 JSONResume files
+- Initialize master cv.json with domain tag convention
 - Set up .gitignore
 - Initial git commit
 
 ### 3. Phase 2 Development
 - Implement scripts/read_html_initial.sh
 - Extract data from VitaliyHlynianyiZhuk2025.html
-- Distribute to 4 domain files (manual)
+- Add domain tags to each entry (manual)
 - First data commits
 
 ### 4. Iterate Through Phases 3-8

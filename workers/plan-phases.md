@@ -7,31 +7,26 @@
    ```
    mycv/
    ├── data/
-   │   ├── it.json (empty JSONResume structure)
-   │   ├── psychology.json
-   │   ├── theatre.json
-   │   └── bank_marketing.json
+   │   └── cv.json (master JSONResume with domain tags)
    ├── review/ (for diffs)
    ├── scripts/
    ├── templates/
    │   ├── cv.html.j2
-   │   └── europass.xml.j2
-   ├── CHANGELOG-it.md
-   ├── CHANGELOG-psychology.md
-   ├── CHANGELOG-theatre.md
-   ├── CHANGELOG-bank_marketing.md
+   │   └── index.html.j2
+   ├── CHANGELOG.md
    ├── .gitignore (add .env, review/*, tokens)
    └── requirements.txt
    ```
 
-2. Initialize 4 JSONResume files with basic structure:
+2. Initialize master JSONResume file with basic structure + domain tags:
    ```json
    {
      "basics": {"name": "Vitaliy Hlynianyi-Zhuk", "email": "...", "phone": "..."},
      "work": [],
      "education": [],
      "skills": [],
-     "meta": {"version": "1.0.0", "lastModified": "2026-03-16"}
+     "meta": {"version": "1.0.0", "lastModified": "2026-03-16",
+              "domains": ["it", "psychology", "theatre", "bank_marketing"]}
    }
    ```
 
@@ -43,8 +38,8 @@
 1. Implement `scripts/read_html_initial.sh`
 2. Run on VitaliyHlynianyiZhuk2025.html
 3. Extract all experience, education, skills to temp JSON
-4. **Manual step**: User distributes data across 4 domain JSONs
-5. Git commit each domain file separately with message: "Initial import from HTML"
+4. **Manual step**: User adds `"domains": [...]` tags to each entry
+5. Git commit with message: "Initial import from HTML"
 
 ## Phase 3: LinkedIn Import (*parallel with Phase 2*)
 > Details: [plan-linkedin.md](plan-linkedin.md)
@@ -52,9 +47,9 @@
 1. User requests LinkedIn export (Settings > Data Privacy > Get copy)
 2. Wait 24 hours for ZIP file
 3. Implement `scripts/read_linkedin.sh`
-4. Run script on export ZIP for each domain
+4. Run script on export ZIP for each LinkedIn account (one per domain)
 5. Review diffs in review/ folder
-6. User decides which data to merge into which domain files
+6. User decides which data to merge into master JSON (adding domain tags)
 7. Git commit changes
 
 ## Phase 4: HTML Generation (*depends on Phase 2*)
@@ -63,15 +58,16 @@
 1. Create templates/cv.html.j2 (Jinja2 HTML template)
    - Based on existing VitaliyHlynianyiZhuk2025.html structure
    - Add Jinja2 variables: `{{ basics.name }}`, `{% raw %}{% for job in work %}{% endraw %}`, etc.
-2. Implement `scripts/write_html_full.sh`
-3. Generate HTML for all 4 domains:
+2. Create templates/index.html.j2 (landing page with links to each domain)
+3. Implement `scripts/write_html_full.sh`
+4. Generate HTML for all 4 domains:
    ```bash
    ./scripts/write_html_full.sh it
    ./scripts/write_html_full.sh psychology
    ./scripts/write_html_full.sh theatre
    ./scripts/write_html_full.sh bank_marketing
    ```
-4. Test in browser (open locally)
+5. Verify index.html links to all domain pages
 5. Git commit HTML files
 6. Push to GitHub (existing gh-pages action will deploy)
 
@@ -83,12 +79,12 @@
 3. Implement `scripts/apply_update.sh` (stage changes, prepare commit)
 4. Implement `scripts/changelog_entry.sh` (auto-generate changelog)
 5. Test full workflow:
-   - Make manual edit to data/it.json
+   - Make manual edit to data/cv.json
    - Run generate_diff.sh → see changes
    - Run apply_update.sh → stage and prepare commit
    - Review git diff --cached
    - Git commit
-6. Verify CHANGELOG-it.md updated correctly
+6. Verify CHANGELOG.md updated correctly
 
 ## Phase 6: ORCID Integration (*depends on Phase 5*)
 > Details: [plan-orcid.md](plan-orcid.md)
@@ -105,19 +101,14 @@
 10. Test production read
 11. Test production write (one domain, e.g., IT)
 
-## Phase 7: Europass Integration (*parallel with Phase 6*)
+## Phase 7: Europass Integration (*low priority, deferred*)
 > Details: [plan-europass.md](plan-europass.md)
 
-1. **Research step**: Investigate Europass API/MCP availability (see [open-questions](plan-open-questions.md) #2)
-2. If no API: Use manual XML export/import approach
-3. Create templates/europass.xml.j2 (Europass XML schema template)
-4. Implement `scripts/write_europass.sh` (JSONResume → Europass XML)
-5. Generate Europass XML for one domain (IT)
-6. Manually import to https://europass.europa.eu
-7. Verify import successful, data correct
-8. If needs adjustments: refine XML template
-9. Implement `scripts/read_europass.sh` (Europass XML → JSONResume diff) - optional
-10. Document manual workflow in README
+Deprioritized. Revisit after Phases 1–6 are working.
+
+1. Research Europass API/MCP availability (see [open-questions #2](plan-open-questions.md))
+2. Define filtering model (per-domain or all-together)
+3. Implement if/when needed
 
 ## Phase 8: Full Workflow Testing (*depends on all phases*)
 
@@ -126,9 +117,10 @@
 2. **Test scenario 2**: ORCID round-trip
    - Read from ORCID → Review diff → Modify local JSON → Write back to ORCID → Read again to verify
 3. **Test scenario 3**: Manual JSON edit
-   - Edit data/it.json directly → Generate diff → Apply → Commit → Update HTML + ORCID + Europass
+   - Edit data/cv.json directly → Generate diff → Apply → Commit → Update HTML + ORCID
 4. **Test scenario 4**: Data consistency
-   - Verify all 4 domains maintain proper JSONResume schema
+   - Verify master JSON maintains proper JSONResume schema
+   - Domain filtering produces correct subsets
    - No data corruption across read/write cycles
 5. Git tag: `v1.0.0-complete-workflow`
 
@@ -142,7 +134,8 @@ Phase 1 (Setup)
   │     └── Phase 4 (HTML Generation) ──┐
   ├── Phase 3 (LinkedIn Import)         │
   └───────────────── Phase 5 (Diff Tools) ──parallel with Phase 4
-                       ├── Phase 6 (ORCID)
-                       └── Phase 7 (Europass) ──parallel with Phase 6
-                              └── Phase 8 (Full Testing) ──depends on all
+                       └── Phase 6 (ORCID)
+                              └── Phase 8 (Full Testing) ──depends on 1-6
+
+Phase 7 (Europass) ── deferred, low priority
 ```
