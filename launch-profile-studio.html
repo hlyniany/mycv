@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Profile Studio...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .loader {
+            text-align: center;
+        }
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .error {
+            background: #f44336;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+        }
+        h2 { margin-top: 0; }
+        pre {
+            background: rgba(0,0,0,0.2);
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <h2>Loading Profile Studio...</h2>
+        <p>Preparing your resume data...</p>
+    </div>
+
+    <script>
+        async function loadAndLaunch() {
+            try {
+                // Fetch the resume JSON file
+                const response = await fetch('review/cv.resume.json');
+                
+                if (!response.ok) {
+                    throw new Error(`Failed to load resume file: ${response.status} ${response.statusText}`);
+                }
+                
+                const resumeData = await response.json();
+                
+                // Transform the data to match the expected structure
+                // Profile Studio expects the data in a 'sections' format
+                const sections = {
+                    basics: resumeData.basics || {},
+                    work: resumeData.work || [],
+                    volunteer: resumeData.volunteer || [],
+                    education: resumeData.education || [],
+                    awards: resumeData.awards || [],
+                    publications: resumeData.publications || [],
+                    skills: resumeData.skills || [],
+                    languages: resumeData.languages || [],
+                    interests: resumeData.interests || [],
+                    references: resumeData.references || [],
+                    projects: resumeData.projects || []
+                };
+                
+                // Ensure basics has required nested objects
+                if (!sections.basics.location) {
+                    sections.basics.location = {};
+                }
+                if (!sections.basics.profiles) {
+                    sections.basics.profiles = [];
+                }
+                
+                // Store in localStorage
+                localStorage.setItem('sections', JSON.stringify(sections));
+                
+                // Add a small delay to show the loader
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                // Redirect to Profile Studio
+                window.location.href = 'tools/profile-studio/index.html';
+                
+            } catch (error) {
+                // Show error message
+                document.getElementById('loader').innerHTML = `
+                    <div class="error">
+                        <h2>❌ Error Loading Resume</h2>
+                        <p><strong>Error:</strong> ${error.message}</p>
+                        <pre>${error.stack || 'No stack trace available'}</pre>
+                        <p style="margin-top: 20px;">
+                            <strong>Troubleshooting:</strong><br>
+                            • Make sure the file <code>review/cv.resume.json</code> exists<br>
+                            • Try opening this page using a local web server<br>
+                            • Check the browser console for more details
+                        </p>
+                        <p style="margin-top: 20px;">
+                            <a href="tools/profile-studio/index.html" style="color: white; text-decoration: underline;">
+                                Open Profile Studio without loading data
+                            </a>
+                        </p>
+                    </div>
+                `;
+                console.error('Error loading resume:', error);
+            }
+        }
+        
+        // Start loading when page loads
+        loadAndLaunch();
+    </script>
+</body>
+</html>
