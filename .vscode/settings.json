@@ -2,5 +2,6 @@
     "chat.tools.terminal.autoApprove": {
         "gh": true,
         "git remote": true
-    }
+    },
+    "specstory.cloudSync.enabled": "never"
 }
