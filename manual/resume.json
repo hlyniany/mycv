@@ -1,0 +1,256 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
+  "basics": {
+    "name": "Vitaliy Hlynianyi-Zhuk",
+    "label": "API Low-Code Integration Engineer, Database Developer, Business Analyst, Scrum Master",
+    "email": "hlyniany@gmail.com",
+    "phone": "46216692",
+    "url": "https://hlyniany.github.io/mycv/",
+    "location": {
+      "city": "Randaberg",
+      "countryCode": "NO",
+      "region": "Rogaland"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "vizhu",
+        "url": "https://www.linkedin.com/in/vizhu/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "CF \"Sane Ukraine\"",
+      "position": "Cloud Administrator (volunteer)",
+      "startDate": "2023-08",
+      "summary": "Volunteering role in Ukrainian charity fund. Google Workspace and Microsoft Entra administration. Nonprofit licence management. User and domain management and provisioning."
+    },
+    {
+      "name": "Flying Donkey IT",
+      "location": "Kyiv",
+      "position": "API Integration Engineer",
+      "startDate": "2021-08",
+      "endDate": "2023-12",
+      "summary": "SaaS platforms integration for various businesses: Energy, Real Estate, Construction, Finance, IT.",
+      "highlights": [
+        "Automation with no-code/low-code tools – Make, Zapier, Appsmith, ReTool",
+        "AI API integration: OpenAI, Cohere, Claude, Google Gemini",
+        "Finance platforms: XERO, MYOB, Accello, Unleashed",
+        "Project management: ClickUp, Jira, Monday.com, Trello",
+        "Documents: Adobe API, Google Suite"
+      ]
+    },
+    {
+      "name": "Armed Forces of Ukraine",
+      "location": "Ukraine",
+      "position": "Supply Unit Chief Coordinator"
+    },
+    {
+      "name": "EPAM Systems",
+      "location": "Kyiv",
+      "position": "Senior Software Engineer and Business Analyst",
+      "startDate": "2022-02",
+      "endDate": "2022-08"
+    },
+    {
+      "name": "Thomson Reuters",
+      "location": "Kyiv",
+      "position": "Business Analyst (via EPAM Systems outsourcing)",
+      "startDate": "2018-05",
+      "endDate": "2018-12",
+      "summary": "Business users interviewing and elicitation, backlog creation, technical writing, demo."
+    },
+    {
+      "name": "Canadian Tire Corporation",
+      "location": "Kyiv",
+      "position": "Business Analyst (via EPAM Systems outsourcing)",
+      "startDate": "2016-10",
+      "endDate": "2017-12",
+      "summary": "Collaborated with clients to gather requirements, analysed old IBM OS/360 code to reconstruct system logic, created user stories, communicated with developers and testers, presented results to clients, and contributed to Agile process improvements."
+    },
+    {
+      "name": "Barclays",
+      "location": "Kyiv",
+      "position": "Senior Database Developer, BI Analyst, Liquidity Risk (via EPAM Systems outstaffing)",
+      "startDate": "2012-08",
+      "endDate": "2016-10",
+      "highlights": [
+        "Liquidity & Treasury IT – Regulatory Reporting with SAP BO and Microsoft SQL Server",
+        "SSIS DWH management across multiple environments with SDLC automation",
+        "Team leadership using SCRUM techniques"
+      ]
+    },
+    {
+      "name": "GCM Global Energy PLC",
+      "location": "Kyiv",
+      "position": "Business Intelligence Consultant, Database Developer",
+      "startDate": "2011-03",
+      "endDate": "2013-07",
+      "summary": "Reporting for Azerbaijan Oil & Gas company.",
+      "highlights": [
+        "Budgeting / Forecasting / KPI reports for all stages from drilling to PnL",
+        "SAP Crystal Reports, SAP BO Dashboards, MS SQL DWH"
+      ]
+    },
+    {
+      "name": "Report Writing Services",
+      "location": "Kyiv",
+      "position": "Business Intelligence Consultant, Database Developer",
+      "startDate": "2010-07",
+      "endDate": "2012-07",
+      "highlights": [
+        "Developing budgeting, forecasting, financial, operational, controlling, payroll, and user management reports using Crystal Reports and SAP BO Dashboards",
+        "Designing and optimising MS SQL stored procedures and Oracle SQL routines for data extraction and transformation",
+        "Maintaining SAP BW Middleware and data warehouses (Oracle DWH, MS SQL DWH)",
+        "Enhancing report filtering and UX elements using JavaScript components (JQuery)",
+        "Tuning IBM WebSphere and JSP applications"
+      ]
+    },
+    {
+      "name": "Alfa Bank Ukraine",
+      "position": "Head of Consumer Finance and Personal Loan Development",
+      "startDate": "2007-09",
+      "endDate": "2008-11"
+    },
+    {
+      "name": "Forward Bank Ukraine",
+      "position": "Head of Credit Products",
+      "startDate": "2006-07",
+      "endDate": "2007-08"
+    },
+    {
+      "name": "UkrSibbank, BNP Paribas Group",
+      "position": "Head of Card Products and Co-Brand Programs Development",
+      "startDate": "2004-07",
+      "endDate": "2006-07",
+      "summary": "Also worked as head of Card products reengineering team in SAP implementation project."
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "CF \"Sane Ukraine\"",
+      "position": "Cloud Administrator",
+      "startDate": "2023-08",
+      "summary": "Google Workspace and Microsoft Entra administration. Nonprofit licence management. User and domain management and provisioning."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Dnipropetrovs'kij Nacional'nij Universitet",
+      "area": "Applied Mathematics and Computer Science",
+      "studyType": "Master's degree",
+      "startDate": "1995-01",
+      "endDate": "2000-12",
+      "score": "Bachelor and short master's degree",
+      "courses": [
+        "Mathematical Modeling",
+        "Statistical Data Analysis",
+        "Probabilistic Models",
+        "Discrete Mathematics",
+        "Graph Theory",
+        "Combinatorics",
+        "Algorithm Design",
+        "Data Structures",
+        "Computational Finance"
+      ]
+    },
+    {
+      "institution": "Kyiv Institute of Modern Psychology and Psychotherapy",
+      "area": "Psychology",
+      "studyType": "Master's degree",
+      "startDate": "2014-01",
+      "endDate": "2017-12",
+      "score": "Bachelor and short Master's degree",
+      "courses": [
+        "Coaching",
+        "Personal Development",
+        "Conflict Management"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "API Integration",
+      "keywords": ["Make", "Zapier", "Appsmith", "ReTool"]
+    },
+    {
+      "name": "AI Platforms",
+      "keywords": ["OpenAI", "Cohere", "Claude", "Google Gemini"]
+    },
+    {
+      "name": "Finance SaaS",
+      "keywords": ["XERO", "MYOB", "Accello", "Unleashed"]
+    },
+    {
+      "name": "Project Management",
+      "keywords": ["ClickUp", "Jira", "Monday.com", "Trello"]
+    },
+    {
+      "name": "Documents & Productivity",
+      "keywords": ["Adobe API", "Google Suite"]
+    },
+    {
+      "name": "Database & BI",
+      "keywords": ["MS SQL Server", "Oracle SQL", "SSIS", "SAP BO", "SAP Crystal Reports", "SAP BW"]
+    },
+    {
+      "name": "Cloud Administration",
+      "keywords": ["Google Workspace", "Microsoft Entra"]
+    },
+    {
+      "name": "Methodologies",
+      "keywords": ["Scrum", "Agile", "SDLC"]
+    },
+    {
+      "name": "Web Technologies",
+      "keywords": ["JavaScript", "JQuery", "IBM WebSphere", "JSP"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Full professional proficiency"
+    },
+    {
+      "language": "Norwegian",
+      "fluency": "A2"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Outdoor Activities",
+      "keywords": ["Snorkeling", "Hiking", "Cycling"]
+    },
+    {
+      "name": "Performing Arts",
+      "keywords": ["Amateur Theatre", "Choir"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Nina Lind",
+      "reference": "Daglig leder i Stavanger Frelsesarmeens. Phone: +47 905 90 990"
+    },
+    {
+      "name": "Lene Berg Mathiesen",
+      "reference": "Landlord, Randaberg. Phone: +47 416 95 305"
+    },
+    {
+      "name": "Andrii Rudniev",
+      "reference": "Socialfaglig medarbejder, Randaberg Kommune. Phone: +47 966 68 861"
+    },
+    {
+      "name": "Dmytro Bukhantsov",
+      "reference": "Senior Consultant at PSA Consulting, Oslo. Colleague from Barclays Capital project. LinkedIn: https://www.linkedin.com/in/bukhantsov/"
+    },
+    {
+      "name": "Dr. Ihor Luzhansky",
+      "reference": "Commander in army service, owner at 42Flows.tech. Phone: +380 96 448 80 46"
+    },
+    {
+      "name": "Anton Sydorenko",
+      "reference": "Business analyst, colleague from Canadian Tire project. Phone: +356 77 15 85 58"
+    }
+  ]
+}
