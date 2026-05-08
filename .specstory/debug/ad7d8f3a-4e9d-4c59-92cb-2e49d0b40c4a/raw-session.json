@@ -1,0 +1,65 @@
+{
+  "host": "",
+  "sessionId": "ad7d8f3a-4e9d-4c59-92cb-2e49d0b40c4a",
+  "version": 3,
+  "requesterUsername": "",
+  "responderUsername": "",
+  "creationDate": 1778228173361,
+  "lastMessageDate": 0,
+  "initialLocation": "panel",
+  "isImported": false,
+  "requests": [
+    {
+      "requestId": "request_5d8eb964-1313-4a94-9359-bfb16882e07a",
+      "timestamp": 1778228216642,
+      "message": {
+        "text": "relogin me in git, gh cli and az cli",
+        "parts": [
+          {
+            "kind": "text"
+          }
+        ]
+      },
+      "response": [
+        {
+          "didStartServerIds": [],
+          "kind": "mcpServersStarting"
+        }
+      ],
+      "result": {
+        "metadata": {},
+        "timings": {
+          "firstProgress": 0,
+          "totalElapsed": 0
+        }
+      },
+      "modelId": "copilot/claude-sonnet-4.5"
+    },
+    {
+      "requestId": "request_a01dc656-4872-4336-b8f2-209d569cfe0e",
+      "timestamp": 1778228252860,
+      "message": {
+        "text": "relogin me in git, gh cli and az cli",
+        "parts": [
+          {
+            "kind": "text"
+          }
+        ]
+      },
+      "response": [
+        {
+          "didStartServerIds": [],
+          "kind": "mcpServersStarting"
+        }
+      ],
+      "result": {
+        "metadata": {},
+        "timings": {
+          "firstProgress": 0,
+          "totalElapsed": 0
+        }
+      },
+      "modelId": "copilot/claude-sonnet-4.5"
+    }
+  ]
+}
