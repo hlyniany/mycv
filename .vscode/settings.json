@@ -3,5 +3,14 @@
         "gh": true,
         "git remote": true
     },
-    "specstory.cloudSync.enabled": "never"
+    "specstory.cloudSync.enabled": "never",
+    "chat.mcp.serverSampling": {
+        "mycv/.vscode/mcp.json: make-mcp": {
+            "allowedModels": [
+                "copilot/auto",
+                "copilotcli/claude-haiku-4.5",
+                "copilot/claude-haiku-4.5"
+            ]
+        }
+    }
 }
