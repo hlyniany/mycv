@@ -189,7 +189,7 @@ async function handleAnalyze(request, env) {
     );
   }
   
-  const { jobDescription, language = 'en' } = body;
+  const { jobDescription } = body;
   
   // Input validation
   if (!jobDescription || typeof jobDescription !== 'string') {
@@ -213,13 +213,6 @@ async function handleAnalyze(request, env) {
     );
   }
   
-  if (!['en', 'ua'].includes(language)) {
-    return new Response(
-      JSON.stringify({ error: 'Language must be "en" or "ua"' }),
-      { status: 400, headers: { 'Content-Type': 'application/json' } }
-    );
-  }
-  
   try {
     // Fetch CV JSON from GitHub Pages
     const cvResponse = await fetch(env.CV_JSON_URL);
@@ -229,18 +222,16 @@ async function handleAnalyze(request, env) {
     const cvData = await cvResponse.json();
     
     // Build complete prompt
-    const promptTemplate = PROMPTS[language];
-    const fullPrompt = `${promptTemplate}\n${jobDescription}\n\n**Resume Data (JSON):**\n${JSON.stringify(cvData, null, 2)}`;
+    const fullPrompt = `${PROMPT_TEMPLATE}\n${jobDescription}\n\n**Resume Data (JSON):**\n${JSON.stringify(cvData, null, 2)}`;
     
     // Call Azure OpenAI
-    console.log(`Analyzing job description (${language}) for IP: ${clientIP}`);
+    console.log(`Analyzing job description for IP: ${clientIP}`);
     const analysis = await callAzureOpenAI(fullPrompt, env);
     
     return new Response(
       JSON.stringify({ 
         success: true, 
-        analysis,
-        language 
+        analysis
       }),
       { 
         status: 200,
