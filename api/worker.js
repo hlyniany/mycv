@@ -1,84 +1,9 @@
 /**
  * Cloudflare Worker for CV Analysis with Azure OpenAI
  * 
- * Provides secure proxy for OpenAI API calls from static GitHub Pages site
- * Uses Azure OpenAI Service (GPT-55 model)
+ * Secure proxy for OpenAI API calls from static GitHub Pages site
+ * Uses Azure OpenAI Service (GPT-5.5 model)
  */
-
-// Embedded prompt templates from data/hrprompt.md
-const PROMPTS = {
-  en: `You are an expert technical recruiter assistant and resume analyst.
-
-I will provide you with:
-1. A JSON Resume (fetched from URL below)
-2. A job description (I will paste it after this prompt)
-
-**Resume JSON URL:** https://hlyniany.github.io/mycv/cv.resume.json
-
-**Your task:**
-1. Fetch and parse the JSON Resume from the URL above
-2. Read the job description I paste below
-3. Analyze the match between the candidate's profile and the role
-4. Output a structured report:
-
----
-## Match Analysis
-
-### ✅ Strong matches
-[Skills, experience, keywords that directly align]
-
-### ⚠️ Partial matches
-[Areas where candidate has adjacent but not exact experience]
-
-### ❌ Gaps
-[Requirements not covered by the resume]
-
-### 🏆 Overall fit score
-[X/10 with one-sentence rationale]
-
-### 💬 Suggested talking points for screening call
-[3–5 specific questions based on gaps or ambiguities]
-
----
-
-**Job description:**`,
-
-  ua: `Ти — експерт з технічного рекрутингу та аналізу резюме.
-
-Я надам тобі:
-1. JSON Resume (за URL нижче)
-2. Опис вакансії (вставлю після цього промту)
-
-**URL резюме у форматі JSON:** https://hlyniany.github.io/mycv/cv.resume.json
-
-**Твоє завдання:**
-1. Завантажити та розпарсити JSON Resume за вказаним URL
-2. Прочитати опис вакансії, який я вставлю нижче
-3. Проаналізувати відповідність профілю кандидата та вимог ролі
-4. Сформувати структурований звіт:
-
----
-## Аналіз відповідності
-
-### ✅ Сильні збіги
-[Навички, досвід, ключові слова, які прямо відповідають вимогам]
-
-### ⚠️ Часткові збіги
-[Сфери, де кандидат має суміжний, але не точний досвід]
-
-### ❌ Прогалини
-[Вимоги, які не покриті резюме]
-
-### 🏆 Загальна оцінка відповідності
-[X/10 з одним реченням обґрунтування]
-
-### 💬 Рекомендовані питання для скринінгового дзвінка
-[3–5 конкретних питань на основі прогалин або неоднозначностей]
-
----
-
-**Опис вакансії:**`
-};
 
 // Simple in-memory rate limiting
 // Note: Resets on worker restart, but good enough for MVP
@@ -189,26 +114,19 @@ async function handleAnalyze(request, env) {
     );
   }
   
-  const { jobDescription } = body;
+  const { prompt } = body;
   
   // Input validation
-  if (!jobDescription || typeof jobDescription !== 'string') {
+  if (!prompt || typeof prompt !== 'string') {
     return new Response(
-      JSON.stringify({ error: 'jobDescription is required and must be a string' }),
+      JSON.stringify({ error: 'prompt is required and must be a string' }),
       { status: 400, headers: { 'Content-Type': 'application/json' } }
     );
   }
   
-  if (jobDescription.trim().length < 50) {
+  if (prompt.length > 50000) {
     return new Response(
-      JSON.stringify({ error: 'Job description too short (minimum 50 characters)' }),
-      { status: 400, headers: { 'Content-Type': 'application/json' } }
-    );
-  }
-  
-  if (jobDescription.length > 10000) {
-    return new Response(
-      JSON.stringify({ error: 'Job description too long (maximum 10000 characters)' }),
+      JSON.stringify({ error: 'Prompt too long (maximum 50000 characters)' }),
       { status: 400, headers: { 'Content-Type': 'application/json' } }
     );
   }
@@ -221,11 +139,11 @@ async function handleAnalyze(request, env) {
     }
     const cvData = await cvResponse.json();
     
-    // Build complete prompt
-    const fullPrompt = `${PROMPT_TEMPLATE}\n${jobDescription}\n\n**Resume Data (JSON):**\n${JSON.stringify(cvData, null, 2)}`;
+    // Build complete prompt with CV data
+    const fullPrompt = `${prompt}\n\n**Resume Data (JSON):**\n${JSON.stringify(cvData, null, 2)}`;
     
     // Call Azure OpenAI
-    console.log(`Analyzing job description for IP: ${clientIP}`);
+    console.log(`Analyzing CV match for IP: ${clientIP}`);
     const analysis = await callAzureOpenAI(fullPrompt, env);
     
     return new Response(

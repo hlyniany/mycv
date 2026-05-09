@@ -325,7 +325,7 @@
                     id="api-endpoint" 
                     class="config-input" 
                     placeholder="https://mycv-api.YOUR-SUBDOMAIN.workers.dev/api/analyze"
-                    value=""
+                    value="https://mycv-api.losskot.workers.dev/api/analyze"
                 >
                 <div class="config-hint">
                     Enter your deployed Cloudflare Worker URL. Leave empty to test locally (http://localhost:8787/api/analyze)
@@ -451,6 +451,9 @@ I will provide you with:
             resultsDiv.classList.remove('show', 'error');
 
             try {
+                // Build complete prompt
+                const fullPrompt = `${PROMPT}\n${jobDescription}`;
+
                 // Call the API
                 const response = await fetch(apiEndpoint, {
                     method: 'POST',
@@ -458,7 +461,7 @@ I will provide you with:
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        jobDescription: jobDescription
+                        prompt: fullPrompt
                     })
                 });
 
