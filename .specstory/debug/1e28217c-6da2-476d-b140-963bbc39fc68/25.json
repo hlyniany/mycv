@@ -1,0 +1,33 @@
+{
+  "cwd": "/Users/vitaliy/Documents/GitHub/mycv",
+  "entrypoint": "claude-vscode",
+  "gitBranch": "main",
+  "isSidechain": false,
+  "message": {
+    "content": [
+      {
+        "content": "Done",
+        "is_error": false,
+        "tool_use_id": "toolu_014zTAexPAf8ZotoR3J9sjTH",
+        "type": "tool_result"
+      }
+    ],
+    "role": "user"
+  },
+  "parentUuid": "a23c37c3-bb6f-4fcb-b3db-239989166090",
+  "promptId": "bd3fab59-3dfa-40fd-b044-e29b291638fe",
+  "sessionId": "1e28217c-6da2-476d-b140-963bbc39fc68",
+  "sourceToolAssistantUUID": "a23c37c3-bb6f-4fcb-b3db-239989166090",
+  "timestamp": "2026-05-09T22:25:25.239Z",
+  "toolUseResult": {
+    "interrupted": false,
+    "isImage": false,
+    "noOutputExpected": false,
+    "stderr": "",
+    "stdout": "Done"
+  },
+  "type": "user",
+  "userType": "external",
+  "uuid": "734356db-4a2a-4b44-a227-9bb5d2502c2a",
+  "version": "2.1.138"
+}

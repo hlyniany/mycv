@@ -14,16 +14,216 @@
         a {
             font-family: Arial, Helvetica, sans-serif !important;
         }
+
+        /* ── Recruiter Banner ── */
+        @media print {
+            #recruiter-banner, #banner-spacer { display: none !important; }
+        }
+
+        #recruiter-banner {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 9999;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        #banner-strip {
+            background: rgba(255,255,255,0.88);
+            backdrop-filter: blur(20px) saturate(160%);
+            -webkit-backdrop-filter: blur(20px) saturate(160%);
+            border-bottom: 1px solid rgba(0,0,0,0.07);
+            box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+            height: 40px;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: default;
+            user-select: none;
+        }
+
+        #banner-cta {
+            font-size: 12.5px;
+            font-weight: 500;
+            color: #6366f1;
+            letter-spacing: 0.2px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.15s;
+        }
+        #recruiter-banner:hover #banner-cta { color: #4f46e5; }
+
+        #banner-chevron {
+            position: absolute;
+            right: 22px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: #94a3b8;
+            line-height: 1;
+            transition: transform 0.22s cubic-bezier(0.16,1,0.3,1), color 0.15s;
+        }
+        #recruiter-banner:hover #banner-chevron {
+            transform: translateY(-50%) rotate(180deg);
+            color: #6366f1;
+        }
+
+        #banner-panel {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(20px) saturate(160%);
+            -webkit-backdrop-filter: blur(20px) saturate(160%);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.24s cubic-bezier(0.16,1,0.3,1);
+            border-bottom: 1px solid rgba(0,0,0,0.07);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+        }
+        #recruiter-banner:hover #banner-panel { max-height: 33vh; }
+
+        #banner-inner {
+            padding: 12px 24px 14px;
+            height: calc(33vh - 26px);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-sizing: border-box;
+        }
+
+        #banner-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            flex-shrink: 0;
+        }
+
+        .blang-btn {
+            background: transparent;
+            border: 1px solid #cbd5e1;
+            color: #64748b;
+            padding: 3px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 10.5px;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            transition: border-color 0.12s, color 0.12s, background 0.12s;
+            font-family: inherit;
+        }
+        .blang-btn:hover { border-color: #6366f1; color: #6366f1; }
+        .blang-btn.active { background: #6366f1; border-color: #6366f1; color: #fff; }
+
+        #banner-copy-btn {
+            margin-left: auto;
+            background: transparent;
+            border: 1px solid #cbd5e1;
+            color: #64748b;
+            padding: 4px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: border-color 0.12s, color 0.12s, background 0.12s;
+            font-family: inherit;
+        }
+        #banner-copy-btn:hover { border-color: #6366f1; color: #6366f1; }
+        #banner-copy-btn.copied { border-color: #16a34a; color: #16a34a; }
+
+        #banner-prompt-area {
+            flex: 1;
+            overflow-y: auto;
+            font-size: 11px;
+            line-height: 1.62;
+            white-space: pre-wrap;
+            font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 10px 14px;
+            color: #475569;
+            scrollbar-width: thin;
+            scrollbar-color: #cbd5e1 transparent;
+        }
+        #banner-prompt-area::-webkit-scrollbar { width: 3px; }
+        #banner-prompt-area::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
+
+        #banner-spacer {
+            height: 40px;
+            transition: height 0.24s cubic-bezier(0.16,1,0.3,1);
+        }
+        #recruiter-banner:hover + #banner-spacer { height: calc(40px + 33vh); }
     </style>
 </head>
 
 <body style="font-family: Arial, sans-serif; font-size: 14px; color: #000; line-height: 1.4; margin: 0; padding: 20px;">
 
+    <!-- ── Recruiter Banner ── -->
+    <div id="recruiter-banner">
+        <div id="banner-strip">
+            <span id="banner-cta">▸ Analyze with AI</span>
+            <span id="banner-chevron">⌄</span>
+        </div>
+        <div id="banner-panel">
+            <div id="banner-inner">
+                <div id="banner-toolbar">
+                    <button class="blang-btn active" id="bbtn-en" onclick="bannerSetLang('en')">EN</button>
+                    <button class="blang-btn" id="bbtn-ua" onclick="bannerSetLang('ua')">UA</button>
+                    <button id="banner-copy-btn" onclick="bannerCopy()">
+                        <span id="banner-copy-icon">📋</span>
+                        <span id="banner-copy-text">Copy prompt</span>
+                    </button>
+                </div>
+                <div id="banner-prompt-area"></div>
+            </div>
+        </div>
+    </div>
+    <div id="banner-spacer"></div>
+
+    <script>
+    (function () {
+        var RESUME_URL = 'https://hlyniany.github.io/mycv/cv.resume.json';
+        var PROMPTS = {
+            en: 'You are an expert technical recruiter assistant and resume analyst.\n\nI will provide you with:\n1. A JSON Resume (fetched from URL below)\n2. A job description (I will paste it after this prompt)\n\n**Resume JSON URL:** ' + RESUME_URL + '\n\n**Your task:**\n1. Fetch and parse the JSON Resume from the URL above\n2. Read the job description I paste below\n3. Analyze the match between the candidate\'s profile and the role\n4. Output a structured report:\n\n---\n## Match Analysis\n\n### ✅ Strong matches\n[Skills, experience, keywords that directly align]\n\n### ⚠️ Partial matches\n[Areas where candidate has adjacent but not exact experience]\n\n### ❌ Gaps\n[Requirements not covered by the resume]\n\n### 🏆 Overall fit score\n[X/10 with one-sentence rationale]\n\n### 💬 Suggested talking points for screening call\n[3–5 specific questions based on gaps or ambiguities]\n\n---\n\n**Job description:**\n[PASTE JOB DESCRIPTION HERE]',
+            ua: 'Ти — експерт з технічного рекрутингу та аналізу резюме.\n\nЯ надам тобі:\n1. JSON Resume (за URL нижче)\n2. Опис вакансії (вставлю після цього промту)\n\n**URL резюме у форматі JSON:** ' + RESUME_URL + '\n\n**Твоє завдання:**\n1. Завантажити та розпарсити JSON Resume за вказаним URL\n2. Прочитати опис вакансії, який я вставлю нижче\n3. Проаналізувати відповідність профілю кандидата та вимог ролі\n4. Сформувати структурований звіт:\n\n---\n## Аналіз відповідності\n\n### ✅ Сильні збіги\n[Навички, досвід, ключові слова, які прямо відповідають вимогам]\n\n### ⚠️ Часткові збіги\n[Сфери, де кандидат має суміжний, але не точний досвід]\n\n### ❌ Прогалини\n[Вимоги, які не покриті резюме]\n\n### 🏆 Загальна оцінка відповідності\n[X/10 з одним реченням обґрунтування]\n\n### 💬 Рекомендовані питання для скринінгового дзвінка\n[3–5 конкретних питань на основі прогалин або неоднозначностей]\n\n---\n\n**Опис вакансії:**\n[ВСТАВТЕ ОПИС ВАКАНСІЇ ТУТ]'
+        };
+        var currentLang = 'en';
+
+        document.getElementById('banner-prompt-area').textContent = PROMPTS['en'];
+
+        window.bannerSetLang = function (lang) {
+            currentLang = lang;
+            document.getElementById('banner-prompt-area').textContent = PROMPTS[lang];
+            document.getElementById('bbtn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('bbtn-ua').classList.toggle('active', lang === 'ua');
+        };
+
+        window.bannerCopy = function () {
+            var icon = document.getElementById('banner-copy-icon');
+            var text = document.getElementById('banner-copy-text');
+            var btn  = document.getElementById('banner-copy-btn');
+            navigator.clipboard.writeText(PROMPTS[currentLang]).then(function () {
+                btn.classList.add('copied');
+                icon.textContent = '✓';
+                text.textContent = 'Copied!';
+                setTimeout(function () {
+                    btn.classList.remove('copied');
+                    icon.textContent = '📋';
+                    text.textContent = 'Copy prompt';
+                }, 2200);
+            });
+        };
+    })();
+    </script>
+
     <!-- Header -->
     <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
         <div style="flex: 1;">
             <h1 style="font-size: 32px; font-weight: bold; margin: 0;">Vitaliy Hlynianyi-Zhuk</h1>
-            <p style="font-size: 18px; margin: 5px 0 0 0;">API low-code integration engineer, Database developer, Business-Analyst, Scrum-master.</p>
+            <p style="font-size: 18px; margin: 5px 0 0 0;">AI Integration Engineer · Azure Cloud · Low-code Automation · Business Analyst · Scrum Master</p>
         </div>
         <div style="flex: 0 0 300px; background-color: #f0f0f0; padding: 15px;">
             <p style="margin: 5px 0;"><strong>Phone:</strong> 46216692</p>
@@ -42,56 +242,103 @@
         </div>
         <div style="flex: 0 0 1px; background-color: #ccc;"></div>
         <div style="flex: 1; padding-left: 15px;">
+
+            <!-- Epic Flooring -->
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="font-size: 16px; font-weight: bold; margin: 0;">Epic Flooring, Australia</h3>
+                    <p style="font-style: italic; margin: 0; color: #666;">October 2025 - Present</p>
+                </div>
+                <p style="font-style: italic; margin: 5px 0 0 0;">Freelance Developer</p>
+                <ul style="margin: 5px 0 0 20px; padding: 0; list-style-type: disc;">
+                    <li>Built a Missive email client CRM add-on from scratch using GitHub Copilot, enabling job tracking without context switching for a commercial flooring business.</li>
+                    <li>Designed full data pipeline: ClickUp API, Google Drive, Xero, Google Sheets → Azure Functions (Python) → Supabase (PostgreSQL) → Vanilla JS frontend embedded in Missive.</li>
+                    <li>Deployed on Azure Static Web Apps with GitHub Actions CI/CD; covers job status, document revisions, purchase orders, and tender tracking.</li>
+                </ul>
+            </div>
+
+            <!-- Stavanger kommune -->
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="font-size: 16px; font-weight: bold; margin: 0;">Stavanger kommune, Norway</h3>
+                    <p style="font-style: italic; margin: 0; color: #666;">August 2025 - April 2026</p>
+                </div>
+                <p style="font-style: italic; margin: 5px 0 0 0;">Engineering Intern</p>
+                <ul style="margin: 5px 0 0 20px; padding: 0; list-style-type: disc;">
+                    <li>Internship at Stavanger municipality. Integration and automation using Workato and Power Automate. Python unit testing with AI assistance. Projects related to HR systems.</li>
+                </ul>
+            </div>
+
             <!-- CF "Sane Ukraine" -->
             <div style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <h3 style="font-size: 16px; font-weight: bold; margin: 0;">CF "Sane Ukraine"</h3>
-                    <p style="font-style: italic; margin: 0; color: #666;">August 2023 - Present</p>
+                    <p style="font-style: italic; margin: 0; color: #666;">August 2023 - September 2025</p>
                 </div>
                 <p style="font-style: italic; margin: 5px 0 0 0;">Cloud Administrator (volunteer)</p>
                 <ul style="margin: 5px 0 0 20px; padding: 0; list-style-type: disc;">
-                    <li>Volunteering role in Ukrainian charity fund. Google Workspace and Microsoft Entra administration. Nonprofit licence management. User and domain management and provisioning.</li>
+                    <li>Volunteering role in Ukrainian charity fund. Google Workspace and Google Cloud administration. Microsoft Entra, Microsoft Azure (Azure CLI) administration. AI Foundry models deployment. Nonprofit licence management. User and domain management and provisioning.</li>
                 </ul>
             </div>
+
             <!-- Flying Donkey IT -->
             <div style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <h3 style="font-size: 16px; font-weight: bold; margin: 0;">Flying Donkey IT, Kyiv</h3>
-                    <p style="font-style: italic; margin: 0; color: #666;">August 2021 - December 2023</p>
+                    <p style="font-style: italic; margin: 0; color: #666;">August 2021 - Present</p>
                 </div>
                 <p style="font-style: italic; margin: 5px 0 0 0;">API integration engineer</p>
                 <ul style="margin: 5px 0 0 20px; padding: 0; list-style-type: disc;">
                     <li>SaaS platforms integration for various businesses: Energy, Real Estate, Construction, Finance, IT.</li>
-                    <li>Automation with no-code \ low-code tools – Make, Zapier, Appsmith, ReTool</li>
-                    <li>SAAS platforms:
+                    <li>Automation (no-code/low-code): Make.com, Zapier, Appsmith, ReTool; custom HTTP OAuth 2.0 integrations</li>
+                    <li>API integrations:
                         <ul style="list-style-type: circle; margin: 5px 0 0 20px; padding: 0;">
-                            <li>AI API integration: Open AI, Cohere, Claude, Google Gemini</li>
-                            <li>Finance: XERO, MYOB, Accello, Unleashed</li>
-                            <li>Project management: ClickUp, Jira, Monday.com, Trello</li>
-                            <li>Documents: Adobe API, Google Suite</li>
+                            <li>AI &amp; ML: OpenAI, Cohere, Claude, Google Gemini, Google Cloud Vision</li>
+                            <li>Finance &amp; ERP: Xero, MYOB, Accello, Unleashed, ActiveCampaign</li>
+                            <li>CRM &amp; Identity: HubSpot CRM, Okta</li>
+                            <li>Field Service: ServiceM8, FastField</li>
+                            <li>Project Management: ClickUp, Jira, Monday.com, Trello</li>
+                            <li>Communication: Slack, Missive, Dialpad, Microsoft SMTP/IMAP</li>
+                            <li>Documents &amp; Signing: Adobe Sign, eSignatures.io, PDF.co, Aspose, APITemplate.io, Google Drive</li>
+                            <li>Cloud &amp; Storage: Azure, AWS, Azure DevOps, GitHub, Supabase, Dropbox</li>
+                            <li>Databases: MS SQL Server, MySQL</li>
+                            <li>Web/Data: HasData (web scraping)</li>
                         </ul>
                     </li>
+                    <li>POC: PDF form recognition using Microsoft Document Intelligence and GPT-4.5, replacing legacy ABBYY FineReader OCR (July 2025).</li>
                 </ul>
             </div>
+
             <!-- Armed Forces of Ukraine -->
             <div style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <h3 style="font-size: 16px; font-weight: bold; margin: 0;">Armed Forces of Ukraine, Ukraine</h3>
-                    <p style="font-style: italic; margin: 0; color: #666;">Supply unit chief coordinator</p>
+                    <p style="font-style: italic; margin: 0; color: #666;">February 2022 - August 2022</p>
                 </div>
+                <p style="font-style: italic; margin: 5px 0 0 0;">Supply unit chief coordinator</p>
             </div>
+
+            <!-- Listeninghour.org -->
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="font-size: 16px; font-weight: bold; margin: 0;">Listeninghour.org</h3>
+                    <p style="font-style: italic; margin: 0; color: #666;">February 2020 - February 2022</p>
+                </div>
+                <p style="font-style: italic; margin: 5px 0 0 0;">Portal Developer</p>
+                <ul style="margin: 5px 0 0 20px; padding: 0; list-style-type: disc;">
+                    <li>Created back-office portal for international school listeninghour.org: user self-registration, online training course workflow, electronic certification issuing, and membership fees management. Tools: Wix, Make.com, Airtable, SignRequest.</li>
+                </ul>
+            </div>
+
             <!-- EPAM Systems -->
             <div style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <h3 style="font-size: 16px; font-weight: bold; margin: 0;">EPAM Systems, Kyiv</h3>
-                    <p style="font-style: italic; margin: 0; color: #666;">February 2022 - August 2022</p>
+                    <p style="font-style: italic; margin: 0; color: #666;">August 2012 - December 2018</p>
                 </div>
-                <p style="font-style: italic; margin: 5px 0 0 0;">Senior Software Engineer and Business Analyst</p>
+                <p style="font-style: italic; margin: 5px 0 0 0;">Outstaffing and outsourcing: Barclays Capital, Canadian Tire, Thomson Reuters</p>
             </div>
-            <!-- Outstaffing positions -->
-            <div style="margin-bottom: 20px;">
-                <p style="margin: 0 0 5px 0;">August 2012 - December 2018: Outstaffing and outsourcing positions at Barclays Capital, Canadian Tire, Thomson Reuters (details below)</p>
-            </div>
+
             <!-- Thomson Reuters -->
             <div style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -101,6 +348,7 @@
                 <p style="font-style: italic; margin: 5px 0 0 0;">Business Analyst (via EPAM Systems outsourcing)</p>
                 <p style="margin: 5px 0;">Business users interviewing and elicitation, backlog creation, technical writing, demo.</p>
             </div>
+
             <!-- Canadian Tire Corporation -->
             <div style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -108,9 +356,9 @@
                     <p style="font-style: italic; margin: 0; color: #666;">October 2016 - December 2017</p>
                 </div>
                 <p style="font-style: italic; margin: 5px 0 0 0;">Business Analyst (via EPAM Systems outsourcing)</p>
-
                 <p style="margin: 5px 0;">Collaborated with clients to gather requirements, analysed old IBM OS/360 code to reconstruct system logic, created user stories, communicated with developers and testers, presented results to clients, and contributed to Agile process improvements.</p>
             </div>
+
             <!-- Barclays -->
             <div style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -124,6 +372,7 @@
                     <li>Team leadership using the SCRUM techniques</li>
                 </ul>
             </div>
+
             <!-- GCM GLOBAL ENERGY PLC -->
             <div style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -137,6 +386,7 @@
                     <li>SAP Crystal Reports, SAP BO Dashboards, MS SQL DWH</li>
                 </ul>
             </div>
+
             <!-- Report Writing Services -->
             <div style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -152,6 +402,7 @@
                     <li>Tuning IBM WebSphere and JSP applications</li>
                 </ul>
             </div>
+
             <!-- Alfa Bank Ukraine -->
             <div style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -160,6 +411,7 @@
                 </div>
                 <p style="font-style: italic; margin: 5px 0 0 0;">Head of consumer finance and personal loan development</p>
             </div>
+
             <!-- Forward Bank Ukraine -->
             <div style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -168,6 +420,7 @@
                 </div>
                 <p style="font-style: italic; margin: 5px 0 0 0;">Head of credit products</p>
             </div>
+
             <!-- UkrSibbank, BNP Paribas Group -->
             <div style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -177,9 +430,55 @@
                 <p style="font-style: italic; margin: 5px 0 0 0;">Head of Card Products and Co-Brand programs development</p>
                 <p style="margin: 5px 0;">Also worked as head of Card products reengineering team in SAP implementation project</p>
             </div>
-            <!-- Interpipe group -->
+
         </div>
     </div>
+
+    <!-- PROJECTS -->
+    <div style="display: flex; margin-bottom: 40px;">
+        <div style="flex: 0 0 100px; padding-right: 15px;">
+            <p style="font-style: italic; margin: 0; font-size: 16px;">PROJECTS</p>
+        </div>
+        <div style="flex: 0 0 1px; background-color: #ccc;"></div>
+        <div style="flex: 1; padding-left: 15px;">
+            <!-- Home Assistant Green -->
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="font-size: 16px; font-weight: bold; margin: 0;">Home Assistant Green — Smart Home (pet project)</h3>
+                    <p style="font-style: italic; margin: 0; color: #666;">2026</p>
+                </div>
+                <ul style="margin: 5px 0 0 20px; padding: 0; list-style-type: disc;">
+                    <li>Self-hosted Home Assistant Green hub exposed to the internet via Cloudflare Tunnel (Zero Trust), connected to Android companion app without port forwarding.</li>
+                    <li>Cross-compiled PhotoRec (CGSecurity open-source file recovery utility) for Home Assistant OS (aarch64) using a temporary Azure Linux VM provisioned and scripted with GitHub Copilot.</li>
+                </ul>
+            </div>
+
+            <!-- Telegram MCP Server -->
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="font-size: 16px; font-weight: bold; margin: 0;">Telegram MCP Server on Azure (pet project)</h3>
+                    <p style="font-style: italic; margin: 0; color: #666;">2026</p>
+                </div>
+                <ul style="margin: 5px 0 0 20px; padding: 0; list-style-type: disc;">
+                    <li>Forked fast-mcp-telegram, customised and deployed on Azure Linux VM, added OAuth, exposed via Cloudflare Tunnel, authored a Claude Skill to integrate the server with Claude AI.</li>
+                </ul>
+            </div>
+
+            <!-- VTT Voice Transcription App -->
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="font-size: 16px; font-weight: bold; margin: 0;">Voice-to-Text Transcription App (pet project)</h3>
+                    <p style="font-style: italic; margin: 0; color: #666;">2026</p>
+                </div>
+                <ul style="margin: 5px 0 0 20px; padding: 0; list-style-type: disc;">
+                    <li>Android app (Flutter/Dart) built with GitHub Copilot — transcribes voice messages shared from Telegram and WhatsApp.</li>
+                    <li>Benchmarked all available Azure AI Foundry speech-to-text models on Russian and English speech; selected best-performing engines across Azure AI Foundry, Azure Speech Services, and ElevenLabs.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
     <!-- EDUCATION -->
     <div style="display: flex; margin-bottom: 40px;">
         <div style="flex: 0 0 100px; padding-right: 15px;">
@@ -215,6 +514,17 @@
         </div>
     </div>
 
+    <!-- CERTIFICATIONS -->
+    <div style="display: flex; margin-bottom: 40px;">
+        <div style="flex: 0 0 100px; padding-right: 15px;">
+            <p style="font-style: italic; margin: 0; font-size: 16px;">CERTIFICATIONS</p>
+        </div>
+        <div style="flex: 0 0 1px; background-color: #ccc;"></div>
+        <div style="flex: 1; padding-left: 15px;">
+            <p style="margin: 0;">Workato certified: Automation Pro I, Automation Pro II, Advanced Data Transformations, Error Troubleshooting, Recipe Lifecycle Management.</p>
+        </div>
+    </div>
+
     <!-- HOBBIES -->
     <div style="display: flex; margin-bottom: 40px;">
         <div style="flex: 0 0 100px; padding-right: 15px;">
@@ -229,31 +539,26 @@
     <!-- RECOMMENDATIONS -->
     <div style="display: flex; margin-bottom: 20px;">
         <div style="flex: 0 0 100px; padding-right: 15px;">
-
             <p style="font-style: italic; margin: 0; font-size: 16px;">RECOMMEN DATIONS</p>
         </div>
         <div style="flex: 0 0 1px; background-color: #ccc;"></div>
         <div style="flex: 1; padding-left: 15px;">
-            <h3 style="font-size: 16px; font-weight: bold; margin: 0;">Norwegian contacts</h3>
-            <p style="margin: 5px 0;">Nina Lind: Daglig leder i Stavanger Frelsesarmeens <a href="tel:+4790590990‬">+47 905 90 990</a></p>
-            <p style="margin: 5px 0;">Lene Berg Mathiesen: my landlord, Randaberg <a href="tel:+4741695305‬">+47 416 95 305</a></p>
-            <p style="margin: 5px 0;">Andrii Rudniev: Socialfaglig medarbejder, Randaberg Kommune ‪<a href="tel:+4796668861‬">+47 966 68 861</a>‬</p>
-            <p style="margin: 5px 0;">Dmytro Bukhantsov: Senior Consultant at PSA Consulting, Oslo, colleague by‪ Barclays Capital project ‪<a href="https://www.linkedin.com/in/bukhantsov/‬">https://www.linkedin.com/in/bukhantsov/</a>‬</p>
             <h3 style="font-size: 16px; font-weight: bold; margin: 0;">other contacts</h3>
-            <p style="margin: 5px 0;">Dr. Ihor Luzhansky: my commander in army service, owner at 42Flows.tech ‪<a href="tel:+380964488046‬">+380 96 448 80 46</a>
-            <p style="margin: 5px 0;">Anton Sydorenko: business analyst, colleague by‪ Canadian Tire project <a href="tel:++35677158558‬">+356 77 15 85 58</a>
+            <p style="margin: 5px 0;">Dr. Ihor Luzhansky: my commander in army service, owner at 42Flows.tech <a href="tel:+380964488046">+380 96 448 80 46</a></p>
+            <p style="margin: 5px 0;">Anton Sydorenko: business analyst, colleague by Canadian Tire project <a href="tel:+35677158558">+356 77 15 85 58</a></p>
         </div>
     </div>
 
-<!-- Updated CV link -->
-  <div style="margin-top: 20px;">
-    <p style="font-size: 0.75em; font-style: italic; margin: 0;">
-      You may find an updated version of this CV at 
-      <a href="https://hlyniany.github.io/mycv/" style="font-size: inherit; font-style: inherit; color: #0000EE; text-decoration: none;">
-        https://hlyniany.github.io/mycv/
-      </a>
-    </p>
-  </div>
+    <!-- Updated CV link -->
+    <div style="margin-top: 20px;">
+        <p style="font-size: 0.75em; font-style: italic; margin: 0;">
+            You may find an updated version of this CV at
+            <a href="https://hlyniany.github.io/mycv/" style="font-size: inherit; font-style: inherit; color: #0000EE; text-decoration: none;">
+                https://hlyniany.github.io/mycv/
+            </a>
+        </p>
+    </div>
+
 </body>
 
 </html>

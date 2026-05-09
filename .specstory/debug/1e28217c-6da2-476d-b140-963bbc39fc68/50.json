@@ -1,0 +1,73 @@
+{
+  "agentId": "a6c52c4c85a156607",
+  "attributionAgent": "Explore",
+  "cwd": "/Users/vitaliy/Documents/GitHub/mycv",
+  "entrypoint": "claude-vscode",
+  "gitBranch": "main",
+  "isSidechain": true,
+  "message": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01FUU3Bf8F9hDyfrp9Lb51Se",
+        "input": {
+          "format": "markdown",
+          "urls": [
+            "https://exclusiveaddons.com/glassmorphism-css-tutorial/",
+            "https://www.joshwcomeau.com/css/backdrop-filter/",
+            "https://freefrontend.com/css-backdrop-filter-examples/"
+          ]
+        },
+        "name": "mcp__claude_ai_Tavily_2__tavily_extract",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_013QXFz6iP2xCxJrNnyfpkR5",
+    "model": "claude-haiku-4-5-20251001",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "tool_use",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 8723
+      },
+      "cache_creation_input_tokens": 8723,
+      "cache_read_input_tokens": 121451,
+      "inference_geo": "",
+      "input_tokens": 7,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 8723
+          },
+          "cache_creation_input_tokens": 8723,
+          "cache_read_input_tokens": 121451,
+          "input_tokens": 7,
+          "output_tokens": 153,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 153,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "parentUuid": "b88eafb0-d769-4d79-8a4e-f191ce966adc",
+  "requestId": "req_011CasnkVSvXqCL7vjh6sgSG",
+  "sessionId": "1e28217c-6da2-476d-b140-963bbc39fc68",
+  "timestamp": "2026-05-09T22:32:48.856Z",
+  "type": "assistant",
+  "userType": "external",
+  "uuid": "086cbc8e-47ef-4506-8cae-99581bd1b5ab",
+  "version": "2.1.138"
+}
