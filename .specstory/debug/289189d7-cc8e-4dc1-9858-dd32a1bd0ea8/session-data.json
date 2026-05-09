@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "provider": {
+    "id": "copilotide",
+    "name": "VS Code Copilot IDE",
+    "version": "1.0"
+  },
+  "sessionId": "289189d7-cc8e-4dc1-9858-dd32a1bd0ea8",
+  "createdAt": "2026-05-09T23:26:39+02:00",
+  "updatedAt": "1970-01-01T01:00:00+01:00",
+  "slug": "untitled",
+  "workspaceRoot": "/Users/vitaliy/Documents/GitHub/mycv",
+  "exchanges": null
+}

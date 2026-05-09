@@ -1,0 +1,28 @@
+{
+  "cwd": "/Users/vitaliy/Documents/GitHub/mycv",
+  "entrypoint": "claude-vscode",
+  "gitBranch": "main",
+  "isSidechain": false,
+  "message": {
+    "content": [
+      {
+        "text": "\u003cide_selection\u003eThe user selected the lines 1 to 76 from /Users/vitaliy/Documents/GitHub/mycv/data/hrprompt.md:\n--en\nYou are an expert technical recruiter assistant and resume analyst.\n\nI will provide you with:\n1. A JSON Resume (fetched from URL below)\n2. A job description (I will paste it after this prompt)\n\n**Resume JSON URL:** https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO/resume.json\n\n**Your task:**\n1. Fetch and parse the JSON Resume from the URL above\n2. Read the job description I paste below\n3. Analyze the match between the candidate's profile and the role\n4. Output a structured report:\n\n---\n## Match Analysis\n\n### ✅ Strong matches\n[Skills, experience, keywords that directly align]\n\n### ⚠️ Partial matches\n[Areas where candidate has adjacent but not exact experience]\n\n### ❌ Gaps\n[Requirements not covered by the resume]\n\n### 🏆 Overall fit score\n[X/10 with one-sentence rationale]\n\n### 💬 Suggested talking points for screening call\n[3–5 specific questions based on gaps or ambiguities]\n\n---\n\n**Job description:**\n[PASTE JOB DESCRIPTION HERE]\n\n\n--ua\nТи — експерт з технічного рекрутингу та аналізу резюме.\n\nЯ надам тобі:\n1. JSON Resume (за URL нижче)\n2. Опис вакансії (вставлю після цього промту)\n\n**URL резюме у форматі JSON:** https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO/resume.json\n\n**Твоє завдання:**\n1. Завантажити та розпарсити JSON Resume за вказаним URL\n2. Прочитати опис вакансії, який я вставлю нижче\n3. Проаналізувати відповідність профілю кандидата та вимог ролі\n4. Сформувати структурований звіт:\n\n---\n## Аналіз відповідності\n\n### ✅ Сильні збіги\n[Навички, досвід, ключові слова, які прямо відповідають вимогам]\n\n### ⚠️ Часткові збіги\n[Сфери, де кандидат має суміжний, але не точний досвід]\n\n### ❌ Прогалини\n[Вимоги, які не покриті резюме]\n\n### 🏆 Загальна оцінка відповідності\n[X/10 з одним реченням обґрунтування]\n\n### 💬 Рекомендовані питання для скринінгового дзвінка\n[3–5 конкретних питань на основі прогалин або неоднозначностей]\n\n---\n\n**Опис вакансії:**\n[ВСТАВТЕ ОПИС ВАКАНСІЇ ТУТ]\n\nThis may or may not be related to the current task.\u003c/ide_selection\u003e",
+        "type": "text"
+      },
+      {
+        "text": "С точки зрения структуры ты понял правильно но чёрный цвет красный бордюр это что-то совсем не то я хочу чтобы оно очень быстро открывалось при наведении мышки чтобы в центре была одна строка ▸ Analyze with AI И чтобы в принципе было ощущение лёгкости и не тяжело лосте сделай поиск каких-то скилов для себя прежде чем редактировать дизайн",
+        "type": "text"
+      }
+    ],
+    "role": "user"
+  },
+  "parentUuid": "404a8736-8183-4280-bb12-849287b76250",
+  "permissionMode": "default",
+  "promptId": "4a3306e9-4ed0-472f-bd6b-0d042aecd101",
+  "sessionId": "1e28217c-6da2-476d-b140-963bbc39fc68",
+  "timestamp": "2026-05-09T22:31:15.357Z",
+  "type": "user",
+  "userType": "external",
+  "uuid": "e8a189cb-3fad-4947-b06c-b31ee2197d21",
+  "version": "2.1.138"
+}
