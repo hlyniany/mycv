@@ -1,0 +1,18 @@
+{
+  "attachment": {
+    "content": [],
+    "itemCount": 0,
+    "type": "todo_reminder"
+  },
+  "cwd": "/Users/vitaliy/Documents/GitHub/mycv",
+  "entrypoint": "claude-vscode",
+  "gitBranch": "main",
+  "isSidechain": false,
+  "parentUuid": "1a19fba8-0745-435c-b175-53b11746edf0",
+  "sessionId": "1e28217c-6da2-476d-b140-963bbc39fc68",
+  "timestamp": "2026-05-09T22:42:45.767Z",
+  "type": "attachment",
+  "userType": "external",
+  "uuid": "f7ba500a-53d2-4852-8f65-606575cf6888",
+  "version": "2.1.138"
+}

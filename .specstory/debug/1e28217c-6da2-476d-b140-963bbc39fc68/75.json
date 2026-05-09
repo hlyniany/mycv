@@ -1,0 +1,67 @@
+{
+  "cwd": "/Users/vitaliy/Documents/GitHub/mycv",
+  "entrypoint": "claude-vscode",
+  "gitBranch": "main",
+  "isSidechain": false,
+  "message": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_0123oCbF4BsqZtmwWgeU2y6g",
+        "input": {
+          "command": "ls /Users/vitaliy/Documents/GitHub/mycv/manual/expl/src/components/",
+          "description": "List components directory"
+        },
+        "name": "Bash",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_014AhxwMyMjDXL5eo9FB1pai",
+    "model": "claude-sonnet-4-6",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "tool_use",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 117,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 117,
+      "cache_read_input_tokens": 56596,
+      "inference_geo": "",
+      "input_tokens": 1,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 117,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 117,
+          "cache_read_input_tokens": 56596,
+          "input_tokens": 1,
+          "output_tokens": 94,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 94,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "parentUuid": "acc20bbf-c66c-480c-9f02-0c04fb6e0757",
+  "requestId": "req_011CasoPEEAeEX2KxWKHsdH4",
+  "sessionId": "1e28217c-6da2-476d-b140-963bbc39fc68",
+  "timestamp": "2026-05-09T22:41:07.344Z",
+  "type": "assistant",
+  "userType": "external",
+  "uuid": "a02ec4bf-6c0f-4e5b-ad9d-e1233201dc9e",
+  "version": "2.1.138"
+}
