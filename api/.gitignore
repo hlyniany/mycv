@@ -1,0 +1,17 @@
+# Cloudflare Workers
+.wrangler/
+.dev.vars
+dist/
+node_modules/
+worker/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.idea/
+.vscode/
+
+# System
+.DS_Store

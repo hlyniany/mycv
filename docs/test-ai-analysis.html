@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI CV Analysis Test Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 32px;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            background: #f3f4f6;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #6b7280;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            display: flex;
+            gap: 4px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            padding: 4px;
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+
+        .lang-btn {
+            padding: 6px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #6b7280;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .lang-btn:hover {
+            color: #374151;
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: #111827;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Prompt Display */
+        .prompt-display {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .prompt-text {
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #374151;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        /* Job Description Input */
+        .job-input {
+            width: 100%;
+            min-height: 200px;
+            padding: 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            transition: border-color 0.15s;
+        }
+
+        .job-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .job-input::placeholder {
+            color: #9ca3af;
+        }
+
+        /* Analyze Button */
+        .analyze-btn {
+            width: 100%;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .analyze-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .analyze-btn:active {
+            transform: translateY(0);
+        }
+
+        .analyze-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .spinner {
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Results Display */
+        .results {
+            margin-top: 32px;
+            padding: 24px;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .results.error {
+            background: #fef2f2;
+            border-color: #fecaca;
+        }
+
+        .results-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .results-content {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #374151;
+        }
+
+        .results-content h2 {
+            font-size: 18px;
+            margin: 24px 0 12px 0;
+            color: #111827;
+        }
+
+        .results-content h3 {
+            font-size: 15px;
+            margin: 16px 0 8px 0;
+            color: #1f2937;
+        }
+
+        .results-content ul {
+            margin: 8px 0 8px 24px;
+        }
+
+        .results-content li {
+            margin: 4px 0;
+        }
+
+        .error-message {
+            color: #dc2626;
+            font-weight: 500;
+        }
+
+        /* Configuration Section */
+        .config-section {
+            background: #fef3c7;
+            border: 1px solid #fcd34d;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .config-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .config-input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #fbbf24;
+            border-radius: 6px;
+            font-size: 13px;
+            font-family: 'SF Mono', monospace;
+            background: white;
+        }
+
+        .config-hint {
+            font-size: 12px;
+            color: #92400e;
+            margin-top: 8px;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 13px;
+            color: #1e40af;
+            margin-bottom: 16px;
+        }
+
+        .info-box strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI CV Analysis Test</h1>
+            <p>Test the Cloudflare Worker API integration with Azure OpenAI</p>
+        </div>
+
+        <div class="content">
+            <!-- API Configuration -->
+            <div class="config-section">
+                <div class="config-title">
+                    ⚙️ Cloudflare Worker Endpoint
+                </div>
+                <input 
+                    type="text" 
+                    id="api-endpoint" 
+                    class="config-input" 
+                    placeholder="https://mycv-api.YOUR-SUBDOMAIN.workers.dev/api/analyze"
+                    value=""
+                >
+                <div class="config-hint">
+                    Enter your deployed Cloudflare Worker URL. Leave empty to test locally (http://localhost:8787/api/analyze)
+                </div>
+            </div>
+
+            <!-- Prompt Display Section -->
+            <div class="section">
+                <div class="section-title">
+                    📝 AI Prompt Template
+                    <span class="badge">Read-only</span>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+                    <button class="lang-btn" onclick="setLanguage('ua')">Українська</button>
+                </div>
+
+                <div class="prompt-display">
+                    <div class="prompt-text" id="prompt-text"></div>
+                </div>
+
+                <div class="info-box">
+                    <strong>Note:</strong> This prompt will be sent to your Cloudflare Worker, which will combine it with your job description and CV data before calling Azure OpenAI.
+                </div>
+            </div>
+
+            <!-- Job Description Input -->
+            <div class="section">
+                <div class="section-title">
+                    💼 Job Description
+                </div>
+                <textarea 
+                    id="job-description" 
+                    class="job-input" 
+                    placeholder="Paste the job description here...
+
+Example:
+Senior Python Developer
+5+ years of experience
+FastAPI, async programming, Azure
+PostgreSQL, Redis
+CI/CD with GitHub Actions"
+                ></textarea>
+            </div>
+
+            <!-- Analyze Button -->
+            <button id="analyze-btn" class="analyze-btn" onclick="analyzeJob()">
+                <span id="btn-text">✨ Analyze Match</span>
+            </button>
+
+            <!-- Results Display -->
+            <div id="results" class="results">
+                <div class="results-title" id="results-title">
+                    📊 Analysis Results
+                </div>
+                <div class="results-content" id="results-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const RESUME_URL = 'https://hlyniany.github.io/mycv/cv.resume.json';
+        
+        const PROMPTS = {
+            en: `You are an expert technical recruiter assistant and resume analyst.
+
+I will provide you with:
+1. A JSON Resume (fetched from URL below)
+2. A job description (I will paste it after this prompt)
+
+**Resume JSON URL:** ${RESUME_URL}
+
+**Your task:**
+1. Fetch and parse the JSON Resume from the URL above
+2. Read the job description I paste below
+3. Analyze the match between the candidate's profile and the role
+4. Output a structured report:
+
+---
+## Match Analysis
+
+### ✅ Strong matches
+[Skills, experience, keywords that directly align]
+
+### ⚠️ Partial matches
+[Areas where candidate has adjacent but not exact experience]
+
+### ❌ Gaps
+[Requirements not covered by the resume]
+
+### 🏆 Overall fit score
+[X/10 with one-sentence rationale]
+
+### 💬 Suggested talking points for screening call
+[3–5 specific questions based on gaps or ambiguities]
+
+---
+
+**Job description:**
+[PASTE JOB DESCRIPTION HERE]`,
+
+            ua: `Ти — експерт з технічного рекрутингу та аналізу резюме.
+
+Я надам тобі:
+1. JSON Resume (за URL нижче)
+2. Опис вакансії (вставлю після цього промту)
+
+**URL резюме у форматі JSON:** ${RESUME_URL}
+
+**Твоє завдання:**
+1. Завантажити та розпарсити JSON Resume за вказаним URL
+2. Прочитати опис вакансії, який я вставлю нижче
+3. Проаналізувати відповідність профілю кандидата та вімог ролі
+4. Сформувати структурований звіт:
+
+---
+## Аналіз відповідності
+
+### ✅ Сильні збіги
+[Навички, досвід, ключові слова, які прямо відповідають вимогам]
+
+### ⚠️ Часткові збіги
+[Сфери, де кандидат має суміжний, але не точний досвід]
+
+### ❌ Прогалини
+[Вимоги, які не покриті резюме]
+
+### 🏆 Загальна оцінка відповідності
+[X/10 з одним реченням обґрунтування]
+
+### 💬 Рекомендовані питання для скринінгового дзвінка
+[3–5 конкретних питань на основі прогалин або неоднозначностей]
+
+---
+
+**Опис вакансії:**
+[ВСТАВТЕ ОПИС ВАКАНСІЇ ТУТ]`
+        };
+
+        let currentLanguage = 'en';
+
+        // Initialize prompt display
+        document.getElementById('prompt-text').textContent = PROMPTS.en;
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            document.getElementById('prompt-text').textContent = PROMPTS[lang];
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        async function analyzeJob() {
+            const jobDescription = document.getElementById('job-description').value.trim();
+            const apiEndpoint = document.getElementById('api-endpoint').value.trim() || 'http://localhost:8787/api/analyze';
+            const resultsDiv = document.getElementById('results');
+            const resultsContent = document.getElementById('results-content');
+            const resultsTitle = document.getElementById('results-title');
+            const analyzeBtn = document.getElementById('analyze-btn');
+            const btnText = document.getElementById('btn-text');
+
+            // Validation
+            if (!jobDescription) {
+                showError('Please enter a job description');
+                return;
+            }
+
+            if (jobDescription.length < 50) {
+                showError('Job description is too short. Please provide more details (minimum 50 characters).');
+                return;
+            }
+
+            // Show loading state
+            analyzeBtn.disabled = true;
+            btnText.innerHTML = '<div class="spinner"></div> Analyzing...';
+            resultsDiv.classList.remove('show', 'error');
+
+            try {
+                // Call the API
+                const response = await fetch(apiEndpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        jobDescription: jobDescription,
+                        language: currentLanguage
+                    })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.message || data.error || `HTTP ${response.status}`);
+                }
+
+                // Display success results
+                resultsDiv.classList.add('show');
+                resultsDiv.classList.remove('error');
+                resultsTitle.innerHTML = '✅ Analysis Results';
+                
+                // Convert markdown-like formatting to HTML
+                const formattedAnalysis = formatAnalysis(data.analysis);
+                resultsContent.innerHTML = formattedAnalysis;
+
+            } catch (error) {
+                showError(`API Error: ${error.message}`);
+            } finally {
+                // Reset button state
+                analyzeBtn.disabled = false;
+                btnText.innerHTML = '✨ Analyze Match';
+            }
+        }
+
+        function showError(message) {
+            const resultsDiv = document.getElementById('results');
+            const resultsContent = document.getElementById('results-content');
+            const resultsTitle = document.getElementById('results-title');
+
+            resultsDiv.classList.add('show', 'error');
+            resultsTitle.innerHTML = '❌ Error';
+            resultsContent.innerHTML = `<div class="error-message">${message}</div>`;
+        }
+
+        function formatAnalysis(text) {
+            // Simple markdown-like formatter
+            let html = text;
+            
+            // Convert headers
+            html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+            html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+            
+            // Convert bold
+            html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            
+            // Convert lists
+            html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
+            html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
+            
+            // Convert line breaks
+            html = html.replace(/\n\n/g, '<br><br>');
+            
+            return html;
+        }
+
+        // Allow Enter key in textarea (Shift+Enter for new line)
+        document.getElementById('job-description').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && e.ctrlKey) {
+                analyzeJob();
+            }
+        });
+
+        // Load saved API endpoint from localStorage
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedEndpoint = localStorage.getItem('apiEndpoint');
+            if (savedEndpoint) {
+                document.getElementById('api-endpoint').value = savedEndpoint;
+            }
+        });
+
+        // Save API endpoint to localStorage on change
+        document.getElementById('api-endpoint').addEventListener('change', function() {
+            localStorage.setItem('apiEndpoint', this.value);
+        });
+    </script>
+</body>
+</html>
