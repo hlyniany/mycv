@@ -1,0 +1,12 @@
+name = "mycv-api"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+CV_JSON_URL = "https://hlyniany.github.io/mycv/cv.resume.json"
+ALLOWED_ORIGIN = "https://hlyniany.github.io"
+
+# Secrets (set via CLI commands):
+# wrangler secret put AZURE_OPENAI_KEY
+# wrangler secret put AZURE_OPENAI_ENDPOINT
+# wrangler secret put AZURE_OPENAI_DEPLOYMENT
