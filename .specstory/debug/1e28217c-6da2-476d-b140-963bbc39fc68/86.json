@@ -1,0 +1,69 @@
+{
+  "cwd": "/Users/vitaliy/Documents/GitHub/mycv",
+  "entrypoint": "claude-vscode",
+  "gitBranch": "main",
+  "isSidechain": false,
+  "message": {
+    "content": [
+      {
+        "caller": {
+          "type": "direct"
+        },
+        "id": "toolu_01FCL4DdEQVZoL3iBQcfeBqz",
+        "input": {
+          "file_path": "/Users/vitaliy/Documents/GitHub/mycv/docs/VitaliyHlynianyiZhuk2025.html",
+          "new_string": "        /* ── Recruiter Banner ── */\n        @media print { #recruiter-banner, #banner-spacer { display: none !important; } }\n\n        #recruiter-banner {\n            position: fixed;\n            top: 0; left: 0; right: 0;\n            z-index: 50;\n            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n        }\n\n        /* Collapsed bar */\n        #banner-bar {\n            background: rgba(255,255,255,0.9);\n            backdrop-filter: blur(4px);\n            -webkit-backdrop-filter: blur(4px);\n            border-bottom: 1px solid #e5e7eb;\n        }\n        #banner-btn {\n            width: 100%; height: 44px;\n            display: flex; align-items: center; justify-content: center;\n            background: transparent; border: none; cursor: pointer;\n            padding: 0; font-family: inherit;\n            transition: background 0.15s;\n        }\n        #banner-btn:hover { background: rgba(249,250,251,0.8); }\n        #banner-btn-inner {\n            display: flex; align-items: center; gap: 6px;\n            font-size: 13px; letter-spacing: 0.025em;\n            color: #4b5563; font-weight: normal;\n            transition: color 0.15s;\n        }\n        #banner-btn:hover #banner-btn-inner { color: #111827; }\n        #banner-arrow {\n            display: inline-block; font-style: normal;\n            color: #9ca3af; line-height: 1;\n            transform-origin: center;\n            transition: transform 0.15s ease, color 0.15s;\n        }\n        #banner-btn:hover #banner-arrow { color: #8b5cf6; }\n        #banner-arrow.open { transform: rotate(90deg); }\n        #banner-label { font-weight: 500; }\n\n        /* Expanded panel */\n        #banner-panel {\n            background: #fff;\n            border-bottom: 1px solid #e5e7eb;\n            box-shadow: 0 1px 2px rgba(0,0,0,0.05);\n            max-height: 0; overflow: hidden; opacity: 0;\n            transition: max-height 0.18s cubic-bezier(0.22,1,0.36,1),\n                        opacity 0.18s cubic-bezier(0.22,1,0.36,1);\n        }\n        #banner-panel.open { max-height: 40vh; opacity: 1; }\n\n        #banner-inner {\n            max-width: 896px; margin: 0 auto;\n            padding: 20px 24px;\n            display: flex; flex-direction: column; gap: 16px;\n            min-height: 280px; max-height: 40vh;\n            box-sizing: border-box;\n        }\n\n        /* Controls row */\n        #banner-controls {\n            display: flex; align-items: center;\n            justify-content: space-between; gap: 12px;\n            flex-wrap: wrap; flex-shrink: 0;\n        }\n        #banner-hint-text { font-size: 14px; color: #4b5563; margin: 0; }\n        #banner-controls-right { display: flex; align-items: center; gap: 8px; }\n\n        /* Language pill group */\n        #banner-lang-toggle {\n            display: flex; gap: 2px;\n            background: #f3f4f6; border-radius: 6px; padding: 2px;\n        }\n        .blang-btn {\n            padding: 4px 12px; border-radius: 4px;\n            font-size: 12px; font-weight: 500; color: #6b7280;\n            background: transparent; border: none; cursor: pointer;\n            font-family: inherit;\n            transition: background 0.1s, color 0.1s, box-shadow 0.1s;\n        }\n        .blang-btn:hover { color: #374151; }\n        .blang-btn.active { background: #fff; color: #111827; box-shadow: 0 1px 2px rgba(0,0,0,0.08); }\n\n        /* Copy button */\n        #banner-copy-btn {\n            display: flex; align-items: center; gap: 6px;\n            padding: 6px 12px;\n            background: #111827; color: #fff;\n            border: none; border-radius: 6px;\n            font-size: 12px; font-weight: 500; cursor: pointer;\n            font-family: inherit;\n            transition: background 0.15s, transform 0.1s;\n        }\n        #banner-copy-btn:hover { background: #1f2937; }\n        #banner-copy-btn:active { transform: scale(0.96); }\n\n        /* Close button */\n        #banner-close-btn {\n            padding: 6px; background: transparent; border: none;\n            cursor: pointer; border-radius: 6px;\n            color: #6b7280; line-height: 1; font-size: 16px;\n            font-family: inherit;\n            transition: background 0.12s;\n        }\n        #banner-close-btn:hover { background: #f3f4f6; }\n\n        /* Prompt area */\n        #banner-prompt-area {\n            flex: 1; overflow-y: auto;\n            background: #f9fafb; border-radius: 6px;\n            padding: 16px; border: 1px solid #e5e7eb;\n        }\n        #banner-prompt-pre {\n            font-size: 12px;\n            font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;\n            color: #374151; line-height: 1.625;\n            white-space: pre-wrap; margin: 0;\n            transition: opacity 0.12s;\n        }\n\n        #banner-spacer { height: 44px; transition: height 0.18s cubic-bezier(0.22,1,0.36,1); }",
+          "old_string": "        /* ── Recruiter Banner ── */\n        @media print {\n            #recruiter-banner, #banner-spacer { display: none !important; }\n        }\n\n        #recruiter-banner {\n            position: fixed;\n            top: 0; left: 0; right: 0;\n            z-index: 9999;\n            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n        }\n\n        #banner-strip {\n            background: rgba(255,255,255,0.88);\n            backdrop-filter: blur(20px) saturate(160%);\n            -webkit-backdrop-filter: blur(20px) saturate(160%);\n            border-bottom: 1px solid rgba(0,0,0,0.07);\n            box-shadow: 0 1px 6px rgba(0,0,0,0.04);\n            height: 40px;\n            padding: 0 24px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            position: relative;\n            cursor: default;\n            user-select: none;\n        }\n\n        #banner-cta {\n            font-size: 12.5px;\n            font-weight: 500;\n            color: #6366f1;\n            letter-spacing: 0.2px;\n            display: flex;\n            align-items: center;\n            gap: 6px;\n            transition: color 0.15s;\n        }\n        #recruiter-banner:hover #banner-cta { color: #4f46e5; }\n\n        #banner-chevron {\n            position: absolute;\n            right: 22px;\n            top: 50%;\n            transform: translateY(-50%);\n            font-size: 16px;\n            color: #94a3b8;\n            line-height: 1;\n            transition: transform 0.22s cubic-bezier(0.16,1,0.3,1), color 0.15s;\n        }\n        #recruiter-banner:hover #banner-chevron {\n            transform: translateY(-50%) rotate(180deg);\n            color: #6366f1;\n        }\n\n        #banner-panel {\n            background: rgba(255,255,255,0.97);\n            backdrop-filter: blur(20px) saturate(160%);\n            -webkit-backdrop-filter: blur(20px) saturate(160%);\n            max-height: 0;\n            overflow: hidden;\n            transition: max-height 0.24s cubic-bezier(0.16,1,0.3,1);\n            border-bottom: 1px solid rgba(0,0,0,0.07);\n            box-shadow: 0 10px 28px rgba(0,0,0,0.06);\n        }\n        #recruiter-banner:hover #banner-panel { max-height: 33vh; }\n\n        #banner-inner {\n            padding: 12px 24px 14px;\n            height: calc(33vh - 26px);\n            display: flex;\n            flex-direction: column;\n            gap: 10px;\n            box-sizing: border-box;\n        }\n\n        #banner-toolbar {\n            display: flex;\n            align-items: center;\n            gap: 7px;\n            flex-shrink: 0;\n        }\n\n        .blang-btn {\n            background: transparent;\n            border: 1px solid #cbd5e1;\n            color: #64748b;\n            padding: 3px 12px;\n            border-radius: 20px;\n            cursor: pointer;\n            font-size: 10.5px;\n            font-weight: 600;\n            letter-spacing: 0.4px;\n            transition: border-color 0.12s, color 0.12s, background 0.12s;\n            font-family: inherit;\n        }\n        .blang-btn:hover { border-color: #6366f1; color: #6366f1; }\n        .blang-btn.active { background: #6366f1; border-color: #6366f1; color: #fff; }\n\n        #banner-copy-btn {\n            margin-left: auto;\n            background: transparent;\n            border: 1px solid #cbd5e1;\n            color: #64748b;\n            padding: 4px 14px;\n            border-radius: 20px;\n            cursor: pointer;\n            font-size: 11px;\n            font-weight: 500;\n            display: flex;\n            align-items: center;\n            gap: 5px;\n            transition: border-color 0.12s, color 0.12s, background 0.12s;\n            font-family: inherit;\n        }\n        #banner-copy-btn:hover { border-color: #6366f1; color: #6366f1; }\n        #banner-copy-btn.copied { border-color: #16a34a; color: #16a34a; }\n\n        #banner-prompt-area {\n            flex: 1;\n            overflow-y: auto;\n            font-size: 11px;\n            line-height: 1.62;\n            white-space: pre-wrap;\n            font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;\n            background: #f8fafc;\n            border: 1px solid #e2e8f0;\n            border-radius: 6px;\n            padding: 10px 14px;\n            color: #475569;\n            scrollbar-width: thin;\n            scrollbar-color: #cbd5e1 transparent;\n        }\n        #banner-prompt-area::-webkit-scrollbar { width: 3px; }\n        #banner-prompt-area::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }\n\n        #banner-spacer {\n            height: 40px;\n            transition: height 0.24s cubic-bezier(0.16,1,0.3,1);\n        }\n        #recruiter-banner:hover + #banner-spacer { height: calc(40px + 33vh); }",
+          "replace_all": false
+        },
+        "name": "Edit",
+        "type": "tool_use"
+      }
+    ],
+    "id": "msg_018Gdu9v9MVxEYovvt6krePf",
+    "model": "claude-sonnet-4-6",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "tool_use",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 6743,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 6743,
+      "cache_read_input_tokens": 60075,
+      "inference_geo": "",
+      "input_tokens": 1,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 6743,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 6743,
+          "cache_read_input_tokens": 60075,
+          "input_tokens": 1,
+          "output_tokens": 3613,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 3613,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "parentUuid": "198065ec-4249-4b3d-babe-a3b8a7448fe3",
+  "requestId": "req_011CasoWhB6P4cvRaLVfXQXC",
+  "sessionId": "1e28217c-6da2-476d-b140-963bbc39fc68",
+  "timestamp": "2026-05-09T22:43:31.122Z",
+  "type": "assistant",
+  "userType": "external",
+  "uuid": "844bc1b5-fe62-4964-8aa1-5783cf50f1eb",
+  "version": "2.1.138"
+}

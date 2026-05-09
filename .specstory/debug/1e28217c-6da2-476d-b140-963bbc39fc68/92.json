@@ -1,0 +1,59 @@
+{
+  "cwd": "/Users/vitaliy/Documents/GitHub/mycv",
+  "entrypoint": "claude-vscode",
+  "gitBranch": "main",
+  "isSidechain": false,
+  "message": {
+    "content": [
+      {
+        "text": "Done. The banner now exactly mirrors the React design from `RecruiterPromptBar.tsx`:\n\n- **Bar**: `bg-white/90 backdrop-blur-sm border-b border-gray-200`, height 44px, centered `▸ Analyze with AI` in gray-600\n- **▸ arrow**: rotates 90° on expand (matching the React `rotate: isExpanded ? 90 : 0`), turns violet on hover\n- **Hover behavior**: opens on mouseenter, closes after 150ms grace period on mouseleave — same as the React `closeTimeoutRef` logic\n- **Panel**: white `bg-white border-b border-gray-200 shadow-sm`, `max-w-4xl mx-auto`, `min-height: 280px / max-height: 40vh`\n- **Controls row**: hint text left, language pills + dark copy button + X close icon right — pixel-matched layout\n- **Language toggle**: gray-100 pill container, active tab = white bg + shadow (the exact Tailwind segmented control pattern)\n- **Copy button**: `bg-gray-900` → switches to lucide `CheckIcon` SVG + \"Copied!\" for 2s\n- **Prompt text**: `bg-gray-50 border border-gray-200 rounded-md`, monospace, `text-gray-700`, fades between EN/UA",
+        "type": "text"
+      }
+    ],
+    "id": "msg_013oks1ZZtNJv93XpeKoA2yo",
+    "model": "claude-sonnet-4-6",
+    "role": "assistant",
+    "stop_details": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "type": "message",
+    "usage": {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 122,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 122,
+      "cache_read_input_tokens": 74606,
+      "inference_geo": "",
+      "input_tokens": 1,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 122,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 122,
+          "cache_read_input_tokens": 74606,
+          "input_tokens": 1,
+          "output_tokens": 324,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 324,
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  },
+  "parentUuid": "52fa0a95-b790-48af-9cc0-7c11579c7a92",
+  "requestId": "req_011Casoer8pvV6d8SiTewrAt",
+  "sessionId": "1e28217c-6da2-476d-b140-963bbc39fc68",
+  "timestamp": "2026-05-09T22:44:47.511Z",
+  "type": "assistant",
+  "userType": "external",
+  "uuid": "8364f6ff-2146-4c55-9f30-8fc7f422e968",
+  "version": "2.1.138"
+}

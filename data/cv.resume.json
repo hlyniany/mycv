@@ -22,8 +22,8 @@
   "work": [
     {
       "name": "Epic Flooring",
-      "location": "Australia (remote)",
-      "position": "Freelance Developer",
+      "location": "Brisbane, Australia (remote)",
+      "position": "Freelance Full-stack & AI Developer",
       "startDate": "2025-10",
       "summary": "Built a Missive email client CRM add-on from scratch using GitHub Copilot, enabling job tracking without context switching for a commercial flooring business.",
       "highlights": [
@@ -48,22 +48,18 @@
     },
     {
       "name": "Flying Donkey IT",
-      "location": "Kyiv",
+      "location": "Brisbane, Australia",
       "position": "API Integration Engineer",
       "startDate": "2021-08",
       "summary": "SaaS platforms integration for various businesses: Energy, Real Estate, Construction, Finance, IT.",
       "highlights": [
-        "Automation (no-code/low-code): Make.com, Zapier, Appsmith, ReTool; custom HTTP OAuth 2.0 integrations",
+        "Automation (no-code/low-code): Make.com, Zapier, Appsmith, ReTool",
         "AI & ML: OpenAI, Cohere, Claude, Google Gemini, Google Cloud Vision",
-        "Finance & ERP: Xero, MYOB, Accello, Unleashed, ActiveCampaign",
-        "CRM & Identity: HubSpot CRM, Okta",
-        "Field Service: ServiceM8, FastField",
-        "Project Management: ClickUp, Jira, Monday.com, Trello",
-        "Communication: Slack, Missive, Dialpad, Microsoft SMTP/IMAP",
-        "Documents & Signing: Adobe Sign, eSignatures.io, PDF.co, Aspose, APITemplate.io, Google Drive",
-        "Cloud & Storage: Azure, AWS, Azure DevOps, GitHub, Supabase, Dropbox",
-        "Databases: MS SQL Server, MySQL",
-        "Web/Data: HasData (web scraping)",
+        "Finance & ERP: Xero, MYOB, Accello, Unleashed",
+        "CRM & Marketing: HubSpot, ActiveCampaign, ServiceM8, FastField",
+        "Project & Communication: ClickUp, Jira, Monday.com, Trello, Slack, Missive, Dialpad",
+        "Documents & Signing: Adobe Sign, eSignatures.io, PDF.co, Aspose, APITemplate.io",
+        "Cloud & Security: Azure, AWS, Supabase, GitHub, Okta",
         "POC: PDF form recognition using Microsoft Document Intelligence and GPT-4.5, replacing legacy ABBYY FineReader OCR (July 2025)."
       ]
     },
