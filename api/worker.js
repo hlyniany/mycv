@@ -61,9 +61,7 @@ async function callAzureOpenAI(prompt, env) {
         { role: 'system', content: 'You are a helpful technical recruiter assistant.' },
         { role: 'user', content: prompt }
       ],
-      max_tokens: 2000,
-      temperature: 0.7,
-      top_p: 0.95
+      max_completion_tokens: 2000
     })
   });
   
