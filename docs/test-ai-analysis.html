@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI CV Analysis Test Page</title>
+    <title>AI CV Analysis - Analyze with AI</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,114 +13,325 @@
 
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #f9fafb;
             min-height: 100vh;
-            padding: 20px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
+        /* Ribbon Container */
+        .ribbon {
+            position: sticky;
+            top: 0;
+            z-index: 50;
         }
 
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 32px;
-            text-align: center;
+        /* Collapsed Bar */
+        .ribbon-collapsed {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #e5e7eb;
         }
 
-        .header h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .header p {
-            font-size: 14px;
-            opacity: 0.9;
-        }
-
-        .content {
-            padding: 32px;
-        }
-
-        .section {
-            margin-bottom: 32px;
-        }
-
-        .section-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: #111827;
-            margin-bottom: 16px;
+        .ribbon-toggle {
+            width: 100%;
+            height: 44px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            transition: background-color 0.15s;
         }
 
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 4px 10px;
-            background: #f3f4f6;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 500;
-            color: #6b7280;
+        .ribbon-toggle:hover {
+            background: rgba(243, 244, 246, 0.8);
         }
 
-        /* Language Toggle */
-        .lang-toggle {
+        .ribbon-toggle.analyzing {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .ribbon-toggle-content {
             display: flex;
-            gap: 4px;
-            background: #f3f4f6;
-            border-radius: 8px;
-            padding: 4px;
-            margin-bottom: 16px;
-            width: fit-content;
-        }
-
-        .lang-btn {
-            padding: 6px 16px;
-            border-radius: 6px;
+            align-items: center;
+            gap: 6px;
             font-size: 13px;
-            font-weight: 500;
+            letter-spacing: 0.02em;
             color: #6b7280;
+            transition: color 0.15s;
+        }
+
+        .ribbon-toggle:hover .ribbon-toggle-content {
+            color: #111827;
+        }
+
+        .ribbon-arrow {
+            color: #9ca3af;
+            transition: transform 0.15s, color 0.15s;
+            display: inline-block;
+        }
+
+        .ribbon-toggle:hover .ribbon-arrow {
+            color: #7c3aed;
+        }
+
+        .ribbon-arrow.expanded {
+            transform: rotate(90deg);
+        }
+
+        .ribbon-label {
+            font-weight: 500;
+        }
+
+        /* Expanded Content */
+        .ribbon-expanded {
+            overflow: hidden;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.18s cubic-bezier(0.22, 1, 0.36, 1), 
+                        opacity 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .ribbon-expanded.show {
+            max-height: 2000px;
+            opacity: 1;
+        }
+
+        .ribbon-expanded.analyzing {
+            max-height: 80vh;
+        }
+
+        .ribbon-content {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 20px 24px;
+        }
+
+        /* Top Row: Settings + Close */
+        .ribbon-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 16px;
+        }
+
+        .close-btn {
+            padding: 6px;
             background: transparent;
             border: none;
             cursor: pointer;
-            transition: all 0.15s;
+            border-radius: 6px;
+            transition: background-color 0.15s;
+            color: #6b7280;
         }
 
-        .lang-btn:hover {
+        .close-btn:hover {
+            background: #f3f4f6;
+        }
+
+        .close-btn.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Mode Tabs */
+        .mode-tabs {
+            display: flex;
+            gap: 4px;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 16px;
+        }
+
+        .mode-tab {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            background: transparent;
+            border: none;
+            font-size: 12px;
+            font-weight: 500;
+            color: #6b7280;
+            cursor: pointer;
+            transition: color 0.15s;
+        }
+
+        .mode-tab:hover {
             color: #374151;
         }
 
-        .lang-btn.active {
-            background: white;
+        .mode-tab.active {
             color: #111827;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
-        /* Prompt Display */
-        .prompt-display {
+        .mode-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #111827;
+        }
+
+        /* Mode Content */
+        .mode-content {
+            min-height: 220px;
+        }
+
+        .mode-panel {
+            display: none;
+            animation: fadeIn 0.12s ease-out;
+        }
+
+        .mode-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Download Mode */
+        .download-description {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .json-url-display {
+            display: flex;
+            align-items: center;
+            gap: 8px;
             background: #f9fafb;
             border: 1px solid #e5e7eb;
-            border-radius: 8px;
+            border-radius: 6px;
+            padding: 10px 12px;
+            margin-bottom: 12px;
+        }
+
+        .json-url-display code {
+            flex: 1;
+            font-size: 12px;
+            font-family: 'SF Mono', Monaco, monospace;
+            color: #374151;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: #111827;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.15s;
+        }
+
+        .btn-primary:hover {
+            background: #1f2937;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: white;
+            color: #374151;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.15s;
+        }
+
+        .btn-secondary:hover {
+            background: #f9fafb;
+        }
+
+        /* Copy Mode */
+        .copy-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .copy-description {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .copy-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: #111827;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.15s, transform 0.1s;
+        }
+
+        .copy-btn:hover {
+            background: #1f2937;
+        }
+
+        .copy-btn:active {
+            transform: scale(0.96);
+        }
+
+        .copy-btn.copied {
+            background: #059669;
+        }
+
+        .prompt-container {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
             padding: 16px;
-            margin-bottom: 16px;
-            max-height: 300px;
+            max-height: 40vh;
             overflow-y: auto;
         }
 
         .prompt-text {
-            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-family: 'SF Mono', Monaco, monospace;
             font-size: 12px;
             line-height: 1.6;
             color: #374151;
@@ -128,64 +339,84 @@
             word-break: break-word;
         }
 
-        /* Job Description Input */
-        .job-input {
+        /* Analyze Mode */
+        .analyze-description {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 12px;
+        }
+
+        .job-textarea {
             width: 100%;
-            min-height: 200px;
-            padding: 16px;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
+            min-height: 160px;
+            padding: 12px;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
             font-size: 14px;
             font-family: inherit;
+            color: #1f2937;
+            line-height: 1.6;
             resize: vertical;
-            transition: border-color 0.15s;
+            transition: border-color 0.15s, box-shadow 0.15s;
         }
 
-        .job-input:focus {
+        .job-textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
         }
 
-        .job-input::placeholder {
+        .job-textarea::placeholder {
             color: #9ca3af;
         }
 
-        /* Analyze Button */
-        .analyze-btn {
-            width: 100%;
-            padding: 14px 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.15s, box-shadow 0.15s;
+        .analyze-footer {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 8px;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 12px;
+            flex-wrap: wrap;
         }
 
-        .analyze-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        .char-count {
+            font-size: 12px;
+            color: #9ca3af;
         }
 
-        .analyze-btn:active {
-            transform: translateY(0);
+        .analyze-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: #7c3aed;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.15s, transform 0.1s;
+        }
+
+        .analyze-btn:hover:not(:disabled) {
+            background: #6d28d9;
+        }
+
+        .analyze-btn:active:not(:disabled) {
+            transform: scale(0.96);
         }
 
         .analyze-btn:disabled {
-            background: #9ca3af;
+            background: #e5e7eb;
+            color: #9ca3af;
             cursor: not-allowed;
-            transform: none;
         }
 
         .spinner {
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
             border: 2px solid rgba(255, 255, 255, 0.3);
             border-top-color: white;
             border-radius: 50%;
@@ -196,167 +427,193 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Results Display */
-        .results {
-            margin-top: 32px;
-            padding: 24px;
+        /* Analysis Results */
+        .analysis-results {
+            margin-top: 16px;
+            padding: 16px;
             background: #f9fafb;
             border: 1px solid #e5e7eb;
-            border-radius: 8px;
+            border-radius: 6px;
             display: none;
         }
 
-        .results.show {
+        .analysis-results.show {
             display: block;
         }
 
-        .results.error {
+        .analysis-results.error {
             background: #fef2f2;
             border-color: #fecaca;
         }
 
-        .results-title {
-            font-size: 16px;
+        .results-header {
+            font-size: 14px;
             font-weight: 600;
             color: #111827;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            margin-bottom: 12px;
         }
 
-        .results-content {
+        .results-body {
             font-size: 14px;
-            line-height: 1.8;
+            line-height: 1.7;
             color: #374151;
         }
 
-        .results-content h2 {
-            font-size: 18px;
-            margin: 24px 0 12px 0;
+        .results-body h2 {
+            font-size: 16px;
+            font-weight: 600;
             color: #111827;
+            margin: 20px 0 10px 0;
         }
 
-        .results-content h3 {
-            font-size: 15px;
-            margin: 16px 0 8px 0;
+        .results-body h3 {
+            font-size: 14px;
+            font-weight: 600;
             color: #1f2937;
+            margin: 14px 0 8px 0;
         }
 
-        .results-content ul {
-            margin: 8px 0 8px 24px;
+        .results-body ul {
+            margin: 8px 0 8px 20px;
         }
 
-        .results-content li {
+        .results-body li {
             margin: 4px 0;
         }
 
-        .error-message {
+        .results-body strong {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .error-text {
             color: #dc2626;
             font-weight: 500;
         }
 
-        /* Configuration Section */
-        .config-section {
-            background: #fef3c7;
-            border: 1px solid #fcd34d;
-            border-radius: 8px;
-            padding: 16px;
-            margin-bottom: 24px;
+        /* Page Content */
+        .page-content {
+            max-width: 1024px;
+            margin: 40px auto;
+            padding: 0 24px;
         }
 
-        .config-title {
+        .page-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .page-description {
             font-size: 14px;
-            font-weight: 600;
-            color: #92400e;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            color: #6b7280;
+            line-height: 1.6;
         }
 
-        .config-input {
-            width: 100%;
-            padding: 10px 12px;
-            border: 1px solid #fbbf24;
-            border-radius: 6px;
-            font-size: 13px;
-            font-family: 'SF Mono', monospace;
-            background: white;
-        }
+        /* Responsive */
+        @media (max-width: 640px) {
+            .ribbon-content {
+                padding: 16px;
+            }
 
-        .config-hint {
-            font-size: 12px;
-            color: #92400e;
-            margin-top: 8px;
-        }
+            .copy-header,
+            .analyze-footer {
+                flex-direction: column;
+                align-items: stretch;
+            }
 
-        /* Info Box */
-        .info-box {
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            border-radius: 8px;
-            padding: 12px;
-            font-size: 13px;
-            color: #1e40af;
-            margin-bottom: 16px;
-        }
-
-        .info-box strong {
-            font-weight: 600;
+            .copy-btn,
+            .analyze-btn {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🤖 AI CV Analysis Test</h1>
-            <p>Test the Cloudflare Worker API integration with Azure OpenAI</p>
+    <!-- AI Analysis Ribbon -->
+    <div class="ribbon" id="ribbon">
+        <!-- Collapsed Bar -->
+        <div class="ribbon-collapsed">
+            <button class="ribbon-toggle" id="ribbon-toggle" onclick="toggleRibbon()">
+                <span class="ribbon-toggle-content">
+                    <span class="ribbon-arrow" id="ribbon-arrow">▸</span>
+                    <span class="ribbon-label">Analyze with AI</span>
+                </span>
+            </button>
         </div>
 
-        <div class="content">
-            <!-- API Configuration -->
-            <div class="config-section">
-                <div class="config-title">
-                    ⚙️ Cloudflare Worker Endpoint
-                </div>
-                <input 
-                    type="text" 
-                    id="api-endpoint" 
-                    class="config-input" 
-                    placeholder="https://mycv-api.YOUR-SUBDOMAIN.workers.dev/api/analyze"
-                    value="https://mycv-api.losskot.workers.dev/api/analyze"
-                >
-                <div class="config-hint">
-                    Enter your deployed Cloudflare Worker URL. Leave empty to test locally (http://localhost:8787/api/analyze)
-                </div>
-            </div>
-
-            <!-- Prompt Display Section -->
-            <div class="section">
-                <div class="section-title">
-                    📝 AI Prompt Template
-                    <span class="badge">Read-only</span>
+        <!-- Expanded Content -->
+        <div class="ribbon-expanded" id="ribbon-expanded">
+            <div class="ribbon-content">
+                <!-- Header: Close -->
+                <div class="ribbon-header">
+                    <div></div>
+                    <button class="close-btn" onclick="closeRibbon()">
+                        ✕
+                    </button>
                 </div>
 
-                <div class="prompt-display">
-                    <div class="prompt-text" id="prompt-text"></div>
+                <!-- Mode Tabs -->
+                <div class="mode-tabs">
+                    <button class="mode-tab active" data-mode="download" onclick="switchMode('download')">
+                        📄 Download JSON
+                    </button>
+                    <button class="mode-tab" data-mode="copy" onclick="switchMode('copy')">
+                        📋 Copy prompt
+                    </button>
+                    <button class="mode-tab" data-mode="analyze" onclick="switchMode('analyze')">
+                        ✨ Analyze here
+                    </button>
                 </div>
 
-                <div class="info-box">
-                    <strong>Note:</strong> This prompt will be sent to your Cloudflare Worker, which will combine it with your job description and CV data before calling Azure OpenAI.
-                </div>
-            </div>
+                <!-- Mode Content -->
+                <div class="mode-content">
+                    <!-- Download Mode -->
+                    <div class="mode-panel active" id="mode-download">
+                        <p class="download-description">
+                            Download the resume in JSON Resume format. Drop it into ChatGPT, Claude, or any AI tool together with your job description for analysis.
+                        </p>
+                        <div class="json-url-display">
+                            <span>📄</span>
+                            <code id="resume-url-display"></code>
+                        </div>
+                        <div class="download-buttons">
+                            <a href="" id="download-link" download="cv.resume.json" class="btn-primary">
+                                ⬇️ Download cv.resume.json
+                            </a>
+                            <a href="" id="open-link" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                                Open in browser
+                            </a>
+                        </div>
+                    </div>
 
-            <!-- Job Description Input -->
-            <div class="section">
-                <div class="section-title">
-                    💼 Job Description
-                </div>
-                <textarea 
-                    id="job-description" 
-                    class="job-input" 
-                    placeholder="Paste the job description here...
+                    <!-- Copy Mode -->
+                    <div class="mode-panel" id="mode-copy">
+                        <div class="copy-header">
+                            <p class="copy-description">
+                                Copy this prompt into ChatGPT or Claude with a job description.
+                            </p>
+                            <button class="copy-btn" id="copy-btn" onclick="copyPrompt()">
+                                <span id="copy-icon">📋</span>
+                                <span id="copy-text">Copy prompt</span>
+                            </button>
+                        </div>
+                        <div class="prompt-container">
+                            <pre class="prompt-text" id="prompt-display"></pre>
+                        </div>
+                    </div>
+
+                    <!-- Analyze Mode -->
+                    <div class="mode-panel" id="mode-analyze">
+                        <p class="analyze-description">
+                            Paste the job description below and run an AI match analysis right here.
+                        </p>
+                        <textarea 
+                            id="job-description" 
+                            class="job-textarea"
+                            placeholder="Paste job description here…
 
 Example:
 Senior Python Developer
@@ -364,22 +621,35 @@ Senior Python Developer
 FastAPI, async programming, Azure
 PostgreSQL, Redis
 CI/CD with GitHub Actions"
-                ></textarea>
-            </div>
-
-            <!-- Analyze Button -->
-            <button id="analyze-btn" class="analyze-btn" onclick="analyzeJob()">
-                <span id="btn-text">✨ Analyze Match</span>
-            </button>
-
-            <!-- Results Display -->
-            <div id="results" class="results">
-                <div class="results-title" id="results-title">
-                    📊 Analysis Results
+                            rows="6"
+                        ></textarea>
+                        <div class="analyze-footer">
+                            <span class="char-count" id="char-count">0 characters</span>
+                            <button class="analyze-btn" id="analyze-btn" onclick="analyzeJob()">
+                                <span id="analyze-icon">✨</span>
+                                <span id="analyze-text">Analyze with GPT</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Analysis Results -->
+                        <div class="analysis-results" id="analysis-results">
+                            <div class="results-header" id="results-header">
+                                📊 Analysis Results
+                            </div>
+                            <div class="results-body" id="results-body"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="results-content" id="results-content"></div>
             </div>
         </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="page-content">
+        <h1 class="page-title">AI CV Analysis</h1>
+        <p class="page-description">
+            Use the ribbon above to analyze job descriptions against the resume using AI. Download the JSON Resume, copy the analysis prompt, or run the analysis directly in your browser.
+        </p>
     </div>
 
     <script>
@@ -422,12 +692,74 @@ I will provide you with:
 **Job description:**
 [PASTE JOB DESCRIPTION HERE]`;
 
+        let isAnalyzing = false; // Track if analysis is active
+
         // Initialize prompt display
         document.getElementById('prompt-text').textContent = PROMPT;
 
+        // Ribbon toggle functions
+        function toggleRibbon() {
+            if (isAnalyzing) return; // Don't allow toggling during analysis
+            const ribbonExpanded = document.querySelector('.ribbon-expanded');
+            const ribbonArrow = document.querySelector('.ribbon-arrow');
+            
+            if (ribbonExpanded.classList.contains('show')) {
+                ribbonExpanded.classList.remove('show');
+                ribbonArrow.classList.remove('expanded');
+            } else {
+                ribbonExpanded.classList.add('show');
+                ribbonArrow.classList.add('expanded');
+            }
+        }
+
+        function closeRibbon() {
+            if (isAnalyzing) return; // Don't allow closing during analysis
+            document.querySelector('.ribbon-expanded').classList.remove('show');
+            document.querySelector('.ribbon-arrow').classList.remove('expanded');
+        }
+
+        function switchMode(mode) {
+            // Update tabs
+            document.querySelectorAll('.mode-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
+            
+            // Update panels
+            document.querySelectorAll('.mode-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            document.getElementById(`mode-${mode}`).classList.add('active');
+        }
+
+        function copyPrompt() {
+            const icon = document.getElementById('copy-icon');
+            const text = document.getElementById('copy-text');
+            const btn = document.getElementById('copy-btn');
+            
+            navigator.clipboard.writeText(PROMPT).then(function () {
+                icon.textContent = '✅';
+                text.textContent = 'Copied!';
+                btn.classList.add('copied');
+                
+                setTimeout(function () {
+                    icon.textContent = '📋';
+                    text.textContent = 'Copy prompt';
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Failed to copy:', err);
+            });
+        }
+
+        // Initialize download links
+        document.getElementById('resume-url-display').textContent = RESUME_URL;
+        document.getElementById('download-link').href = RESUME_URL;
+        document.getElementById('open-link').href = RESUME_URL;
+
         async function analyzeJob() {
             const jobDescription = document.getElementById('job-description').value.trim();
-            const apiEndpoint = document.getElementById('api-endpoint').value.trim() || 'http://localhost:8787/api/analyze';
+            const apiEndpoint = 'https://mycv-api.losskot.workers.dev/api/analyze';
             const resultsDiv = document.getElementById('results');
             const resultsContent = document.getElementById('results-content');
             const resultsTitle = document.getElementById('results-title');
@@ -445,14 +777,29 @@ I will provide you with:
                 return;
             }
 
+            // Set analyzing state - make ribbon non-collapsable
+            isAnalyzing = true;
+            
+            // Ensure ribbon is expanded and visible
+            const ribbonExpanded = document.querySelector('.ribbon-expanded');
+            if (!ribbonExpanded.classList.contains('show')) {
+                ribbonExpanded.classList.add('show');
+                document.querySelector('.ribbon-arrow').classList.add('expanded');
+            }
+            
+            // Disable toggle button, hide close button, add analyzing class to ribbon
+            document.querySelector('.ribbon-toggle').classList.add('analyzing');
+            document.querySelector('.close-btn').classList.add('hidden');
+            ribbonExpanded.classList.add('analyzing');
+
             // Show loading state
             analyzeBtn.disabled = true;
             btnText.innerHTML = '<div class="spinner"></div> Analyzing...';
             resultsDiv.classList.remove('show', 'error');
 
             try {
-                // Build complete prompt
-                const fullPrompt = `${PROMPT}\n${jobDescription}`;
+                // Build complete prompt - replace placeholder with actual job description
+                const fullPrompt = PROMPT.replace('[PASTE JOB DESCRIPTION HERE]', jobDescription);
 
                 // Call the API
                 const response = await fetch(apiEndpoint, {
@@ -482,8 +829,13 @@ I will provide you with:
 
             } catch (error) {
                 showError(`API Error: ${error.message}`);
+                // Reset on error
+                isAnalyzing = false;
+                document.querySelector('.ribbon-toggle').classList.remove('analyzing');
+                document.querySelector('.close-btn').classList.remove('hidden');
+                document.querySelector('.ribbon-expanded').classList.remove('analyzing');
             } finally {
-                // Reset button state
+                // Reset button state but keep analyzing mode active on success
                 analyzeBtn.disabled = false;
                 btnText.innerHTML = '✨ Analyze Match';
             }
@@ -525,19 +877,6 @@ I will provide you with:
             if (e.key === 'Enter' && e.ctrlKey) {
                 analyzeJob();
             }
-        });
-
-        // Load saved API endpoint from localStorage
-        window.addEventListener('DOMContentLoaded', function() {
-            const savedEndpoint = localStorage.getItem('apiEndpoint');
-            if (savedEndpoint) {
-                document.getElementById('api-endpoint').value = savedEndpoint;
-            }
-        });
-
-        // Save API endpoint to localStorage on change
-        document.getElementById('api-endpoint').addEventListener('change', function() {
-            localStorage.setItem('apiEndpoint', this.value);
         });
     </script>
 </body>

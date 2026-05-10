@@ -3,6 +3,13 @@
  * 
  * Secure proxy for OpenAI API calls from static GitHub Pages site
  * Uses Azure OpenAI Service (GPT-5.5 model)
+ * 
+ * SECURITY NOTES:
+ * - CORS protection only blocks browsers, not direct API calls
+ * - TODO: Add Cloudflare Turnstile bot challenge
+ * - TODO: Implement KV-based rate limiting (persistent across worker restarts)
+ * - TODO: Add global daily/monthly quota caps
+ * - Current in-memory rate limit is per-worker instance only
  */
 
 // Simple in-memory rate limiting
@@ -176,14 +183,23 @@ async function handleAnalyze(request, env) {
  */
 function getCORSHeaders(request, env) {
   const origin = request.headers.get('Origin');
-  const allowedOrigin = env.ALLOWED_ORIGIN || 'https://hlyniany.github.io';
+  const allowedOrigins = new Set([
+    env.ALLOWED_ORIGIN || 'https://hlyniany.github.io',
+    'http://localhost:8000' // Development only
+  ]);
   
-  return {
-    'Access-Control-Allow-Origin': origin && origin.startsWith(allowedOrigin) ? origin : allowedOrigin,
+  const headers = {
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Max-Age': '86400'
   };
+  
+  // Only set ACAO if origin is in the allowed set (strict equality check)
+  if (origin && allowedOrigins.has(origin)) {
+    headers['Access-Control-Allow-Origin'] = origin;
+  }
+  
+  return headers;
 }
 
 /**
