@@ -490,6 +490,16 @@
             to { transform: rotate(360deg); }
         }
 
+        @keyframes wiggle {
+            0%, 100% { transform: translateY(0); }
+            25%, 75% { transform: translateY(-4px); }
+            50% { transform: translateY(4px); }
+        }
+
+        #banner-bar.wiggle {
+            animation: wiggle 0.5s ease-in-out;
+        }
+
         /* Analysis Results */
         .analysis-results {
             margin-top: 10px;
@@ -748,6 +758,7 @@ I will provide you with:
         let currentMode = 'download';
         let isAnalyzing = false; // Track if analysis is active
         let isPinned = false; // Track if ribbon is pinned
+        let hasWiggled = false; // Track if wiggle animation has played
 
         // Initialize on load
         document.addEventListener('DOMContentLoaded', function() {
@@ -770,18 +781,19 @@ I will provide you with:
                 }
             });
 
-            // Show wiggle animation once
-            const hasSeenWiggle = localStorage.getItem('hasSeenRibbonWiggle');
-            if (!hasSeenWiggle) {
-                setTimeout(function() {
-                    const bannerBar = document.getElementById('banner-bar');
+            // Show wiggle animation on first hover only
+            const bannerBar = document.getElementById('banner-bar');
+            const bannerBtn = document.getElementById('banner-btn');
+            
+            bannerBtn.addEventListener('mouseenter', function() {
+                if (!hasWiggled) {
                     bannerBar.classList.add('wiggle');
-                    setTimeout(function() {
-                        bannerBar.classList.remove('wiggle');
-                    }, 500);
-                    localStorage.setItem('hasSeenRibbonWiggle', 'true');
-                }, 1000);
-            }
+                    hasWiggled = true;
+                }
+            });
+            bannerBar.addEventListener('animationend', function() {
+                bannerBar.classList.remove('wiggle');
+            });
         });
 
         function updateCharCount() {
