@@ -23,6 +23,11 @@
             top: 0; left: 0; right: 0;
             z-index: 50;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            transition: position 0.3s ease;
+        }
+
+        #recruiter-banner.pinned {
+            position: relative !important;
         }
 
         /* Collapsed Bar */
@@ -111,18 +116,61 @@
             max-height: 70vh;
         }
 
+        /* Pinned mode - scroll inside panel */
+        #recruiter-banner.pinned #banner-panel {
+            max-height: none !important;
+        }
+
+        #recruiter-banner.pinned #banner-inner {
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
         #banner-inner {
             max-width: 1024px;
             margin: 0 auto;
-            padding: 20px 24px;
+            padding: 12px 16px;
         }
 
         /* Header: Settings + Close */
         .ribbon-header {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            margin-bottom: 16px;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .header-spacer {
+            flex: 1;
+        }
+
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pin-btn {
+            padding: 6px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.15s, transform 0.15s;
+            color: #6b7280;
+            font-family: inherit;
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        .pin-btn:hover {
+            background: #f3f4f6;
+            transform: scale(1.1);
+        }
+
+        .pin-btn.pinned {
+            color: #7c3aed;
+            background: #f3f4f6;
         }
 
         .close-btn {
@@ -143,8 +191,7 @@
         }
 
         .close-btn.hidden {
-            opacity: 0;
-            pointer-events: none;
+            visibility: hidden;
         }
 
         /* Mode Tabs */
@@ -152,7 +199,7 @@
             display: flex;
             gap: 4px;
             border-bottom: 1px solid #e5e7eb;
-            margin-bottom: 16px;
+            margin-bottom: 8px;
         }
 
         .mode-tab {
@@ -160,7 +207,7 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            padding: 8px 12px;
+            padding: 6px 10px;
             background: transparent;
             border: none;
             font-size: 12px;
@@ -191,7 +238,7 @@
 
         /* Mode Content */
         .mode-content {
-            min-height: 220px;
+            min-height: 120px;
         }
 
         .mode-panel {
@@ -219,7 +266,7 @@
             font-size: 14px;
             color: #6b7280;
             line-height: 1.6;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
         }
 
         .json-url-display {
@@ -229,8 +276,8 @@
             background: #f9fafb;
             border: 1px solid #e5e7eb;
             border-radius: 6px;
-            padding: 10px 12px;
-            margin-bottom: 12px;
+            padding: 6px 10px;
+            margin-bottom: 6px;
         }
 
         .json-url-display code {
@@ -298,7 +345,7 @@
             justify-content: space-between;
             gap: 12px;
             flex-wrap: wrap;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
         }
 
         .copy-description {
@@ -338,7 +385,7 @@
             background: #f9fafb;
             border: 1px solid #e5e7eb;
             border-radius: 6px;
-            padding: 16px;
+            padding: 10px;
             max-height: 40vh;
             overflow-y: auto;
         }
@@ -357,13 +404,13 @@
         .analyze-description {
             font-size: 14px;
             color: #6b7280;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
         }
 
         .job-textarea {
             width: 100%;
-            min-height: 160px;
-            padding: 12px;
+            min-height: 100px;
+            padding: 8px;
             background: #f9fafb;
             border: 1px solid #e5e7eb;
             border-radius: 6px;
@@ -391,7 +438,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 12px;
-            margin-top: 12px;
+            margin-top: 8px;
             flex-wrap: wrap;
         }
 
@@ -445,8 +492,8 @@
 
         /* Analysis Results */
         .analysis-results {
-            margin-top: 16px;
-            padding: 16px;
+            margin-top: 10px;
+            padding: 10px;
             background: #f9fafb;
             border: 1px solid #e5e7eb;
             border-radius: 6px;
@@ -466,7 +513,7 @@
             font-size: 14px;
             font-weight: 600;
             color: #111827;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .results-body {
@@ -512,6 +559,11 @@
             transition: height 0.18s cubic-bezier(0.22,1,0.36,1); 
         }
 
+        /* Hide spacer when banner is pinned (becomes part of document flow) */
+        #recruiter-banner.pinned ~ #banner-spacer {
+            display: none;
+        }
+
         /* Responsive */
         @media (max-width: 640px) {
             #banner-inner {
@@ -533,7 +585,7 @@
     </style>
 </head>
 
-<body style="font-family: Arial, sans-serif; font-size: 14px; color: #000; line-height: 1.4; margin: 0; padding: 20px;">
+<body style="font-family: Arial, sans-serif; font-size: 14px; color: #000; line-height: 1.4; margin: 0; padding: 0;">
 
     <!-- ── AI Analysis Ribbon ── -->
     <div id="recruiter-banner">
@@ -547,12 +599,17 @@
         </div>
         <div id="banner-panel">
             <div id="banner-inner">
-                <!-- Header: Close -->
+                <!-- Header: Pin + Close -->
                 <div class="ribbon-header">
-                    <div></div>
-                    <button class="close-btn" onclick="bannerClose()">
-                        ✕
-                    </button>
+                    <div class="header-spacer"></div>
+                    <div class="header-buttons">
+                        <button class="pin-btn" id="pin-btn" onclick="togglePin()" title="Pin to page">
+                            📌
+                        </button>
+                        <button class="close-btn" onclick="bannerClose()">
+                            ✕
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Mode Tabs -->
@@ -690,6 +747,7 @@ I will provide you with:
         let closeTimer = null;
         let currentMode = 'download';
         let isAnalyzing = false; // Track if analysis is active
+        let isPinned = false; // Track if ribbon is pinned
 
         // Initialize on load
         document.addEventListener('DOMContentLoaded', function() {
@@ -711,6 +769,19 @@ I will provide you with:
                     analyzeJob();
                 }
             });
+
+            // Show wiggle animation once
+            const hasSeenWiggle = localStorage.getItem('hasSeenRibbonWiggle');
+            if (!hasSeenWiggle) {
+                setTimeout(function() {
+                    const bannerBar = document.getElementById('banner-bar');
+                    bannerBar.classList.add('wiggle');
+                    setTimeout(function() {
+                        bannerBar.classList.remove('wiggle');
+                    }, 500);
+                    localStorage.setItem('hasSeenRibbonWiggle', 'true');
+                }, 1000);
+            }
         });
 
         function updateCharCount() {
@@ -736,8 +807,8 @@ I will provide you with:
         }
 
         function closeBanner() {
-            // Don't allow closing during analysis
-            if (isAnalyzing) return;
+            // Don't allow closing during analysis or when pinned
+            if (isAnalyzing || isPinned) return;
             
             if (!isOpen) return;
             isOpen = false;
@@ -747,15 +818,25 @@ I will provide you with:
             document.getElementById('banner-spacer').style.height = '44px';
         }
 
-        // Hover interaction
-        document.getElementById('recruiter-banner').addEventListener('mouseenter', function() {
-            if (!isAnalyzing) openBanner();
-        });
-        document.getElementById('recruiter-banner').addEventListener('mouseleave', function () {
-            if (!isAnalyzing) {
-                closeTimer = setTimeout(closeBanner, 150);
+        function togglePin() {
+            isPinned = !isPinned;
+            const banner = document.getElementById('recruiter-banner');
+            const pinBtn = document.getElementById('pin-btn');
+            
+            if (isPinned) {
+                banner.classList.add('pinned');
+                pinBtn.classList.add('pinned');
+                pinBtn.title = 'Unpin from page';
+                // Ensure it's open when pinned
+                if (!isOpen) {
+                    openBanner();
+                }
+            } else {
+                banner.classList.remove('pinned');
+                pinBtn.classList.remove('pinned');
+                pinBtn.title = 'Pin to page';
             }
-        });
+        }
 
         // Global functions
         window.bannerToggle = function () {
@@ -765,10 +846,12 @@ I will provide you with:
         };
         
         window.bannerClose = function () {
-            // Don't allow closing during analysis
-            if (isAnalyzing) return;
+            // Don't allow closing during analysis or when pinned
+            if (isAnalyzing || isPinned) return;
             closeBanner(); 
         };
+
+        window.togglePin = togglePin;
 
         window.switchMode = function(mode) {
             currentMode = mode;
@@ -829,6 +912,11 @@ I will provide you with:
 
             // Set analyzing state and ensure banner is open and expanded
             isAnalyzing = true;
+            
+            // Auto-pin when analyzing
+            if (!isPinned) {
+                togglePin();
+            }
             
             // Disable toggle button, hide close button, add analyzing class
             document.getElementById('banner-btn').classList.add('analyzing');
@@ -926,8 +1014,10 @@ I will provide you with:
     })();
     </script>
 
-    <!-- Header -->
-    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+    <!-- Resume Content Wrapper -->
+    <div style="padding: 20px;">
+        <!-- Header -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
         <div style="flex: 1;">
             <h1 style="font-size: 32px; font-weight: bold; margin: 0;">Vitaliy Hlynianyi-Zhuk</h1>
             <p style="font-size: 18px; margin: 5px 0 0 0;">AI Integration Engineer · Azure Cloud · Low-code Automation · Business Analyst · Scrum Master</p>
