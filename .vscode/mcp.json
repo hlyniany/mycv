@@ -1,9 +1,6 @@
 {
 	"servers": {
-		"make-mcp": {
-			"url": "https://mcp.make.com",
-			"type": "http"
-		}
+		
 	},
 	"inputs": []
 }
