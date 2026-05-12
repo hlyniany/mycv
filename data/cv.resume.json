@@ -179,6 +179,18 @@
       "description": "Pet project. Android app (Flutter/Dart) built with GitHub Copilot — transcribes voice messages shared from Telegram and WhatsApp. Benchmarked all available Azure AI Foundry speech-to-text models on Russian and English speech; selected best-performing engines across Azure AI Foundry, Azure Speech Services, and ElevenLabs.",
       "keywords": ["Flutter", "Dart", "Android", "Azure AI Foundry", "Azure Speech Services", "Whisper", "gpt-4o-transcribe", "ElevenLabs", "GitHub Copilot"],
       "startDate": "2026-03"
+    },
+    {
+      "name": "Real Estate Classifieds Scraper",
+      "description": "Pet project. Anti-bot bypass stack: Playwright headless evasion (AutomationControlled disabled, webdriver=undefined patch, custom UA/viewport) + curl_cffi TLS fingerprint spoofing; residential proxy pool rotation + Azure-hosted proxies. AI vision analysis of listing photos (GPT-4o Vision / Google Cloud Vision) for structured client queries — e.g. "shower or bathtub?", "balcony present?"; Azure AI endpoint rotation across 5 regions for maximum throughput. Async pipeline (50 req/sec): category crawler → HTML downloader with session management → private API phone extractor (bearer token auto-refresh via Playwright network interception) → multi-core ultrafast parser → SQLite. Full checkpointing; built with GitHub Copilot.",
+      "keywords": ["Python", "Playwright", "asyncio", "curl_cffi", "TLS fingerprinting", "residential proxy", "Azure", "SQLite", "GitHub Copilot"],
+      "startDate": "2025-12"
+    },
+    {
+      "name": "CV Management System — Profile Studio",
+      "description": "Pet project. JSON Resume as structured AI prompt source — CV data served as machine-readable context alongside a parallel analysis form, enabling side-by-side ChatGPT-assisted review. API keys protected end-to-end via Cloudflare Tunnel (Zero Trust) — no credentials exposed client-side. Vue.js + Python; built with GitHub Copilot.",
+      "keywords": ["JSON Resume", "Vue.js", "Python", "Cloudflare Tunnel", "ChatGPT", "GitHub Copilot"],
+      "startDate": "2026-03"
     }
   ],
   "volunteer": [
