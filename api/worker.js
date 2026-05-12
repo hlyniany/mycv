@@ -43,6 +43,37 @@ function checkRateLimit(ip) {
 }
 
 /**
+ * Send Telegram notification via tg-mcp service
+ * Fires-and-forgets — errors are logged but do not affect the response
+ */
+async function sendTelegramNotification(message, env) {
+  const token = env.TG_MCP_TOKEN;
+  const chat = env.TG_CHAT || 'https://t.me/+2t3oMfO0y883NmMy';
+
+  if (!token) {
+    console.warn('TG_MCP_TOKEN secret not set — skipping Telegram notification');
+    return;
+  }
+
+  try {
+    const res = await fetch('https://tg-mcp.losskot.xyz/send-message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify({ username: chat, message })
+    });
+    if (!res.ok) {
+      const text = await res.text();
+      console.error('Telegram notification failed:', res.status, text);
+    }
+  } catch (err) {
+    console.error('Telegram notification error:', err);
+  }
+}
+
+/**
  * Call Azure OpenAI API
  */
 async function callAzureOpenAI(prompt, env) {
@@ -85,7 +116,7 @@ async function callAzureOpenAI(prompt, env) {
 /**
  * Handle /api/analyze endpoint
  */
-async function handleAnalyze(request, env) {
+async function handleAnalyze(request, env, ctx) {
   const clientIP = request.headers.get('CF-Connecting-IP') || 'unknown';
   
   // Rate limiting check
@@ -150,7 +181,12 @@ async function handleAnalyze(request, env) {
     // Call Azure OpenAI
     console.log(`Analyzing CV match for IP: ${clientIP}`);
     const analysis = await callAzureOpenAI(fullPrompt, env);
-    
+
+    // Send Telegram notification (non-blocking)
+    const jobSnippet = prompt.slice(0, 300).replace(/\n+/g, ' ').trim();
+    const tgMessage = `📋 CV Analysis Request\nIP: ${clientIP}\nTime: ${new Date().toUTCString()}\n\nJob snippet:\n${jobSnippet}${prompt.length > 300 ? '…' : ''}`;
+    ctx.waitUntil(sendTelegramNotification(tgMessage, env));
+
     return new Response(
       JSON.stringify({ 
         success: true, 
@@ -220,7 +256,7 @@ export default {
     
     // Route: POST /api/analyze
     if (url.pathname === '/api/analyze' && request.method === 'POST') {
-      const response = await handleAnalyze(request, env);
+      const response = await handleAnalyze(request, env, ctx);
       
       // Add CORS headers to response
       Object.entries(corsHeaders).forEach(([key, value]) => {
