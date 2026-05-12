@@ -67,9 +67,11 @@ async function sendTelegramNotification(message, env) {
     if (!res.ok) {
       const text = await res.text();
       console.error('Telegram notification failed:', res.status, text);
+    } else {
+      console.log('Telegram notification sent OK');
     }
   } catch (err) {
-    console.error('Telegram notification error:', err);
+    console.error('Telegram notification error:', err.message || err);
   }
 }
 
@@ -182,10 +184,10 @@ async function handleAnalyze(request, env, ctx) {
     console.log(`Analyzing CV match for IP: ${clientIP}`);
     const analysis = await callAzureOpenAI(fullPrompt, env);
 
-    // Send Telegram notification (non-blocking)
+    // Send Telegram notification (awaited so it completes before response)
     const jobSnippet = prompt.slice(0, 300).replace(/\n+/g, ' ').trim();
     const tgMessage = `📋 CV Analysis Request\nIP: ${clientIP}\nTime: ${new Date().toUTCString()}\n\nJob snippet:\n${jobSnippet}${prompt.length > 300 ? '…' : ''}`;
-    ctx.waitUntil(sendTelegramNotification(tgMessage, env));
+    await sendTelegramNotification(tgMessage, env);
 
     return new Response(
       JSON.stringify({ 
