@@ -17,8 +17,8 @@ DEPLOYMENT = "gpt-5.5"
 API_VERSION = "2025-04-01-preview"
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-BATCH_FILES = [f"batch_{i:02d}.md" for i in range(1, 5)]
-OUTPUT_FILES = [f"res_{i:02d}.txt" for i in range(1, 5)]
+BATCH_FILES = [f"batch_{i:02d}.md" for i in range(1, 6)]
+OUTPUT_FILES = [f"res_{i:02d}.txt" for i in range(1, 6)]
 
 DEVELOPER_PROMPT = """\
 You are analyzing freelancer profiles from Upwork (AI-automation specialists).

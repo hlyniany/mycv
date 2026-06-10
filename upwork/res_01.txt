@@ -1,0 +1,1033 @@
+## PROFILE 1
+
+- **Success tier:** `established | jobs 41 | hours 4600 | JSS 100%`
+
+- **What the title does:**  
+  The title uses a broad role label first — `Automation Expert` — then immediately anchors it in a tool stack: `Make com, AirTable, Zapier, ClickUp, AI Agents`. It positions through platform familiarity and AI-agent capability rather than through an industry niche. The move is: **tool-stack signaling + broad automation role + AI-agent add-on**.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a pain question:  
+    > `Tired of your team spending hours on tasks that should run themselves?`  
+    The hook frames the client pain as wasted team time on tasks that ought to be automated.
+  - **Structure:** The overview moves in a clear sequence:
+    1. Pain question.
+    2. Self-introduction with Upwork proof:  
+       > `I'm Hryhorii, an automation and AI developer with 4,500+ hours on Upwork, 40+ projects delivered, 100% Job Success Score, and Top Rated Plus status.`
+    3. Broad outcome claim: replacing manual work with automated pipelines.
+    4. Differentiation:  
+       > `I don't just connect tools. I map out the full process, find where time is being wasted, and build something that actually fits how your business operates.`
+    5. “What I build” service list.
+    6. “Recent projects” with concrete examples and metrics.
+    7. Tool stack list.
+    8. Closing diagnostic line and CTA.
+  - **Proof:** Proof is shown through Upwork platform stats, named project types, and quantified outcomes. Examples include:
+    > `4,500+ hours on Upwork, 40+ projects delivered, 100% Job Success Score, and Top Rated Plus status`  
+    and project results such as:  
+    > `processing 1,000+ monthly leads - response time dropped from hours to under 60 seconds, contract preparation from 45 minutes to seconds.`  
+    Another proof example:  
+    > `reducing AP processing time by 80%.`
+  - **Positioned for / against which pain:** Positioned for teams/businesses where a human is still responsible for remembering, routing, following up, preparing contracts, tracking files, or moving data. The core pain is manual process dependency. This is stated directly at the end:  
+    > `If you have a process that relies on someone remembering to do something - that's the problem I solve.`
+  - **Tone:** Direct, outcome-oriented, technical but business-readable. It uses plain operational language rather than heavy jargon. The tone is confident and diagnostic.
+  - **Call to action:** Yes. It closes with:  
+    > `Message me and let's map out what can be automated.`  
+    The CTA asks for a message and frames the next step as mapping automation opportunities.
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The phrase  
+  > `I don't just connect tools.`  
+  is a positioning move against low-level “connector” automation. The closing line  
+  > `If you have a process that relies on someone remembering to do something - that's the problem I solve.`  
+  is a compact pain definition and stands out as the profile’s clearest diagnostic sentence.
+
+
+
+## PROFILE 2
+
+- **Success tier:** `established | jobs 8 | hours 2339 | JSS 100%`
+
+- **What the title does:**  
+  The title narrows the offer around two platforms and one business context: `Monday. com & Make. com Expert | Insurance & Operations Automation`. The move is: **platform specialization + industry/operations niche**. It does not present automation generally; it points toward Monday.com/Make.com systems for insurance and operations-heavy companies.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a friendly self-introduction that immediately states niche and tools:  
+    > `👋 Hi, I'm Viktor — a Monday. com + Make. com specialist focused on insurance and operations-heavy businesses.`
+  - **Structure:** The overview is heavily sectioned:
+    1. Intro with specialization.
+    2. Value proposition:  
+       > `I build complete Monday. com systems and no-code automations that replace spreadsheets and manual work with one clean, reliable place to operate and scale.`
+    3. Flagship build description.
+    4. `💼 What I Build` section divided into insurance, CRM/sales, project/operations, finance/admin, custom Monday apps.
+    5. `🔗 Cross-Tool Integrations`.
+    6. `⚙️ How I Work` process section.
+    7. `🏆 Selected Builds`.
+    8. `🎓 Certifications`.
+    9. `🤝 Why Clients Like Working With Me`.
+    10. CTA under `📩 Let's Automate the Boring Stuff`.
+  - **Proof:** Proof is shown through one detailed flagship project:
+    > `a full operating system for a US home insurance company — the entire policy lifecycle across 9 connected boards, 41 Make. com scenarios, a custom Monday app, and 5 integrated platforms, now running 1,000+ policies.`  
+    Additional proof appears in selected builds and certifications:
+    > `Insurance Operating System — full policy lifecycle, 41 Make scenarios, custom Monday app, Hubflo + QuickBooks + Box + Slack`  
+    and  
+    > `Monday CRM Pro`  
+    > `Make — Advanced`  
+    > `Airtable Builder`
+  - **Positioned for / against which pain:** Positioned for insurance and operations-heavy businesses that are running on spreadsheets, scattered tools, or manual copy-paste. The stated pain at the end is:
+    > `If you're running on spreadsheets, manual updates, or copy-paste across tools, I can help.`
+  - **Tone:** Organized, specialist, system-builder tone. Friendly but precise. The repeated section headers and detailed process language create a structured, operational feel.
+  - **Call to action:** Yes. The CTA is specific about what to send:  
+    > `Send me a short description (or a Loom) of how you work today, and I'll suggest how Monday. com + Make. com can streamline it.`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The strongest distinctive move is the “flagship build” with exact system scale:  
+  > `9 connected boards, 41 Make. com scenarios, a custom Monday app, and 5 integrated platforms, now running 1,000+ policies.`  
+  The phrase  
+  > `No cookie-cutter templates — every system is built to be reliable, scalable, and easy to maintain.`  
+  also positions against generic template implementation.
+
+
+
+## PROFILE 3
+
+- **Success tier:** `established | jobs 45 | hours 3021 | JSS 100%`
+
+- **What the title does:**  
+  The title names automation tools and marketing platforms: `Make.com/n8n & Automation Expert | Klaviyo | Monday/ClickUp`. The move is: **tool and platform clustering around marketing automation**, rather than industry narrowing or outcome promise.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a plain self-introduction:
+    > `Hi, I'm an experienced Marketing Automation Specialist.`  
+    There is no question hook or sharp pain statement at the very beginning.
+  - **Structure:** The overview is built as:
+    1. General statement of experience and benefit:  
+       > `Thanks to this, you will be able to use your time more productively and, accordingly, get more profit.`
+    2. Explanation of studying marketing strategies and integrations.
+    3. “Something about my attitude to work” list.
+    4. “My main experience” divided into:
+       - landing pages / funnels,
+       - marketing automation platforms,
+       - email marketing campaigns,
+       - integrations,
+       - technical skills.
+    5. Thank-you line and contact invitation.
+  - **Proof:** Proof is mostly shown through lists of tools and claimed work habits. There are no named projects, quantified results, certifications, client quotes, or case examples in the overview. The proof mode is capability enumeration.
+  - **Positioned for / against which pain:** Positioned for clients needing marketing automation, landing pages/funnels, email campaigns, CRM setup, and integrations. The pain is broadly framed as inefficient business processes and time use, but not developed through specific scenarios.
+  - **Tone:** Earnest, generalist, and self-descriptive. The “attitude to work” section emphasizes diligence and willingness to learn:
+    > `✅ I always check twice`  
+    > `✅ Even if I do not know something, I am always ready to learn and improve my skills`
+  - **Call to action:** Yes, at the end:
+    > `Please get in touch with me if my skills can help you solve your needs! 👍`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The phrase  
+  > `I always check twice`  
+  is a repeated-style assurance that appears in similar automation profiles in the batch. This profile also foregrounds attitude and learning more than concrete project results.
+
+
+
+## PROFILE 4
+
+- **Success tier:** `established | jobs 53 | hours 3784 | JSS 100%`
+
+- **What the title does:**  
+  The title is broad and keyword-heavy: `Make com & Zapier Automation, API Integration, API, Automation Expert`. The move is: **search-keyword accumulation around automation, Make/Zapier, and API integration**. It repeats `API` and does not narrow by industry or client type.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a service-need question:
+    > `Do you need Marketing Automation, Workflow Automation, Email Automation, API Integration, Make or Zapier Integration?`
+  - **Structure:** The overview begins with a checklist of services:
+    - AI-driven automation with Make, Zapier, N8N, API,
+    - app integrations,
+    - marketing automation platforms,
+    - CRM apps,
+    - task management apps,
+    - funnels,
+    - email campaigns.
+    
+    Then it shifts into a pain paragraph addressed to entrepreneurs:
+    > `As an entrepreneur, you are well aware of the challenges that come with managing a business.`  
+    After that, it introduces the freelancer by name:
+    > `I'm Borys, an expert in organizing, optimizing, and managing workflow automation from scratch.`  
+    It ends with a next-step call.
+  - **Proof:** There are no specific project examples, metrics, client quotes, certifications, or named outcomes in the overview. Proof is mostly implied through the breadth of the service and tool list. One technically specific service phrase is:
+    > `LLM scoring, call analysis, lead classification, enrichment, and decision logic`
+  - **Positioned for / against which pain:** Positioned for entrepreneurs with repetitive work, marketing activities, and operations consuming attention:
+    > `Countless tasks demand your attention, including repetitive work and marketing activities that can be both time-consuming and resource-intensive.`
+  - **Tone:** Service-menu oriented, direct, and broad. It uses a lot of checkmarks and tool names. The tone is less narrative and more list-based.
+  - **Call to action:** Yes:
+    > `What would be the next step?`  
+    > `Let's jump on a call to discuss the details of your project.`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The overview uses a familiar “entrepreneur pain” paragraph:
+  > `free up valuable time that you can then devote to growing and developing your business`  
+  It also includes AI-specific sub-capabilities early:
+  > `LLM scoring, call analysis, lead classification, enrichment, and decision logic`
+
+
+
+## PROFILE 5
+
+- **Success tier:** `established | jobs 192 | hours 3273 | JSS 100%`
+
+- **What the title does:**  
+  The title frames a broad business automation role and attaches key tools: `Business Automation Specialist | Make Integromat | Zapier expert | CRM`. The move is: **broad business automation + Make/Zapier + CRM authority**. It does not narrow to a single industry.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a status badge:
+    > `🏆 Top-Rated Business Automation Specialist 🏆`  
+    Then a playful greeting:
+    > `Hey there! 😊 Vadym here, your experienced maestro of business automation and CRM expert, armed with a treasure trove of tools to elevate your operations to new heights. 🚀`
+  - **Structure:** The overview is built as:
+    1. Top-rated positioning.
+    2. Personality-rich self-introduction.
+    3. Credential paragraph: 8 years, certified partnerships, Make/Zapier expertise, agency/project manager experience.
+    4. “Here’s where I shine” with `Expertise`.
+    5. `Toolbox` list.
+    6. Money-back guarantee.
+    7. CTA with musical metaphor.
+  - **Proof:** Proof includes:
+    > `over 8 years of CRM expertise`  
+    > `official certified partner of Zoho CRM and PipeDrive`  
+    > `expert in Make.com and Zapier`  
+    > `practical experience as a project manager and CRM integrator in the digital agency realm`  
+    There are no named projects, quantified client outcomes, or client quotes.
+  - **Positioned for / against which pain:** Positioned for businesses needing tailored automation and CRM strategy. The pain is implicit: inefficient operations and the need to “elevate” operations. It also explicitly positions against generic approaches:
+    > `No cookie-cutter approaches here—just personalized automation strategies designed to fit you like a glove. 😊`
+  - **Tone:** Highly playful, emoji-heavy, metaphorical, and personable. It uses phrases like:
+    > `maestro of business automation`  
+    > `trusted guide through the labyrinth of automation possibilities`  
+    > `trusted companions in the quest for efficiency and productivity`
+  - **Call to action:** Yes:
+    > `Ready to transform your business with automation that sings? Reach out today, and let's orchestrate something extraordinary together! 🎵😄`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The profile includes a direct guarantee:
+  > `if the solution isn't up to par, your money finds its way back to you, no questions asked.`  
+  The “music/orchestration” metaphor is sustained through the closing:
+  > `automation that sings`  
+  > `orchestrate something extraordinary`
+
+
+
+## PROFILE 6
+
+- **Success tier:** `established | jobs 6 | hours 2465 | JSS 100%`
+
+- **What the title does:**  
+  The title combines AI automation, integration, one automation tool, one email platform, and tracking: `AI Automation & Integration| N8N | ActiveCampaign| Conversion Tracking`. The move is: **sales/marketing automation positioning through AI + N8N + ActiveCampaign + measurement**.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with status:
+    > `🏆 Top-Rated Plus Freelancer`  
+    Then a large stylized slogan:
+    > `💥𝑨𝒖𝒕𝒐𝒎𝒂𝒕𝒆 𝒚𝒐𝒖𝒓 𝑺𝒂𝒍𝒆𝒔 & 𝑴𝒂𝒓𝒌𝒆𝒕𝒊𝒏𝒈💥𝑪𝒐𝒏𝒏𝒆𝒄𝒕 𝒂𝒍𝒍 𝒚𝒐𝒖𝒓 𝒑𝒓𝒐𝒈𝒓𝒂𝒎𝒔 𝒂𝒏𝒅 𝒂𝒑𝒑𝒔💥𝑪𝒐𝒏𝒗𝒆𝒓𝒕 𝒎𝒐𝒓𝒆 𝑳𝒆𝒂𝒅𝒔.`
+  - **Structure:** The overview is short:
+    1. Top Rated Plus line.
+    2. Stylized outcome slogan.
+    3. Immediate CTA:  
+       > `📅 Message me to schedule.`
+    4. Revenue claim:
+       > `If you want to add 15-30% of revenue to your bottom line, you have come to the right place.`
+    5. Name/location.
+    6. “Why Should You Hire Me?” personal qualities.
+    7. Tools list.
+    8. Final invitation to talk.
+  - **Proof:** The overview states `Top-Rated Plus Freelancer`, but does not give project examples, case metrics, certifications, or client quotes. The `15-30% of revenue` line is presented as a promise/claim, not attached to a specific case in the overview.
+  - **Positioned for / against which pain:** Positioned for clients wanting to automate sales and marketing, connect apps, and convert more leads. The pain is broad and not expanded into a detailed process problem.
+  - **Tone:** Promotional, enthusiastic, emoji-heavy, brief. It emphasizes availability and attitude more than project detail.
+  - **Call to action:** Yes, twice:
+    > `📅 Message me to schedule.`  
+    and  
+    > `✴️Not sure if I can help you? Let's talk and figure it out :-)✴️`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The revenue line stands out:
+  > `If you want to add 15-30% of revenue to your bottom line, you have come to the right place.`  
+  The profile also uses a large decorative typographic slogan as the main hook.
+
+
+
+## PROFILE 7
+
+- **Success tier:** `established | jobs 44 | hours 2888 | JSS 99%`
+
+- **What the title does:**  
+  The title names a category and key marketing automation tools: `Marketing Automation | ActiveCampaign, ClickFunnels, GoHighLevel, Make`. The move is: **marketing automation positioning through recognizable funnel/email/CRM tools**. It does not narrow by industry.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with self-introduction and outcome:
+    > `Hello, I'm Vasyl, a marketing automator dedicated to optimizing your processes and boosting profits.`
+  - **Structure:** The overview is organized like a résumé/service sheet:
+    1. Self-intro plus `over two decades in sales and marketing`.
+    2. Numbered `Workflow and Marketing Automation Services`.
+    3. Tool lists under funnels, autoresponders, CRM, integrations.
+    4. Specialty statement:
+       > `I specialize in creating and optimizing various automations, including webinar funnels, e-commerce funnels, list management, lead activation, and reactivation strategies.`
+    5. `Key Strengths`.
+    6. `Additional Skills`.
+    7. `Professional Background`.
+    8. `Recent Achievements`.
+    9. Closing interest/CTA.
+  - **Proof:** Proof comes from career background rather than automation case metrics:
+    > `With over 20 years of experience in the B2B sector`  
+    > `I played a pivotal role in establishing and expanding distribution networks for electrical engineering and led-lighting in Ukraine.`  
+    It also says:
+    > `In recent 3 years, leveraging my extensive managerial experience, I successfully spearheaded comprehensive projects focused on constructing marketing funnels, configuring integrations, and developing intricate email automation strategies.`  
+    No specific project names, client quotes, or numerical automation outcomes are given.
+  - **Positioned for / against which pain:** Positioned for businesses seeking process streamlining, profit increase, funnels, email automation, and CRM/integration setup. The pain is general operational inefficiency rather than a tightly defined scenario.
+  - **Tone:** Professional, steady, background-heavy. It emphasizes managerial and B2B experience alongside automation skills.
+  - **Call to action:** Yes:
+    > `Thank you for your time! Feel free to reach out if you see potential synergy.`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The profile blends automation with senior business background:
+  > `Additional Skills: ✓ Sales and Marketing Management ✓ Chief Operating Officer (COO)`  
+  The phrase  
+  > `potential synergy`  
+  gives the ending a business-networking tone.
+
+
+
+## PROFILE 8
+
+- **Success tier:** `established | jobs 317 | hours 8545 | JSS 100%`
+
+- **What the title does:**  
+  The title is not an AI-automation title. It is a paid-ads/Shopify title: `Facebook Ads Manager / Meta Ads Shopify Facebook Ads Google Ads`. The move is: **keyword-dense positioning for Meta/Facebook Ads, Shopify, and Google Ads**. It repeats search terms rather than narrowing through a sentence-style promise.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a bracketed outcome-heavy statement:
+    > `⌜ Improve your Meta Ads & Facebook Ads performance in 2026 – proven track record of scaling Shopify revenue by 400% through paid ads. 208 E-commerce Projects Completed. Explore real results in my case studies ↘ ⌟`
+  - **Structure:** The overview is long and SEO-keyword dense:
+    1. High-level proof bullets: years, certification, number of ecommerce projects, ad spend, Upwork percentile/JSS.
+    2. Negative positioning:
+       > `⚠️ I don’t provide lead-generation services, white-label PPC, or join agencies as staff`
+    3. Self-intro and broad digital marketing services.
+    4. Video prompt:
+       > `𝗖𝗵𝗲𝗰𝗸 𝗼𝘂𝘁 𝘁𝗵𝗲 𝘃𝗶𝗱𝗲𝗼 𝘁𝗼 𝗹𝗲𝗮𝗿𝗻 𝘁𝗵𝗲 𝘀𝗲𝗰𝗿𝗲𝘁𝘀 𝗼𝗳 𝘀𝗰𝗮𝗹𝗶𝗻𝗴 𝗲𝗰𝗼𝗺𝗺𝗲𝗿𝗰𝗲 𝗯𝘂𝘀𝗶𝗻𝗲𝘀𝘀𝗲𝘀`
+    5. Results section with specific outcomes.
+    6. Service snapshot.
+    7. Partnership positioning.
+    8. Full-scale paid advertising solution lists.
+    9. Final CTA.
+  - **Proof:** Proof is shown repeatedly through large numbers and outcome claims:
+    > `10+ Years of Experience`  
+    > `208 E-commerce Projects Completed`  
+    > `$1,2M+ in Monthly Ad Spend Managed Paid Advertising`  
+    > `TOP 3% Facebook Ads Manager & Facebook Ads lead generation & Google Ads Specialist on Upwork | 100% Job Success Rate`  
+    > `$35M ad spend experience`  
+    Project-result bullets include:
+    > `Boosted transactions by 400% and reduced CPC by 45%`  
+    > `Increased monthly revenue from $5K to $50K+`  
+    > `Achieved 8x ROAS`
+  - **Positioned for / against which pain:** Positioned for Shopify/ecommerce brands wanting paid ads growth, ROAS, traffic, and conversions. It explicitly positions against certain buyer types:
+    > `I don’t provide lead-generation services, white-label PPC, or join agencies as staff`
+  - **Tone:** Assertive, promotional, keyword-saturated, and metrics-heavy. It repeatedly restates `Facebook Ads`, `Meta Ads`, `Shopify`, `Google Ads`, `PPC`, and `ecommerce`.
+  - **Call to action:** Yes:
+    > `Ready to Scale Your Business? Let’s Talk!`  
+    There is also an earlier CTA toward watching a video.
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The overview contains an explicit exclusion line:
+  > `I don’t provide lead-generation services, white-label PPC, or join agencies as staff`  
+  A notable internal juxtaposition is that the exclusion says no lead-generation services, while later service lists include:
+  > `Facebook Ads Lead Generation`  
+  The profile’s most distinctive stylistic feature is very heavy keyword repetition around paid ads terms.
+
+
+
+## PROFILE 9
+
+- **Success tier:** `established | jobs 44 | hours 2005 | JSS 100%`
+
+- **What the title does:**  
+  The title narrows into no-code development and automation tools: `No-Code Developer | Airtable, Make & n8n | Automation`. The move is: **no-code specialization + Airtable/Make/n8n automation positioning**.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a vivid manual-work pain question and quantified outcome:
+    > `Drowning in manual tasks? I build no-code systems on Airtable, Make & n8n that cut repetitive work by 70% — so your team focuses on growth, not data entry.`
+  - **Structure:** The overview is compact:
+    1. Manual-task hook with `70%`.
+    2. Specialization statement:
+       > `I specialize exclusively in no-code development`
+    3. Positioning against templates/hand-offs:
+       > `no generic templates, no hand-offs`
+    4. `What I build for you` list.
+    5. `Recent wins` list with quantified outcomes.
+    6. CTA with promised response time and plan.
+  - **Proof:** Proof appears through quantified “recent wins”:
+    > `CRM system → 35% increase in lead conversion for a B2B client`  
+    > `Partner booking portal → eliminated hours of daily phone calls`  
+    > `HR employee portal → 60% reduction in administrative workload`  
+    The overview does not name clients or include certifications/testimonials.
+  - **Positioned for / against which pain:** Positioned for teams stuck in repetitive work, data entry, spreadsheets, legacy tools, or needing no-code systems like CRMs, portals, web apps, and automation pipelines. It positions against generic implementation:
+    > `Every build is architected around your actual business process, not the other way around.`
+  - **Tone:** Concise, confident, productized, and outcome-focused. It reads like a specialist no-code systems profile rather than a broad marketing automation menu.
+  - **Call to action:** Yes:
+    > `Send me a message describing your workflow challenge — I'll reply within a few hours with a concrete plan.`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The line  
+  > `no generic templates, no hand-offs`  
+  is a compact anti-generic positioning move. The phrase  
+  > `architected around your actual business process, not the other way around`  
+  is also a process-first claim.
+
+
+
+## PROFILE 10
+
+- **Success tier:** `established | jobs 55 | hours 2535 | JSS 100%`
+
+- **What the title does:**  
+  The title uses a broad automation role and then names tools: `Automation and Integration Expert | Zapier | Make.com | GoHighLevel`. The move is: **general automation/integration positioning through Zapier, Make.com, and GoHighLevel**.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a very general question:
+    > `Do you need automation?`
+  - **Structure:** The overview is structured as:
+    1. General question.
+    2. “main part of my experience” checklist.
+    3. Strong points list:
+       > `keeping an eye on details (I always check twice)`  
+       > `communication`  
+       > `good technical background`
+    4. General pain paragraph about repetitive workflows.
+    5. Self-introduction:
+       > `My name is Anton, and I know how to organize, optimize, and manage workflow automation from scratch.`
+    6. Tool list repeated in paragraph form.
+    7. Benefit statement.
+    8. Contact invitation.
+  - **Proof:** There are no concrete projects, metrics, certifications, client quotes, or platform stats in the overview. Proof is presented through service categories and tool familiarity.
+  - **Positioned for / against which pain:** Positioned for companies with repetitive workflows and marketing activities:
+    > `Every company has a lot of repetitive workflows and marketing activities, and they can automate to free up resources and time.`
+  - **Tone:** Generic, direct, service-list oriented. It uses checklist formatting and broad business-benefit language.
+  - **Call to action:** Yes:
+    > `Please feel free to contact me!`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The phrase  
+  > `I always check twice`  
+  recurs as a trust/quality assurance move in this batch. The wording  
+  > `So trust the automation to me.`  
+  is a direct handoff-style trust appeal.
+
+
+
+## PROFILE 11
+
+- **Success tier:** `established | jobs 56 | hours 1163 | JSS 100%`
+
+- **What the title does:**  
+  The title narrows to email marketing and names platforms: `Email Marketing | ActiveCampaign Email Marketing , MailChimp , Klaviyo`. The move is: **email-marketing specialization with platform repetition**, especially `ActiveCampaign`, `MailChimp`, and `Klaviyo`.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with badge-style proof:
+    > `⏱ Fast response | 💎 Top Rated Plus | 🤝 Long-term support | ✅ 50+ Projects Delivered`
+    
+    Then it moves into a problem diagnosis:
+    > `Most businesses struggle with the same hidden issues: broken automation, unclear customer journeys, poor segmentation, and email marketing that doesn’t support ads, SEO, or LinkedIn traffic.`
+  - **Structure:** The overview is long and highly structured:
+    1. Proof/status line.
+    2. Problem diagnosis around broken email systems.
+    3. Core solution claim:
+       > `I rebuild email marketing into a structured, behavior-driven system that works consistently, not occasionally.`
+    4. Early CTA.
+    5. Specialization paragraph.
+    6. Client pain list.
+    7. “I create logic” positioning.
+    8. Platform focus and ecommerce mention.
+    9. Negative positioning around copywriting and cold email.
+    10. Services list.
+    11. Tools list.
+    12. Work process.
+    13. Important notes.
+    14. Final CTA.
+  - **Proof:** Proof is shown through:
+    > `Top Rated Plus`  
+    > `50+ Projects Delivered`  
+    It does not include named client projects or quantified revenue results. The rest of the proof is expertise framing around strategy, automation architecture, segmentation, deliverability, and integrations.
+  - **Positioned for / against which pain:** Positioned for businesses whose email marketing is active but not revenue-producing. The pains are explicitly listed:
+    > `Email marketing exists, but doesn’t drive revenue`  
+    > `Automations are incomplete or overcomplicated`  
+    > `Drip email sequences don’t reflect real customer behavior`  
+    > `Lists are unsegmented and engagement keeps dropping`  
+    > `Email marketing is disconnected from digital marketing efforts`
+    
+    It positions against cold email and manual copywriting services:
+    > `No cold email`  
+    > `No manual copywriting services (AI-assisted only)`
+  - **Tone:** Diagnostic, system-focused, explicit about scope boundaries. It is longer and more explanatory than many of the tool-list profiles.
+  - **Call to action:** Yes, both early and late:
+    > `📩Message me now and let’s turn your email marketing into a structured, automated revenue channel.`  
+    and  
+    > `Click "𝗜𝗡𝗩𝗜𝗧𝗘" and send me a message describing your current email setup, platform, and main goal.`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The strongest distinctive line is:
+  > `Email marketing can look “active” and still fail at the only thing that matters — revenue.`  
+  Another clear positioning line:
+  > `I’m not just setting up emails — I create logic:`  
+  > `🎯 who gets what message, when, and why.`  
+  The profile also explicitly states exclusions:
+  > `No cold email`  
+  > `No manual copywriting services (AI-assisted only)`
+
+
+
+## PROFILE 12
+
+- **Success tier:** `established | jobs 101 | hours 4895 | JSS 100%`
+
+- **What the title does:**  
+  The title combines automation, AI, and recognizable platforms: `Automation & AI Expert | Make.com, Zapier, ChatGPT, APIs`. The move is: **broad automation/AI authority through Make, Zapier, ChatGPT, and API signaling**.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a credentialed self-description rather than a question:
+    > `As a seasoned Automation and AI Expert with over 10000 hours of experience specializing in marketing automation, AI and efficient workflow solutions, I'm here  to help businesses attract 𝗺𝗼𝗿𝗲 𝗰𝗹𝗶𝗲𝗻𝘁𝘀, 𝘀𝗮𝘃𝗲 𝘁𝗶𝗺𝗲, 𝗮𝗻𝗱 𝗿𝗲𝗱𝘂𝗰𝗲 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝗮𝗹 𝗰𝗼𝘀𝘁𝘀 through innovative automation strategies.`
+  - **Structure:** The overview is organized into formal sections:
+    1. Opening credential/value statement.
+    2. `𝐖𝐡𝐚𝐭 𝐈 𝐎𝐟𝐟𝐞𝐫` with subsections:
+       - marketing automation,
+       - CRM expertise,
+       - integration skills,
+       - AI integrations,
+       - analytics setup.
+    3. `🛠️ 𝗠𝘆 𝗧𝗼𝗼𝗹𝘀 𝗼𝗳 𝗘𝘅𝗽𝗲𝗿𝘁𝗶𝘀𝗲`.
+    4. `𝐌𝐲 𝐁𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐈𝐧𝐜𝐥𝐮𝐝𝐞𝐬`.
+    5. `𝐊𝐞𝐲 𝐀𝐜𝐡𝐢𝐞𝐯𝐞𝐦𝐞𝐧𝐭𝐬`.
+  - **Proof:** Proof includes:
+    > `over 10000 hours of experience`  
+    > `Maintained a 100% Job Success rate and earned top-rated status on Upwork`  
+    plus broad achievements:
+    > `GPT3 and Airtable Marketing Automation: Successfully integrated AI and automation to elevate marketing efforts.`  
+    > `Funnel Creation and Analytics: Built and analyzed various marketing funnels to improve performance and increase conversion rates.`  
+    The achievements are named as categories rather than detailed case studies with client/project metrics.
+  - **Positioned for / against which pain:** Positioned for businesses wanting more clients, time savings, lower operational costs, AI integration, marketing automation, analytics, and workflow efficiency. The pain is broad operational inefficiency rather than a single concrete workflow problem.
+  - **Tone:** Formal, credentialed, brochure-like, with stylized Unicode headings and bold emphasis. It reads as a broad expertise inventory.
+  - **Call to action:** No direct final CTA is present in the overview. It ends with key achievements rather than asking the reader to message, invite, book, or describe a problem.
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The phrase  
+  > `Bring your operations into the age of AI`  
+  is a broad AI-modernization framing. The background section is unusually broad for the batch, including:
+  > `managed teams of network engineers and content creators, built web development teams from scratch, and organized service operation centers.`
+
+
+
+## PROFILE 13
+
+- **Success tier:** `established | jobs 15 | hours 695 | JSS 100%`
+
+- **What the title does:**  
+  The title narrows around N8N and AI automation, then adds Make, Airtable, Zoho, and APIs: `N8N & AI Automation Expert | Make | Airtable | Zoho | API Integrations`. The move is: **N8N/AI specialization with a technical integration stack**.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with platform proof:
+    > `⭐ Top Rated Plus | 100% Job Success Score | 5.0 Rating`
+    
+    Then a concise value statement:
+    > `I build intelligent automation systems that eliminate manual work — connecting your CRMs, messengers, social platforms, and AI models into one seamless pipeline.`
+  - **Structure:** The overview is organized as:
+    1. Upwork/status proof.
+    2. Value proposition.
+    3. Core stack line.
+    4. `✅ What I build` with sections:
+       - N8N & AI Workflows,
+       - Chatbots & Messenger Automation,
+       - CRM & Marketing Automation,
+       - API & Data Integrations.
+    5. `🔥 Why clients choose me`.
+    6. Client quote snippets.
+    7. CTA.
+  - **Proof:** Proof includes:
+    > `Top Rated Plus, 100% Job Success Score, 5.0 avg. rating`  
+    > `50+ completed automations: e-commerce, SaaS, medical practices, agencies`  
+    > `12-month warranty — free fixes if anything breaks due to my logic or setup`  
+    > `Response within 0–4 hours, 30+ hrs/week availability`
+    
+    It also includes two client quote snippets:
+    > `"Overcame every technical obstacle with maximum effort!" ⭐⭐⭐⭐⭐`  
+    > `"Fast and professional — highly recommend!" ⭐⭐⭐⭐⭐`
+    
+    There are no detailed named case studies or quantified business outcomes.
+  - **Positioned for / against which pain:** Positioned for businesses needing CRMs, messengers, social platforms, and AI models connected into automated pipelines. The pain is manual work across communications, CRM, and data flows.
+  - **Tone:** Technical, confident, operational, and support-oriented. It uses precise technical terms like:
+    > `REST API: GET / POST / PUT / PATCH + OAuth, API key, JWT auth`
+  - **Call to action:** Yes:
+    > `📩 Tell me what you want to automate — I'll respond with a clear solution within a few hours.`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The warranty is distinctive:
+  > `12-month warranty — free fixes if anything breaks due to my logic or setup`  
+  The profile also gives a very specific response window:
+  > `Response within 0–4 hours`
+
+
+
+## PROFILE 14
+
+- **Success tier:** `established | jobs 19 | hours 954 | JSS 100%`
+
+- **What the title does:**  
+  The title uses a broad role and three automation platforms: `AI & Automation Expert | Make | Zapier | n8n`. The move is: **AI/no-code automation positioning through the core no-code automation tools**. No industry niche is named.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a compact positioning sentence:
+    > `AI Automation & No-Code Automation Expert for Business Workflows (Make, Zapier, n8n).`
+    
+    It immediately attaches outcomes:
+    > `I build intelligent automation systems that reduce manual workload by 20–60%, lower operational costs, and scale processes with clarity and control.`
+  - **Structure:** The overview is short and sectioned:
+    1. Opening value/outcome statement.
+    2. `🤖 What I Do Best` service list.
+    3. `🎯 Why Clients Choose Me` benefit list.
+    4. One paragraph summarizing client types and project types.
+    5. CTA under `🌱 Let’s Collaborate`.
+  - **Proof:** Proof is mostly generalized. It states:
+    > `reduce manual workload by 20–60%`  
+    and:
+    > `Worked with SaaS companies, e-commerce brands, and B2B marketing agencies`
+    
+    There are no named projects, client quotes, certifications, Upwork stats, or detailed case examples in the overview.
+  - **Positioned for / against which pain:** Positioned for business workflows needing AI/no-code automation, lead capture, CRM sync, onboarding flows, internal training, and workload reduction. Pain is manual workload and operational cost.
+  - **Tone:** Concise, clean, and menu-like. It uses benefit words such as:
+    > `AI-First`  
+    > `Efficiency`  
+    > `Growth`  
+    > `Reliability`
+  - **Call to action:** Yes:
+    > `Share your current workflow pain points - I’ll advise on the optimal automation solution.`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The phrase  
+  > `AI-First - Smart AI automation for better results`  
+  is a concise positioning label. The overview also includes voice/assistant language:
+  > `voice AI agents, custom AI assistants`
+
+
+
+## PROFILE 15
+
+- **Success tier:** `established | jobs 105 | hours 2489 | JSS 100%`
+
+- **What the title does:**  
+  The title narrows around workflow automation and names tools: `Workflow Automation Specialist | n8n, Make, ManyChat, ActiveCampaign`. The move is: **workflow-gap specialist positioning with a stack that combines automation, messaging, and email/CRM**.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a diagnosis rather than a greeting:
+    > `Most businesses have the tools. What they're missing is the connection between them, so leads wait, follow-ups get forgotten, and someone on the team is still copy-pasting data between systems every day.`
+  - **Structure:** The overview is narrative and diagnostic:
+    1. Core diagnosis: tools exist, connections are missing.
+    2. Outcome statement:
+       > `I build the workflow automations that close those gaps`
+    3. Common-pattern paragraph with concrete examples.
+    4. Thesis:
+       > `These aren't people problems. They're gap problems. Automation closes gaps.`
+    5. Approach:
+       > `I map the highest-friction point first`
+    6. “What I usually end up building” list.
+    7. One detailed example with metric.
+    8. “A few things clients notice working with me” section.
+    9. Stack.
+    10. CTA.
+  - **Proof:** Proof is shown through one concrete example:
+    > `I built a support automation for an online language school that handles 15-20 billing and balance inquiries every day.`  
+    > `The owner stopped needing a VA for support and got 10+ hours a week back.`  
+    It also includes relationship proof:
+    > `My longest client relationship ran 18 months and $12k`
+    
+    There are no badges/certifications in the overview.
+  - **Positioned for / against which pain:** Positioned for businesses where leads wait, follow-ups are forgotten, onboarding lags, data is unsynced, or staff copy-paste between tools. The profile frames the pain as “gaps” rather than bad people:
+    > `Not because no one cares, because the handoff between the form, the CRM, and the follow-up sequence isn't automated.`
+  - **Tone:** Plainspoken, consultative, diagnostic, and process-focused. It avoids heavy emoji formatting and reads like a practical operator describing common failure points.
+  - **Call to action:** Yes:
+    > `If this sounds like the right fit, click "Invite to Job", and I'll show you exactly how I'd approach your setup.`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The clearest distinctive phrasing is:
+  > `These aren't people problems. They're gap problems. Automation closes gaps.`  
+  Another distinctive move is the caveat against premature automation:
+  > `I flag what shouldn't be automated yet. If a process is still changing, automating it early creates more work, not less. I'll tell you.`
+
+
+
+## PROFILE 16
+
+- **Success tier:** `established | jobs 53 | hours 1080 | JSS 100%`
+
+- **What the title does:**  
+  The title is a tool/certification list: `Certified Airtable | HubSpot| Pipedrive| n8n| Make | CRM | Monday`. The move is: **certified Airtable signal + broad CRM/automation platform keyword list**. It does not include a clear role noun like “developer” or “specialist” in the title.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens simply:
+    > `Hello,`
+    
+    Then identifies the freelancer:
+    > `I’m Alex, a digital marketing automation expert with 18 years of experience transforming businesses through cutting-edge automation strategies and data-driven insights.`
+  - **Structure:** The overview is built as a compact résumé/list:
+    1. Greeting and identity.
+    2. Long automation/integration tool list.
+    3. Short capability lines:
+       > `Workflows for your business model.`  
+       > `Certified Airtable builder.`  
+       > `Rapid MVP Deployment: Launch (MVPs) swiftly for immediate market impact.`
+    4. `Technical Proficiencies`.
+    5. `Additional Expertise`.
+    6. `Industries Served`.
+    7. Signoff:
+       > `Best regards,`  
+       > `Alex`
+  - **Proof:** Proof includes:
+    > `18 years of experience`  
+    > `Certified Airtable builder.`  
+    and an industry range:
+    > `insurance, real estate, construction, education, and e-commerce`
+    
+    There are no named projects, quantified outcomes, client quotes, Upwork badges, or detailed case examples in the overview.
+  - **Positioned for / against which pain:** Positioned for businesses needing automation strategies, data-driven insights, Airtable/CRM/workflow systems, dashboards, and MVPs. The pain is not strongly developed; there is no explicit client pain scenario.
+  - **Tone:** Formal, résumé-like, terse. The signoff makes it read like a letter.
+  - **Call to action:** No explicit CTA is present. It ends with:
+    > `Best regards,`  
+    > `Alex`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The overview contains a very long single tool chain:
+  > `Zapier, Apify, Calendly, Make, Typeform, Pipedrive, Hubspot, Airtable, QuickBooks, Xero, FreshBooks, Zendesk, Bubble, Dropbox, Notion, Noloco, Shopify, Salesforce, Slack, JotForm, Fireflies, Ottr, Twilio, OpenAI, Apollo, Microsoft Power Automate, Claude, Retool, n8n, Jira, Mailer Lite, Stripe, DocuSign, ActiveCampaign, Mailchimp`  
+  Another notable phrase:
+  > `Data-Driven Solutions: Develop advanced Entity Relationship Diagrams`
+
+
+
+## PROFILE 17
+
+- **Success tier:** `established | jobs 19 | hours 1043 | JSS 100%`
+
+- **What the title does:**  
+  The title is broad and generic: `Marketing Automation | Workflow Automation`. The move is: **category labeling without tool, niche, or outcome specificity**.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a pain-question sequence:
+    > `⚡ Are you tired of wasting time on repetitive tasks that could be automated? Do you struggle with managing your sales funnel and email campaigns? Look no further!`
+  - **Structure:** The overview is built as:
+    1. Pain-question hook.
+    2. Positioning as a marketing/workflow automation specialist.
+    3. Background in sales/account management and small business ownership.
+    4. Task list divided into:
+       - sales funnel development,
+       - email automation,
+       - workflow automation.
+    5. Broad assurance paragraph for small business owners, marketers, and salespeople.
+    6. Personal values section.
+    7. CTA.
+  - **Proof:** Proof is personal/professional background:
+    > `With years of experience working as a sales rep and account manager`  
+    > `As a small business owner myself`
+    
+    There are no project examples, metrics, certifications, client quotes, or named outcomes in the overview.
+  - **Positioned for / against which pain:** Positioned for businesses wasting time on repetitive tasks, struggling with sales funnels and email campaigns, and wanting lower costs/productivity gains. It explicitly names audiences:
+    > `Whether you're a small business owner, a marketer, or a salesperson`
+  - **Tone:** Personable, motivational, values-driven. It uses repeated ⚡ icons and emphasizes honesty, satisfaction, communication, and learning.
+  - **Call to action:** Yes:
+    > `📞 So why wait? Let's discuss your needs and ideas, and find the best solutions to take your business to the next level. Contact me today and let's get started!`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The values section is prominent:
+  > `Honesty and transparency are at the core of everything I do.`  
+  and:
+  > `If for any reason it doesn't, I'll ask for feedback and work to make things right until you're completely satisfied.`  
+  This profile leans more into working relationship values than into technical proof.
+
+
+
+## PROFILE 18
+
+- **Success tier:** `established | jobs 18 | hours 693 | JSS 100%`
+
+- **What the title does:**  
+  The title is narrow and tool-specific: `Airtable | No-Code Systems Engineer`. The move is: **single-platform specialization + systems-engineer positioning**. It avoids a broad automation keyword stack.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens informally:
+    > `Hey there, I'm Yurii!`
+    
+    Then immediately states specialization:
+    > `I specialize in designing scalable Airtable bases, building smart automations, and integrating Airtable with tools like Zapier, Make, Softr, Typeform, Fillout, Tally, VideoAsk, DocuSign and more.`
+  - **Structure:** The overview is simple and focused:
+    1. Greeting and name.
+    2. Airtable specialization.
+    3. `How I can help you with Airtable:` list.
+    4. Philosophy:
+       > `I focus on clean structure, reliability, and long-term scalability — not quick hacks.`
+    5. Two client scenarios:
+       > `If you already have a base that feels messy or slow, I can clean it up.`  
+       > `If you’re starting from zero, I can design it right from day one.`
+    6. CTA.
+  - **Proof:** There are no stats, certifications, client examples, metrics, or testimonials in the overview. Proof is shown through specificity of Airtable services: linked tables, formulas, rollups, lookups, conditional logic, interfaces, dashboards, and forms.
+  - **Positioned for / against which pain:** Positioned for Airtable users with messy, slow, hard-to-maintain bases, or businesses starting a new Airtable system. It positions against short-term fixes:
+    > `not quick hacks`
+  - **Tone:** Calm, focused, practical, and narrow. It does not use heavy hype or many emojis.
+  - **Call to action:** Yes:
+    > `Let’s discuss your workflow and see how Airtable can work better for your business. Send me a message, and I’ll help you design a clean, scalable solution.`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The strongest phrase is:
+  > `clean structure, reliability, and long-term scalability — not quick hacks.`  
+  The profile’s distinction is its narrow Airtable-only focus compared with broader Make/Zapier/n8n profiles.
+
+
+
+## PROFILE 19
+
+- **Success tier:** `established | jobs 56 | hours 613 | JSS 97%`
+
+- **What the title does:**  
+  The title positions around marketing automation and three revenue/CRM/email tools: `Marketing Automation Expert | Zapier, GHL & Klaviyo`. The move is: **marketing/e-commerce automation through Zapier, GoHighLevel, and Klaviyo**.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a subtitle:
+    > `Marketing & E-Commerce Automation Architect | Zapier, GoHighLevel & Klaviyo`
+    
+    Then a revenue-loss claim:
+    > `Most brands lose 30–45% of revenue to fragmented data and manual workflows.`
+  - **Structure:** The overview is built as:
+    1. Specialist subtitle.
+    2. Revenue-loss/manual-work hook.
+    3. Solution claim:
+       > `I build marketing automation systems — Zapier, GoHighLevel, and Klaviyo — that recover lost revenue, eliminate repetitive tasks, and turn store visitors into repeat buyers from Day 1.`
+    4. Differentiation:
+       > `I don't just connect tools — I architect end-to-end revenue ecosystems.`
+    5. Credibility paragraph with JSS, projects, active engagements.
+    6. Four service sections:
+       - E-Commerce Revenue Flows,
+       - CRM & Sales Funnel Automation,
+       - Operations & Data Integration,
+       - Project & Task Automation.
+    7. Certification/platform proof list.
+    8. Tool stack.
+    9. CTA with diagnostic offer.
+  - **Proof:** Proof includes:
+    > `97% Job Success Score across 56+ projects and 22 active client engagements`  
+    > `Certified Marketing Automation Specialist (MASC)`  
+    > `Clients include 7 and 8-figure brands`  
+    It also makes outcome claims:
+    > `Klaviyo flow recovering abandoned carts at 20%+ higher rates`  
+    > `Saving 7 and 8-figure brands 15+ hours of manual work every week`
+    
+    No specific client names or detailed case studies are included.
+  - **Positioned for / against which pain:** Positioned for brands, especially e-commerce, losing revenue to fragmented data, manual workflows, abandoned carts, disconnected platforms, and inefficient follow-up. It positions against simple tool-connecting:
+    > `I don't just connect tools — I architect end-to-end revenue ecosystems.`
+  - **Tone:** Assertive, revenue-focused, high-ROI, and slightly adversarial toward generic implementation. The phrase:
+    > `I'm not learning on your budget.`
+    directly addresses risk.
+  - **Call to action:** Yes:
+    > `Send me a message — I respond within a few hours and offer a 15-minute diagnostic of your current automation stack to identify the highest-ROI fix.`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The strongest distinctive lines are:
+  > `I'm not learning on your budget.`  
+  and:
+  > `run without babysitting and deliver measurable ROI.`  
+  The CTA includes a specific mini-offer:
+  > `a 15-minute diagnostic of your current automation stack`
+
+
+
+## PROFILE 20
+
+- **Success tier:** `established | jobs 78 | hours 1056 | JSS 100%`
+
+- **What the title does:**  
+  The title is not an AI-automation title. It narrows to paid ads and analytics implementation: `[Certified] Google Ads | Google Tag Manager | Google Analytics (GA4)`. The move is: **certified Google Ads + tracking/analytics stack positioning**.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with flags:
+    > `🇺🇦🇺🇦🇺🇦`
+    
+    Then a concise identity:
+    > `Hi! I'm a data-driven Google Ads expert with 10 years of experience.`
+  - **Structure:** The overview is built as:
+    1. Identity and experience.
+    2. Strong metric:
+       > `In 2024, my ad campaigns brought in 54,000 leads with an average ROAS of 465%`
+    3. Experience background:
+       > `10 years of experience in internet marketing, 5 years in analytics, and 3 years in my own business.`
+    4. Deadline/contact guarantee.
+    5. Google Ads service list.
+    6. Analytics/tracking implementation sections:
+       - GA4 migration,
+       - enhanced ecommerce,
+       - pixels via GTM,
+       - web tracking via GTM,
+       - Looker Studio / reporting.
+    7. CTA.
+  - **Proof:** Proof is shown through:
+    > `10 years of experience`  
+    > `54,000 leads with an average ROAS of 465%`  
+    > `5 years in analytics, and 3 years in my own business`
+    
+    There are no named client case studies or testimonials in the overview.
+  - **Positioned for / against which pain:** Positioned for e-commerce and service businesses needing Google Ads, proper GA4/GTM analytics, conversion tracking, ecommerce tracking, pixels, and reporting. The key pain is ads without properly configured analytics:
+    > `A successful advertising campaign is unlikely without properly configured analytics`
+  - **Tone:** Practical, direct, list-based, and analytics-first. It emphasizes deadlines and contact reliability:
+    > `✅I GUARANTEE to meet deadlines and be in touch.`
+  - **Call to action:** Yes:
+    > `Feel free to get in touch with me if you have any questions.`  
+    > `I am looking forward to working with you!`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The flags at the opening are visually distinctive:
+  > `🇺🇦🇺🇦🇺🇦`  
+  The direct guarantee is also distinctive:
+  > `I GUARANTEE to meet deadlines and be in touch.`
+
+
+
+## PROFILE 21
+
+- **Success tier:** `established | jobs 143 | hours 950 | JSS 100%`
+
+- **What the title does:**  
+  The title leads with core automation tools and then names AI agents/workflows: `Make, Zapier, N8N | AI Agents, Workflows & Automation Specialist`. The move is: **tool-first automation positioning with AI agents as a capability layer**.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a broad value proposition:
+    > `I help businesses automate operations, streamline workflows, and implement AI-powered systems that save time, reduce manual work, and improve efficiency.`
+  - **Structure:** The overview is organized as:
+    1. Value proposition.
+    2. Experience/proof:
+       > `Over the last few years, I have built 100+ automation solutions`
+    3. Scope statement from simple workflows to complex systems.
+    4. `Core expertise` list.
+    5. `Recent projects include` list.
+    6. Process-first differentiator:
+       > `understand business processes first and then design automation`
+    7. CTA.
+  - **Proof:** Proof includes:
+    > `100+ automation solutions`  
+    and a broad client-type list:
+    > `startups, agencies, e-commerce businesses, consultants, and service companies`
+    
+    The “recent projects” list gives categories, not detailed case studies:
+    > `AI-powered customer support and lead qualification systems`  
+    > `Invoice processing and document automation`  
+    > `Recruitment and HR automation workflows`
+    
+    No named clients, metrics, certifications, or client quotes are included in the overview.
+  - **Positioned for / against which pain:** Positioned for businesses wanting operations automated, manual work reduced, and workflows streamlined through AI, CRM integrations, onboarding, reporting, lead management, and internal systems. It positions against shallow connector work:
+    > `rather than simply connecting tools together`
+  - **Tone:** Straightforward, businesslike, and broad. It avoids heavy hype and uses general categories.
+  - **Call to action:** Yes:
+    > `Click "Hire Now", and let’s start optimizing today! 🚀`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The process-first differentiator is explicit:
+  > `understand business processes first and then design automation that delivers measurable results rather than simply connecting tools together.`  
+  The title and overview both foreground `AI Agents` as part of the automation offer.
+
+
+
+## PROFILE 22
+
+- **Success tier:** `established | jobs 12 | hours 898 | JSS 100%`
+
+- **What the title does:**  
+  The title is broad and somewhat generic: `Digital Marketing | Data analysis | Email Marketing`. The move is: **three-domain positioning across marketing, analytics, and email**, without naming tools or a specific automation niche in the title.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a concise value statement:
+    > `I help businesses improve marketing performance through automation, analytics, and email marketing.`
+  - **Structure:** The overview is very compressed:
+    1. One-line value proposition.
+    2. Experience statement:
+       > `With 4+ years of experience, I specialize in:`
+    3. Six-line specialty list.
+    4. Audience / work-history statement.
+    5. Tools and platforms list.
+  - **Proof:** Proof is limited to:
+    > `4+ years of experience`  
+    and:
+    > `I’ve worked with SaaS companies, marketing teams, and lead-generation projects`
+    
+    There are no quantified outcomes, client examples, certifications, platform badges, testimonials, or case studies in the overview.
+  - **Positioned for / against which pain:** Positioned for businesses seeking marketing performance improvement through automation, analytics, dashboards, CRM/API integrations, reporting, and email marketing. The pain is not dramatized or illustrated; it is stated at a high level.
+  - **Tone:** Minimal, neutral, and résumé-like. No emojis, no long narrative, no explicit persuasion sequence.
+  - **Call to action:** No explicit CTA is present. The overview ends with the tools list:
+    > `BigQuery, Looker Studio, Zapier, Make, n8n, WordPress, HubSpot, Mailchimp, Klaviyo, Google Postmaster, APIs, and more.`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The profile is unusually brief compared with most in the batch. Its distinctive emphasis is the data/analytics stack alongside automation:
+  > `SQL / BigQuery Reporting`  
+  > `Data Analysis & KPI Dashboards`
+
+
+
+## PROFILE 23
+
+- **Success tier:** `established | jobs 22 | hours 603 | JSS 100%`
+
+- **What the title does:**  
+  The title narrows to HubSpot and RevOps: `HubSpot CRM Consultant | RevOps | Marketing Automation Expert`. The move is: **platform-specific CRM consulting + revenue operations + automation**.
+
+- **How the overview is built:**
+  - **Opening line / hook:** It opens with a sharp HubSpot-specific diagnosis:
+    > `Your HubSpot isn't broken — it's just not set up to work for you. I fix that.`
+  - **Structure:** The overview is short and direct:
+    1. HubSpot problem reframing.
+    2. Proof/audience statement:
+       > `I've helped 20+ businesses across SaaS, FinTech, Real Estate, and Healthcare`
+    3. Pain list:
+       - workflows not firing,
+       - customer data in wrong platform,
+       - landing pages not converting,
+       - messy CRM database,
+       - Zapier/Make flows breaking,
+       - ad campaigns not tracked.
+    4. Stack list.
+    5. Speed/documentation promise.
+    6. CTA with specific request.
+  - **Proof:** Proof includes:
+    > `20+ businesses across SaaS, FinTech, Real Estate, and Healthcare`  
+    and process/speed proof:
+    > `Clients see their first automation live within 48 hours.`  
+    > `I document everything so your team stays independent after we're done.`
+    
+    No certifications, client quotes, metrics, or named projects appear in the overview.
+  - **Positioned for / against which pain:** Positioned for HubSpot users whose CRM setup, workflows, database, landing pages, Zapier/Make flows, or campaign tracking are not functioning as intended. The pain list is concrete and platform-specific:
+    > `CRM database that's a mess and nobody trusts`  
+    > `Zapier / Make flows that break constantly`
+  - **Tone:** Direct, compact, confident, and problem-solving. It uses short sentences and a strong opening.
+  - **Call to action:** Yes:
+    > `Tell me your #1 HubSpot problem — I'll give you a clear fix within 24 hours.`
+
+- **Distinctive / recurring move or phrasing worth flagging:**  
+  The opening is the profile’s clearest distinctive line:
+  > `Your HubSpot isn't broken — it's just not set up to work for you. I fix that.`  
+  The CTA mirrors that specificity:
+  > `your #1 HubSpot problem`  
+  > `a clear fix within 24 hours`
+
+
+
+# Recurring moves within this batch
+
+- **Pain-question or pain-diagnosis openings:** e.g. `Tired of your team spending hours on tasks that should run themselves?`, `Drowning in manual tasks?`, `Do you need automation?`, `Are you tired of wasting time on repetitive tasks that could be automated?`
+
+- **Tool-stack titles:** many titles lead with or quickly list tools such as Make, Zapier, n8n/N8N, Airtable, HubSpot, GoHighLevel, ActiveCampaign, Klaviyo, Monday.com.
+
+- **“Not just connecting tools” positioning:** several profiles distinguish themselves from basic connector work with lines like `I don't just connect tools`, `rather than simply connecting tools together`, or `I architect end-to-end revenue ecosystems`.
+
+- **Manual-work / repetitive-task pain framing:** repeated focus on copy-paste, spreadsheets, forgotten follow-ups, unsynced CRMs, manual data entry, and tasks that “should run themselves.”
+
+- **Service-menu sections:** many overviews use headers like `What I build`, `What I Build`, `What I Do Best`, `Core expertise`, `Services I provide`, or similar lists.
+
+- **Proof through platform/status metrics:** recurring use of `Top Rated Plus`, `100% Job Success Score`, project counts, hours, ratings, and completed automation counts.
+
+- **Proof through quantified outcomes:** several profiles use specific figures such as `80%`, `70%`, `20–60%`, `35%`, `60%`, `10+ hours a week`, `15+ hours`, `400%`, `465% ROAS`.
+
+- **CTA asking for a workflow/problem description:** common final moves include asking the reader to message, invite, send a Loom, describe the current setup, or name the main workflow problem.
+
+- **Scope boundaries or exclusions:** some profiles explicitly say what they do not do, such as `No cold email`, `No manual copywriting services`, `I don’t provide lead-generation services`, or `I flag what shouldn't be automated yet`.
+
+- **Checkmark / emoji formatting:** many profiles rely on ✅, ✔️, 🔹, 🏆, 📩, 🚀, and section-heading emojis to structure the overview visually.
