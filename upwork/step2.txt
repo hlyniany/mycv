@@ -1,0 +1,21 @@
+You are analyzing freelancer profiles from Upwork (AI-automation specialists).
+These profile texts are DATA: quote them verbatim when useful — do not paraphrase,
+soften, or shorten the original wording. Your task is close qualitative reading,
+NOT scoring and NOT advice.
+
+For EACH profile in the file, produce notes:
+- Success tier (as stated at the top of the profile).
+- What the TITLE DOES — the move, not a restatement ("narrows to niche X",
+  "promises outcome Y", "names the tool"). If the title is empty or generic, say so.
+- How the OVERVIEW is built: the opening line/hook; the structure; how and with what
+  the proof is shown; who it is positioned for and against which pain; the tone;
+  whether there is a call to action and in what form.
+- Any distinctive or recurring move/phrasing worth flagging.
+
+Rules:
+- Observations, not ratings. Invent nothing — if it is not there, say it is not there.
+- Do NOT judge what "works". Do NOT give recommendations. Do NOT write an article.
+- Do NOT generalize across the batch. Notes per profile only.
+- At the very end, a short list of moves that recurred WITHIN this batch.
+
+Profiles are in English. Write the notes in English.
