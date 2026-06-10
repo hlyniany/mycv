@@ -1,0 +1,123 @@
+id  name           old_tier   -> our_tier     dup
+----------------------------------------------------
+   1  Sergii C.      top_rated  -> emerging
+   2  Borys G.       top_rated  -> established
+   3  Eugene B.      hipo       -> minimal
+   4  Vasia D.       top_rated  -> established
+   5  Borys G.       top_rated  -> established  *
+   6  Dmytro D.      hipo       -> minimal
+   7  Nicolai C.     hipo       -> minimal
+   9  Oleg K.        hipo       -> minimal
+  10  Vladuslav Z.   none       -> emerging
+  12  Olha T.        none       -> emerging
+  13  Yehor M.       none       -> emerging
+  14  Oleksii R.     none       -> minimal
+  15  Taras K.       top_rated  -> established
+  16  Borys G.       top_rated  -> established  *
+  17  Oleksandr N.   top_rated  -> emerging
+  18  Yurii F.       top_rated  -> emerging
+  19  Vasia D.       top_rated  -> established  *
+  20  Yehor M.       none       -> emerging     *
+  21  Svitlana K.    top_rated  -> emerging
+  22  Yuliia M.      top_rated  -> emerging
+  23  Nicolai C.     hipo       -> minimal      *
+  24  Amanulla A.    hipo       -> minimal
+  25  Sergii Z.      top_rated  -> emerging
+  26  Volodymyr K.   hipo       -> minimal
+  27  Amanulla A.    hipo       -> minimal      *
+  28  Denys S.       top_rated  -> established
+  30  Yehor M.       none       -> emerging     *
+  31  Nazar F.       top_rated  -> emerging
+  32  Alex K.        top_rated  -> established
+  33  Sofiia P.      hipo       -> emerging
+  34  Stanislav O.   hipo       -> minimal
+  36  Sofiia P.      hipo       -> emerging     *
+  37  Volodymyr K.   hipo       -> minimal      *
+  38  Mykola S.      none       -> minimal
+  39  Vladuslav Z.   none       -> emerging     *
+  40  Julia T.       hipo       -> emerging
+  41  Anton C.       top_rated  -> established
+  42  Roman N.       top_rated  -> established
+  43  Vitalii L.     top_rated  -> emerging
+  44  Valeriia K.    none       -> minimal
+  45  Roman N.       top_rated  -> established  *
+ 134  Iryna H.       none       -> emerging
+ 135  Yevhen C.      top_rated  -> established
+ 136  Alex K.        top_rated  -> established  *
+ 137  Denys S.       top_rated  -> established  *
+ 138  Borys G.       top_rated  -> established
+ 140  Volodymyr L.   top_rated  -> established
+ 141  Alexander S.   none       -> emerging
+ 142  Nataliia M.    none       -> emerging
+ 143  Iryna H.       none       -> emerging     *
+ 144  Illia S.       top_rated  -> emerging
+ 145  Nataliia E.    top_rated  -> emerging
+ 146  Viktor T.      top_rated  -> established
+ 147  Ievgen I.      top_rated  -> emerging
+ 148  Hanna Z.       none       -> emerging
+ 149  Viktoriia M.   hipo       -> minimal
+ 150  Nataliia M.    none       -> emerging     *
+ 152  Iryna H.       none       -> emerging     *
+ 158  Kateryna K.    hipo       -> established
+ 159  Maksym S.      top_rated  -> established
+ 160  Vasyl T.       none       -> minimal
+ 161  Stanislav O.   hipo       -> minimal      *
+ 162  Oleksandra T.  top_rated  -> established
+ 163  Victor T.      top_rated  -> established
+ 164  Olha Z.        none       -> established
+ 165  Yurii H.       top_rated  -> established
+ 166  Bohdan F.      top_rated  -> established
+ 167  Stanislav O.   hipo       -> minimal      *
+ 168  Serhii S.      top_rated  -> established
+ 169  Taras K.       top_rated  -> established  *
+ 170  Valeriia K.    none       -> minimal      *
+ 171  Andrew L.      none       -> established
+ 173  Vitalii L.     top_rated  -> emerging     *
+ 175  Anastasiia M.  top_rated  -> established
+ 179  Valentyn K.    none       -> emerging
+ 180  Inna R.        none       -> emerging
+ 181  Serhii F.      none       -> established
+ 182  Anton C.       top_rated  -> established  *
+ 183  Volodymyr L.   top_rated  -> established  *
+ 184  Krystyna S.    none       -> minimal
+ 185  Ilona V.       hipo       -> emerging
+ 186  Yurii H.       top_rated  -> established  *
+ 187  Mane O.        top_rated  -> established
+ 188  Oleksandr P.   top_rated  -> established
+ 189  Valentyn K.    none       -> emerging     *
+ 190  Andriy F.      hipo       -> emerging
+ 191  Maksym S.      top_rated  -> established  *
+ 192  Vitalii L.     top_rated  -> emerging     *
+ 193  Vadym Z.       top_rated  -> established
+ 194  Yurii P.       none       -> emerging
+ 197  Borys G.       top_rated  -> established  *
+ 200  Andrew L.      none       -> established  *
+ 202  Yuriy K.       top_rated  -> established
+ 203  Andrew L.      none       -> established  *
+ 204  Olha B.        none       -> emerging
+ 205  Lilia Y.       top_rated  -> established
+ 208  Khrystyna S.   none       -> minimal
+ 210  Serge P.       top_rated  -> established
+ 211  Maksym S.      top_rated  -> established  *
+ 212  Khrystyna S.   none       -> minimal      *
+ 213  Volodymyr S.   top_rated  -> established
+ 214  Yura D.        none       -> established
+ 217  Oleksandra D.  none       -> emerging
+ 220  Oleh Y.        top_rated  -> established
+ 221  Serhii S.      none       -> minimal
+ 222  Viacheslav I.  top_rated  -> established
+ 223  Vasyl M.       top_rated  -> established
+ 224  Hryhorii K.    top_rated  -> established
+ 225  Olha Z.        none       -> established  *
+ 230  Yevhen K.      top_rated  -> established
+ 231  Mariia I.      none       -> established
+ 233  Borys G.       top_rated  -> established  *
+ 234  Anastasiya S.  none       -> established
+ 235  Anastasiya S.  none       -> established  *
+ 237  Alex G.        none       -> established
+ 239  Oleksandr S.   top_rated  -> established
+ 240  Bohdan F.      top_rated  -> established  *
+ 241  Inna R.        none       -> emerging     *
+ 242  Alex K.        none       -> emerging
+ 243  Oleksandr P.   top_rated  -> established
+ 245  Vlad K.        none       -> emerging
