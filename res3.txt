@@ -1,0 +1,125 @@
+id   name           tier       jss      total_earnings  total_jobs  total_hours  hourly_rate  country         member_since              hrs_per_month
+---  -------------  ---------  -------  --------------  ----------  -----------  -----------  --------------  ------------------------  -------------
+9    Oleg K.        hipo       1        0.0             3           4.36         25.0         Ukraine         2023-03-06T15:17:26.954Z  0.1          
+26   Volodymyr K.   hipo       1        0.0             3           0.17         25.0         Ukraine         2024-12-01T09:14:06.469Z  0.0          
+37   Volodymyr K.   hipo       1        0.0             3           0.17         25.0         Ukraine         2024-12-01T09:14:06.469Z  0.0          
+149  Viktoriia M.   hipo       1        0.0             2                        35.0         Ukraine         2024-06-23T13:50:55.606Z               
+158  Kateryna K.    hipo       1        0.0             28          438.96       50.0         Ukraine         2022-08-10T12:46:07.474Z  9.5          
+185  Ilona V.       hipo       1        0.0             11          158.62       30.0         Ukraine         2024-05-30T09:50:23.130Z  6.5          
+190  Andriy F.      hipo       1        0.0             21          86.58        40.0         Ukraine         2018-09-07T15:12:38.872Z  0.9          
+3    Eugene B.      hipo                0.0             1                        30.0         Ukraine         2025-04-23T13:35:30.425Z               
+6    Dmytro D.      hipo                0.0             3                        29.99        Poland          2026-04-02T10:31:34.712Z               
+7    Nicolai C.     hipo                0.0             2                        25.0         Czech Republic  2025-03-08T15:15:28.129Z               
+23   Nicolai C.     hipo                0.0             2                        25.0         Czech Republic  2025-03-08T15:15:28.129Z               
+24   Amanulla A.    hipo                0.0             2                        22.0         Ukraine         2025-04-22T11:22:54.235Z               
+27   Amanulla A.    hipo                0.0             2                        22.0         Ukraine         2025-04-22T11:22:54.235Z               
+33   Sofiia P.      hipo                0.0             4           21.2         20.0         Ukraine         2025-05-01T08:46:59.283Z  1.6          
+34   Stanislav O.   hipo                0.0             1                        20.0         Poland          2024-09-25T16:06:18.342Z               
+36   Sofiia P.      hipo                0.0             4           21.2         20.0         Ukraine         2025-05-01T08:46:59.283Z  1.6          
+40   Julia T.       hipo                0.0             4           78.98        20.0         Ukraine         2025-05-22T07:39:28.435Z  6.3          
+161  Stanislav O.   hipo                0.0             1                        20.0         Poland          2024-09-25T16:06:18.342Z               
+167  Stanislav O.   hipo                0.0             1                        20.0         Poland          2024-09-25T16:06:18.342Z               
+1    Sergii C.      top_rated  1        0.0             26          85.16        40.0         Ukraine         2024-05-03T05:10:02.340Z  3.4          
+2    Borys G.       top_rated  1        0.0             5           320.84       30.0         Poland          2020-05-05T15:19:21.870Z  4.4          
+4    Vasia D.       top_rated  1        0.0             32          159.6        30.0         Ukraine         2023-07-07T15:46:34.252Z  4.5          
+5    Borys G.       top_rated  1        0.0             5           320.84       30.0         Poland          2020-05-05T15:19:21.870Z  4.4          
+15   Taras K.       top_rated  1        0.0             20          640.79       40.0         Ukraine         2023-05-22T10:46:41.369Z  17.5         
+16   Borys G.       top_rated  1        0.0             5           320.84       30.0         Poland          2020-05-05T15:19:21.870Z  4.4          
+17   Oleksandr N.   top_rated  1        0.0             9           169.47       60.0         Ukraine         2025-04-16T18:58:20.829Z  12.3         
+18   Yurii F.       top_rated  1        0.0             12          154.47       22.0         Ukraine         2023-07-13T18:59:11.677Z  4.4          
+19   Vasia D.       top_rated  1        0.0             32          159.6        30.0         Ukraine         2023-07-07T15:46:34.252Z  4.5          
+21   Svitlana K.    top_rated  1        0.0             7           142.97       15.0         Ukraine         2025-03-03T16:00:51.099Z  9.4          
+22   Yuliia M.      top_rated  1        0.0             10          121.0        30.0         Ukraine         2025-03-21T09:49:28.499Z  8.3          
+25   Sergii Z.      top_rated  1        0.0             14          48.8         29.0         Denmark         2025-01-03T13:25:59.311Z  2.8          
+28   Denys S.       top_rated  1        0.0             15          695.48       35.0         Ukraine         2024-11-25T11:17:52.113Z  37.7         
+31   Nazar F.       top_rated  1        0.0             8                        36.0         Spain           2024-11-11T19:21:16.663Z               
+32   Alex K.        top_rated  1        0.0             53          1080.8       50.0         Ukraine         2023-01-26T10:31:14.075Z  26.7         
+41   Anton C.       top_rated  1        0.0             55          2535.23      30.0         Ukraine         2022-08-08T16:21:19.600Z  55.0         
+42   Roman N.       top_rated  1        0.0             22          735.67       29.0         Ukraine         2023-01-30T18:09:43.806Z  18.3         
+43   Vitalii L.     top_rated  1        0.0             5           71.31        39.0         Ukraine         2024-03-30T18:10:48.681Z  2.7          
+45   Roman N.       top_rated  1        0.0             22          735.67       29.0         Ukraine         2023-01-30T18:09:43.806Z  18.3         
+135  Yevhen C.      top_rated  1        0.0             44          2005.03      30.0         Ukraine         2023-08-17T13:15:55.246Z  59.4         
+136  Alex K.        top_rated  1        0.0             53          1080.8       50.0         Ukraine         2023-01-26T10:31:14.075Z  26.7         
+137  Denys S.       top_rated  1        0.0             15          695.48       35.0         Ukraine         2024-11-25T11:17:52.113Z  37.7         
+138  Borys G.       top_rated  1        0.0             53          3784.89      80.0         Ukraine         2022-02-03T18:28:41.307Z  72.6         
+140  Volodymyr L.   top_rated  1        0.0             23          277.67       25.0         Ukraine         2023-05-16T08:06:08.962Z  7.5          
+144  Illia S.       top_rated  1        0.0             8           30.17        20.0         Poland          2023-11-24T14:19:12.306Z  1.0          
+145  Nataliia E.    top_rated  1        0.0             7           159.04       25.0         Ukraine         2025-03-08T08:46:32.591Z  10.5         
+146  Viktor T.      top_rated  1        0.0             8           2339.56      40.0         Ukraine         2024-09-12T11:52:33.858Z  112.0        
+147  Ievgen I.      top_rated  1        0.0             16          19.43        38.0         Ukraine         2024-11-05T17:35:11.000Z  1.0          
+159  Maksym S.      top_rated  1        0.0             101         4895.27      50.0         Ukraine         2015-11-10T21:07:52Z      38.6         
+162  Oleksandra T.  top_rated  1        0.0             56          1163.73      45.0         Ukraine         2024-02-16T20:43:16.340Z  41.9         
+163  Victor T.      top_rated  1        0.0             317         8545.18      30.0         Ukraine         2014-08-10T12:55:45Z      60.2         
+165  Yurii H.       top_rated  1        0.0             18          693.86       35.0         Ukraine         2023-11-01T14:39:54.366Z  22.2         
+166  Bohdan F.      top_rated  1        0.0             39          544.89       57.0         Poland          2023-03-05T12:02:32.439Z  13.9         
+168  Serhii S.      top_rated  1        0.0             64          531.02       30.0         Ukraine         2019-04-23T14:22:27.168Z  6.2          
+169  Taras K.       top_rated  1        0.0             20          640.79       40.0         Ukraine         2023-05-22T10:46:41.369Z  17.5         
+173  Vitalii L.     top_rated  1        0.0             5           71.31        39.0         Ukraine         2024-03-30T18:10:48.681Z  2.7          
+175  Anastasiia M.  top_rated  1        0.0             6           200.79       25.0         Ukraine         2024-08-12T09:18:56.996Z  9.2          
+182  Anton C.       top_rated  1        0.0             55          2535.23      30.0         Ukraine         2022-08-08T16:21:19.600Z  55.0         
+183  Volodymyr L.   top_rated  1        0.0             23          277.67       25.0         Ukraine         2023-05-16T08:06:08.962Z  7.5          
+186  Yurii H.       top_rated  1        0.0             18          693.86       35.0         Ukraine         2023-11-01T14:39:54.366Z  22.2         
+187  Mane O.        top_rated  1        0.0             19          954.08       40.0         Ukraine         2024-04-29T16:37:30.943Z  37.6         
+188  Oleksandr P.   top_rated  1        0.0             6           2465.01      37.0         Ukraine         2023-01-19T19:43:57.109Z  60.6         
+191  Maksym S.      top_rated  1        0.0             101         4895.27      50.0         Ukraine         2015-11-10T21:07:52Z      38.6         
+192  Vitalii L.     top_rated  1        0.0             5           71.31        39.0         Ukraine         2024-03-30T18:10:48.681Z  2.7          
+193  Vadym Z.       top_rated  1        0.0             192         3273.49      40.0         Ukraine         2022-03-02T11:48:05.650Z  63.8         
+197  Borys G.       top_rated  1        0.0             53          3784.89      80.0         Ukraine         2022-02-03T18:28:41.307Z  72.6         
+202  Yuriy K.       top_rated  1        0.0             12          898.77       25.0         Ukraine         2022-08-06T10:34:39.649Z  19.5         
+210  Serge P.       top_rated  1        0.0             105         2489.85      75.0         Ukraine         2020-03-12T07:36:35.424Z  33.2         
+211  Maksym S.      top_rated  1        0.0             101         4895.27      50.0         Ukraine         2015-11-10T21:07:52Z      38.6         
+213  Volodymyr S.   top_rated  1        0.0             6           245.96       40.0         Ukraine         2023-08-09T19:16:28.996Z  7.2          
+220  Oleh Y.        top_rated  1        0.0             45          3021.99      50.0         Ukraine         2023-09-16T17:09:00.421Z  92.2         
+222  Viacheslav I.  top_rated  1        0.0             15          262.4        40.0         Ukraine         2022-03-17T18:58:35.736Z  5.2          
+224  Hryhorii K.    top_rated  1        0.0             41          4600.2       40.0         Ukraine         2023-03-27T17:30:03.485Z  119.6        
+230  Yevhen K.      top_rated  1        0.0             78          1056.26      49.99        Romania         2022-01-07T11:52:51.888Z  19.9         
+233  Borys G.       top_rated  1        0.0             53          3784.89      80.0         Ukraine         2022-02-03T18:28:41.307Z  72.6         
+239  Oleksandr S.   top_rated  1        0.0             143         950.38       35.0         Ukraine         2022-06-02T07:55:26.016Z  19.7         
+240  Bohdan F.      top_rated  1        0.0             39          544.89       57.0         Poland          2023-03-05T12:02:32.439Z  13.9         
+243  Oleksandr P.   top_rated  1        0.0             10          342.65       30.0         Ukraine         2023-02-05T17:51:26.868Z  8.5          
+223  Vasyl M.       top_rated  0.9859   0.0             44          2888.62      35.0         Ukraine         2022-06-21T08:44:42.831Z  60.6         
+205  Lilia Y.       top_rated  0.9685   0.0             56          613.15       44.5         Ukraine         2023-11-29T06:57:02.290Z  20.2         
+134  Iryna H.       none       1        0.0             5           2.0          25.0         Ukraine         2024-10-26T07:19:08.796Z  0.1          
+142  Nataliia M.    none       1        0.0             2           16.8         20.0         Ukraine         2025-01-08T08:27:25.054Z  1.0          
+143  Iryna H.       none       1        0.0             5           2.0          25.0         Ukraine         2024-10-26T07:19:08.796Z  0.1          
+148  Hanna Z.       none       1        0.0             5           9.63         20.0         Poland          2025-01-13T10:29:33.478Z  0.6          
+150  Nataliia M.    none       1        0.0             2           16.8         20.0         Ukraine         2025-01-08T08:27:25.054Z  1.0          
+152  Iryna H.       none       1        0.0             5           2.0          25.0         Ukraine         2024-10-26T07:19:08.796Z  0.1          
+164  Olha Z.        none       1        0.0             17          226.61       35.0         Spain           2023-04-23T20:22:12.312Z  6.0          
+171  Andrew L.      none       1        0.0             11          543.96       40.0         Romania         2023-12-05T03:45:31.246Z  18.0         
+180  Inna R.        none       1        0.0             18          100.14       70.0         Germany         2021-01-27T18:32:18.456Z  1.6          
+181  Serhii F.      none       1        0.0             15          495.83       37.0         Ukraine         2022-01-17T14:15:37.971Z  9.4          
+200  Andrew L.      none       1        0.0             11          543.96       40.0         Romania         2023-12-05T03:45:31.246Z  18.0         
+203  Andrew L.      none       1        0.0             11          543.96       40.0         Romania         2023-12-05T03:45:31.246Z  18.0         
+214  Yura D.        none       1        0.0             22          603.51       35.0         Ukraine         2023-10-07T16:07:13.012Z  18.8         
+225  Olha Z.        none       1        0.0             17          226.61       35.0         Spain           2023-04-23T20:22:12.312Z  6.0          
+234  Anastasiya S.  none       1        0.0             14          202.51       25.0         Ukraine         2023-01-25T11:13:38.843Z  5.0          
+235  Anastasiya S.  none       1        0.0             14          202.51       25.0         Ukraine         2023-01-25T11:13:38.843Z  5.0          
+237  Alex G.        none       1        0.0             19          1043.01      50.0         Ukraine         2023-01-17T08:42:52.331Z  25.6         
+241  Inna R.        none       1        0.0             18          100.14       70.0         Germany         2021-01-27T18:32:18.456Z  1.6          
+245  Vlad K.        none       1        0.0             12          30.7         30.0         Ukraine         2023-02-17T19:50:54.587Z  0.8          
+204  Olha B.        none       0.86665  0.0             9           217.55       25.0         Poland          2024-03-18T12:24:06.266Z  8.1          
+13   Yehor M.       none       0.86205  0.0             6           1.33         29.0         Ukraine         2025-10-15T08:12:29.098Z  0.2          
+20   Yehor M.       none       0.86205  0.0             6           1.33         29.0         Ukraine         2025-10-15T08:12:29.098Z  0.2          
+30   Yehor M.       none       0.86205  0.0             6           1.33         29.0         Ukraine         2025-10-15T08:12:29.098Z  0.2          
+12   Olha T.        none       0.8077   0.0             6           35.14        25.0         Ukraine         2023-08-11T12:01:55.952Z  1.0          
+179  Valentyn K.    none       0.72415  0.0             12          84.67        33.33        Ukraine         2024-01-22T20:37:31.761Z  3.0          
+189  Valentyn K.    none       0.72415  0.0             12          84.67        33.33        Ukraine         2024-01-22T20:37:31.761Z  3.0          
+10   Vladuslav Z.   none       0.55555  0.0             5           62.5         20.0         Ukraine         2025-04-11T10:41:20.452Z  4.5          
+39   Vladuslav Z.   none       0.55555  0.0             5           62.5         20.0         Ukraine         2025-04-11T10:41:20.452Z  4.5          
+160  Vasyl T.       none       0.5      0.0             1                        25.0         Ukraine         2022-12-24T08:56:54.898Z               
+14   Oleksii R.     none                0.0             2                        40.0         Ukraine         2018-05-03T17:23:07.120Z               
+38   Mykola S.      none                0.0             1                        20.0         Ukraine         2020-07-21T03:56:12.106Z               
+44   Valeriia K.    none                0.0             1                        30.0         Poland          2024-05-01T08:36:31.770Z               
+141  Alexander S.   none                0.0             1           10.0         25.0         Ukraine         2024-11-16T13:16:46.744Z  0.5          
+170  Valeriia K.    none                0.0             1                        30.0         Poland          2024-05-01T08:36:31.770Z               
+184  Krystyna S.    none                0.0             1                        18.0         Ukraine         2023-10-19T18:11:40.299Z               
+194  Yurii P.       none                0.0             7                        30.0         Ukraine         2023-04-16T15:07:51.640Z               
+208  Khrystyna S.   none                0.0             1           7.8          4.0          Ukraine         2023-07-28T06:56:54.750Z  0.2          
+212  Khrystyna S.   none                0.0             1           7.8          4.0          Ukraine         2023-07-28T06:56:54.750Z  0.2          
+217  Oleksandra D.  none                0.0             3           27.33        20.0         Portugal        2024-02-11T20:14:31.858Z  1.0          
+221  Serhii S.      none                0.0             2           4.0          30.0         Ukraine         2023-07-28T06:33:35.204Z  0.1          
+231  Mariia I.      none                0.0             10          1442.16      42.0         Ukraine         2008-11-23T12:55:07Z      6.9          
+242  Alex K.        none                0.0             19          156.0        20.0         Ukraine         2016-09-19T17:02:55Z      1.3          
+
+(121 rows)
